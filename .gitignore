@@ -1,0 +1,32 @@
+# =========================================================================
+# Ignore other unrelated workspaces/projects in D:\My Web Sites
+# =========================================================================
+/bike-parts-admin-main/
+/dev/
+/hts-cache/
+/magicui/
+/motion/
+/anime/
+/design-resources-for-developers/
+/ui-design-reference-library/
+
+# Ignore unrelated files
+/index.html
+/mizanur_moto_admin.html
+/website_content.html
+/decoded_rsc.txt
+/bogura_sample.webp
+/backblue.gif
+/fade.gif
+gitignor
+
+# OS & Environment files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.env
+.env.*
+node_modules/
+.vscode/
+.idea/
