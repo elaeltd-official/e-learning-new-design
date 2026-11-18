@@ -1,0 +1,35 @@
+  <!-- ========================================================================= -->
+  <!-- 0. TOP URGENT ANNOUNCEMENT & HOTLINE BANNER                                -->
+  <!-- ========================================================================= -->
+  <div class="bg-brand-night text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10 relative z-50">
+    <div class="max-w-[1380px] mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+      <!-- Left: Batch Admission Deadline Countdown -->
+      <div class="flex items-center gap-2 flex-wrap justify-center">
+        <span
+          class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-brand-gold text-brand-night animate-pulse">
+          LIMITED SEATS
+        </span>
+        <span class="text-slate-300">Govt. Subsidized Batch 42 Admission Closes In:</span>
+        <div id="countdown-timer"
+          class="font-mono font-bold text-brand-gold bg-black/40 px-2.5 py-0.5 rounded border border-white/10 flex gap-1">
+          <span id="cd-days">04</span>d : <span id="cd-hours">16</span>h : <span id="cd-mins">32</span>m : <span
+            id="cd-secs">45</span>s
+        </div>
+      </div>
+
+      <!-- Right: Direct Phone Hotline & 64-District Link -->
+      <div class="flex items-center gap-4 text-slate-300 text-xs">
+        <a href="tel:01791111890" class="flex items-center gap-1.5 hover:text-white transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-brand-emerald"></i>
+          <span>Central Hotline: <strong class="text-white">01791-111890</strong></span>
+        </a>
+        <span class="hidden sm:inline text-white/20">|</span>
+        <button onclick="openDistrictModal()"
+          class="hidden sm:flex items-center gap-1 text-brand-emerald hover:text-emerald-300 font-semibold underline underline-offset-2">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+          Find 64 District Campuses
+        </button>
+      </div>
+    </div>
+  </div>
+

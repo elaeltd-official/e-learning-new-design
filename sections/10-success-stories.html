@@ -1,0 +1,545 @@
+  <!-- ========================================================================= -->
+  <!-- 10. SUCCESS STORIES (VIDEO DOCUMENTARY GALLERY & SMOOTH AUTO SLIDER)       -->
+  <!-- ========================================================================= -->
+  <section id="success-section" class="py-20 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header with Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            Success Stories
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+            See All 450+ Success Stories — Real students across all 64 district branches who transformed their careers through hands-on practical lab training.
+          </p>
+        </div>
+
+        <!-- Manual Prev / Next Controls & Live Auto-slide Badge -->
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="success-slider-prev" aria-label="Previous Slide"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button id="success-slider-next" aria-label="Next Slide"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Continuous Smooth Auto-Moving Slider Carousel -->
+      <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Subtle Left & Right Edge Fades -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Scrollable Track Container -->
+        <div id="success-slider-scroll"
+          class="flex gap-6 overflow-x-auto scroll-smooth py-4 select-none cursor-grab active:cursor-grabbing no-scrollbar"
+          style="scrollbar-width: none; -ms-overflow-style: none;">
+
+          <!-- ==================== CARD 1 (Tanvir Ahmed - MERN Stack) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-10969-gfg.webp"
+                alt="Tanvir Ahmed Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    MERN Stack &amp; Freelancing · Dhaka Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “Before joining e-Learning &amp; Earning Ltd., I struggled to structure real-world projects. Guided portfolio reviews helped me land my first international SaaS client within 6 weeks of graduating.”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  Tanvir Ahmed
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Top Rated Seller · $2,400/mo Avg. Billing
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== CARD 2 (Muktadir Hasan Fuhad - Graphic Design) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/P85xLYbLo-w?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-120196-WhatsApp Image 2025-08-21 at 12.43.01 PM (1).webp"
+                alt="Muktadir Hasan Fuhad Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Graphic Design &amp; Upwork · Bogura Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “বগুড়া শাখা থেকে গ্রাফিক ডিজাইন কোর্স সম্পন্ন করে আন্তর্জাতিক মার্কেটপ্লেসে কাজ শুরু করি। লাইভ প্রজেক্ট সাপোর্ট এবং মেন্টরদের সার্বক্ষণিক গাইডলাইন আমার আয়ের পথ সুগম করেছে।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  মুকতাদির হাসান ফুহাদ
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Level 2 Freelancer · $1,800/mo Avg. Billing
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== CARD 3 (Nasrin Akter - Women in Tech) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-292943-Screenshot 2025-08-12 115940.webp"
+                alt="Nasrin Akter Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Digital Marketing &amp; E-Commerce · Chattogram
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “গৃহিণী থেকে স্বাবলম্বী হওয়ার এই যাত্রা সহজ ছিল না। ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের মেন্টরদের সহযোগিতায় আজ আমি ঘরে বসেই বিদেশি ব্র্যান্ডের রিমোট ক্যাম্পেইন হ্যান্ডেল করছি।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  নাসরিন আক্তার
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Remote Agency Lead · $1,500/mo Remote Income
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== CARD 4 (Sabbir Rahman - Cyber Security) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/rA2FCD3FFQk?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-530446-Screenshot 2025-08-12 125338.webp"
+                alt="Sabbir Rahman Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Cyber Security &amp; Ethical Hacking · Sylhet Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “ল্যাবভিত্তিক প্র্যাকটিক্যাল ট্রেনিং আর হ্যান্ডস-অন সিকিউরিটি অডিট এক্সারসাইজ আমাকে আন্তর্জাতিক বাগ বাউন্টি প্ল্যাটফর্মে প্রথম প্রাইজ এনে দেয়। জেলা ব্রাঞ্চ থেকেই আন্তর্জাতিক ক্যারিয়ার সম্ভব!”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  সাব্বির রহমান
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Security Bounty Hunter · $2,100/mo Security Bounties
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== CARD 5 (Ayesha Siddiqa - UI/UX Design) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
+                alt="Ayesha Siddiqa Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    UI/UX &amp; Product Design · Rangpur Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “ক্লায়েন্ট মিটিং কীভাবে হ্যান্ডেল করতে হয়, কীভাবে Figma ডিজাইন সিস্টেম আর্কিটেকচার বানাতে হয় তা হাতে-কলমে শিখেছি। আজ আমি দুটি কানাডিয়ান স্টার্টআপের ইউআই ডিজাইন করছি।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  আয়েশা সিদ্দিকা
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Top Rated Designer · $2,600/mo Retainer
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== CARD 6 (Kamrul Islam - Full Stack) ==================== -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80"
+                alt="Kamrul Islam Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              
+              <!-- Center 'Watch Story' Pill Button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Python, Next.js &amp; Cloud · Cumilla Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “শুধু থিওরি না, সরাসরি প্রোডাকশন গ্রেড ক্লাউড অ্যাপ্লিকেশন ডিপ্লয়মেন্ট শেখানো হয়েছে। কোর্স চলাকালীন সময়েই ইউএসএ ক্লায়েন্টের সাথে ফুল-টাইম রিমোট জব পেয়েছি।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  কামরুল ইসলাম
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Full Stack Engineer · $2,800/mo Retainer
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== DUPLICATE SET FOR INFINITE SEAMLESS LOOP ==================== -->
+          <!-- Duplicate 1 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-10969-gfg.webp"
+                alt="Tanvir Ahmed Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    MERN Stack &amp; Freelancing · Dhaka Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “Before joining e-Learning &amp; Earning Ltd., I struggled to structure real-world projects. Guided portfolio reviews helped me land my first international SaaS client within 6 weeks of graduating.”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  Tanvir Ahmed
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Top Rated Seller · $2,400/mo Avg. Billing
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate 2 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/P85xLYbLo-w?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-120196-WhatsApp Image 2025-08-21 at 12.43.01 PM (1).webp"
+                alt="Muktadir Hasan Fuhad Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Graphic Design &amp; Upwork · Bogura Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “বগুড়া শাখা থেকে গ্রাফিক ডিজাইন কোর্স সম্পন্ন করে আন্তর্জাতিক মার্কেটপ্লেসে কাজ শুরু করি। লাইভ প্রজেক্ট সাপোর্ট এবং মেন্টরদের সার্বক্ষণিক গাইডলাইন আমার আয়ের পথ সুগম করেছে।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  মুকতাদির হাসান ফুহাদ
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Level 2 Freelancer · $1,800/mo Avg. Billing
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate 3 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-292943-Screenshot 2025-08-12 115940.webp"
+                alt="Nasrin Akter Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Digital Marketing &amp; E-Commerce · Chattogram
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “গৃহিণী থেকে স্বাবলম্বী হওয়ার এই যাত্রা সহজ ছিল না। ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের মেন্টরদের সহযোগিতায় আজ আমি ঘরে বসেই বিদেশি ব্র্যান্ডের রিমোট ক্যাম্পেইন হ্যান্ডেল করছি।”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  নাসরিন আক্তার
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Remote Agency Lead · $1,500/mo Remote Income
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate 4 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/rA2FCD3FFQk?autoplay=1')">
+              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-530446-Screenshot 2025-08-12 125338.webp"
+                alt="Sabbir Rahman Success Story"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
+                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                  <span>Watch Story</span>
+                </button>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                    Cyber Security &amp; Ethical Hacking · Sylhet Campus
+                  </span>
+                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                </div>
+                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
+                  “ল্যাবভিত্তিক প্র্যাকটিক্যাল ট্রেনিং আর হ্যান্ডস-অন সিকিউরিটি অডিট এক্সারসাইজ আমাকে আন্তর্জাতিক বাগ বাউন্টি প্ল্যাটফর্মে প্রথম প্রাইজ এনে দেয়। জেলা ব্রাঞ্চ থেকেই আন্তর্জাতিক ক্যারিয়ার সম্ভব!”
+                </p>
+              </div>
+            </div>
+            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
+                  সাব্বির রহমান
+                </h4>
+                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
+                  Security Bounty Hunter · $2,100/mo Security Bounties
+                </p>
+              </div>
+              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Button (Linking to https://e-laeltd.com/video-gallery) -->
+      <div class="mt-12 text-center">
+        <a href="https://e-laeltd.com/video-gallery" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-brand-emerald hover:bg-emerald-600 text-white font-extrabold text-sm sm:text-base transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:-translate-y-0.5 group cursor-pointer">
+          <i data-lucide="film" class="w-4 h-4 text-emerald-200 group-hover:text-white transition-colors"></i>
+          <span>আরও দেখুন (See All 450+ Success Stories)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Script for Ultra-Smooth Continuous Motion & Interactive Controls -->
+    <script>
+      (function() {
+        const slider = document.getElementById('success-slider-scroll');
+        const prevBtn = document.getElementById('success-slider-prev');
+        const nextBtn = document.getElementById('success-slider-next');
+        if (!slider) return;
+
+        let isPaused = false;
+        let animationFrameId;
+        const scrollSpeed = 0.75; // Calm, ultra-smooth continuous speed (~45px per sec)
+
+        function autoGlide() {
+          if (!isPaused && slider) {
+            slider.scrollLeft += scrollSpeed;
+            // Seamless wrap when reached half the track
+            if (slider.scrollLeft >= (slider.scrollWidth / 2)) {
+              slider.scrollLeft = 0;
+            }
+          }
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        animationFrameId = requestAnimationFrame(autoGlide);
+        }
+
+        // Start gliding
+        animationFrameId = requestAnimationFrame(autoGlide);
+
+        // Pause on mouse hover & touch interactions
+        slider.addEventListener('mouseenter', () => { isPaused = true; });
+        slider.addEventListener('mouseleave', () => { isPaused = false; });
+        slider.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+        slider.addEventListener('touchend', () => { isPaused = false; });
+
+        // Prev & Next Manual Navigation
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: -420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: 420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+      })();
+    </script>
+  </section>

@@ -1,0 +1,967 @@
+  <!-- ========================================================================= -->
+  <!-- 17. LIGHTWEIGHT HIGH-PERFORMANCE VANILLA JS                                -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    // Smooth Mega Menu Controller to eliminate cursor leaving / moving glitches
+    (function initMegaMenuController() {
+      const trigger = document.getElementById('courses-menu-group');
+      const menu = document.getElementById('courses-mega-menu');
+      if (!trigger || !menu) return;
+
+      let timer = null;
+
+      function open() {
+        if (timer) clearTimeout(timer);
+        menu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+        menu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+      }
+
+      function close() {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+          menu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+        }, 250);
+      }
+
+      trigger.addEventListener('mouseenter', open);
+      trigger.addEventListener('mouseleave', close);
+      menu.addEventListener('mouseenter', open);
+      menu.addEventListener('mouseleave', close);
+    })();
+
+
+    // 1. Countdown Timer for Batch Admission Urgency
+    function initCountdown() {
+      // 4 days 16 hours from now
+      let targetDate = new Date().getTime() + (4 * 24 * 60 * 60 * 1000) + (16 * 60 * 60 * 1000);
+
+      setInterval(function () {
+        let now = new Date().getTime();
+        let diff = targetDate - now;
+
+        if (diff > 0) {
+          let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          let mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          let secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+          document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+          document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+          document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+        }
+      }, 1000);
+    }
+    initCountdown();
+
+    // Smooth Number Counter Animation for Institutional Impact Card
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter-number');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            const format = el.getAttribute('data-format');
+            const duration = 2200;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-out cubic curve for natural slowdown
+              const easeOut = 1 - Math.pow(1 - progress, 3);
+              const currentVal = Math.floor(easeOut * target);
+
+              if (format === 'comma') {
+                el.textContent = currentVal.toLocaleString('en-US');
+              } else {
+                el.textContent = currentVal;
+              }
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                el.textContent = (format === 'comma') ? target.toLocaleString('en-US') : target;
+              }
+            }
+
+            requestAnimationFrame(updateCounter);
+            obs.unobserve(el);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      counters.forEach(counter => observer.observe(counter));
+    }
+    initCounters();
+
+    // 2. Course Category Filtering
+    function filterCourses(category, btnElement) {
+      const cards = document.querySelectorAll('.course-card');
+      const buttons = document.querySelectorAll('.category-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-forest', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+      });
+
+      // Highlight matching button
+      const activeBtn = btnElement || (event && event.currentTarget) || document.querySelector(`.category-btn[data-filter="${category}"]`);
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-brand-forest', 'text-white', 'shadow-md');
+        activeBtn.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Interactive internal link selector from Top Categories section
+    function selectCategory(category) {
+      filterCourses(category);
+      const target = document.getElementById('courses-section');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // 3. District Real-time Search Filter
+    function filterDistricts() {
+      const input = document.getElementById('district-search-input').value.toLowerCase().trim();
+      const items = document.querySelectorAll('.district-item');
+
+      items.forEach(item => {
+        const name = item.getAttribute('data-name').toLowerCase();
+        if (name.includes(input)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // 4. Interactive Career Matching Funnel Controller
+    const funnelAnswers = {
+      interest: 'web',
+      experience: 'beginner',
+      mode: 'physical'
+    };
+
+    const courseRecommendations = {
+      web: {
+        title: "Full-Stack MERN & Next.js 16 Professional",
+        desc: "Master React 19, Next.js 16, Node.js, Express, MongoDB & Tailwind CSS with 12+ live client projects and 1-on-1 Upwork marketplace approval.",
+        badge: "Most In-Demand Remote Job Track",
+        outcome: "Outcome: Remote Full-Stack Dev ($1,500+/mo)",
+        oldPrice: "৳ 22,000",
+        newPrice: "৳ 14,000",
+        discount: "36% Scholarship Applied",
+        installment: "0% EMI: 3x ৳4,666/mo Available",
+        enrollTrack: "Full-Stack Web Development"
+      },
+      graphics: {
+        title: "Graphic Design, UI/UX & 3D Motion Masterclass",
+        desc: "Professional Figma UI/UX, product design, brand identity, 3D Blender modeling, CGI & commercial video editing with live showreel delivery.",
+        badge: "High Creative Remittance Track",
+        outcome: "Outcome: Figma Product Designer & 3D Artist ($1,200+/mo)",
+        oldPrice: "৳ 18,000",
+        newPrice: "৳ 12,000",
+        discount: "33% Scholarship Applied",
+        installment: "0% EMI: 3x ৳4,000/mo Available",
+        enrollTrack: "Graphic Design & UI/UX"
+      },
+      marketing: {
+        title: "Digital Marketing, Meta Ads & AI Growth Automation",
+        desc: "Data-driven Meta Ads, Google Ads, GA4 analytics, technical SEO audits, and AI prompt engineering for international clients.",
+        badge: "Fastest Path to Remote Freelance Income",
+        outcome: "Outcome: Meta/Google Ads Specialist & SEO Auditor ($1,000+/mo)",
+        oldPrice: "৳ 18,000",
+        newPrice: "৳ 11,000",
+        discount: "39% Scholarship Applied",
+        installment: "0% EMI: 2x ৳5,500/mo Available",
+        enrollTrack: "Digital Marketing & AI"
+      },
+      cyber: {
+        title: "Cyber Security, CCNA Routing & MikroTik Administration",
+        desc: "Industry-standard Cisco CCNA, MikroTik MTCNA, physical hardware labs, ethical hacking, and SOC threat intelligence defense.",
+        badge: "Corporate Enterprise IT & Security",
+        outcome: "Outcome: Network Administrator & SOC Analyst ($1,400+/mo)",
+        oldPrice: "৳ 22,000",
+        newPrice: "৳ 14,000",
+        discount: "36% Scholarship Applied",
+        installment: "0% EMI: 3x ৳4,666/mo Available",
+        enrollTrack: "Cyber Security & Networking"
+      },
+      cbta: {
+        title: "Competency-Based Training & Assessment (Govt. NSDA Level 3/4)",
+        desc: "National Skills Development Authority certified IT support & graphics assessment track for government and multinational corporate careers.",
+        badge: "Govt. Verified National Qualification",
+        outcome: "Outcome: Govt. & Multinational IT Employment Qualification",
+        oldPrice: "৳ 15,000",
+        newPrice: "৳ 8,500",
+        discount: "43% Scholarship Applied",
+        installment: "0% EMI: 2x ৳4,250/mo Available",
+        enrollTrack: "Competency-Based Training (NSDA)"
+      },
+      institute: {
+        title: "Institute Programs & AI Lead Generation Masterclass",
+        desc: "Cutting-edge AI prompt engineering, automated international lead generation pipelines & enterprise client acquisition workflows.",
+        badge: "Specialized Enterprise Program",
+        outcome: "Outcome: AI Automation & B2B Lead Gen Specialist ($1,500+/mo)",
+        oldPrice: "৳ 20,000",
+        newPrice: "৳ 12,500",
+        discount: "37% Scholarship Applied",
+        installment: "0% EMI: 2x ৳6,250/mo Available",
+        enrollTrack: "Institute Programs & AI"
+      }
+    };
+
+    function handleFunnelSelect(step, value) {
+      if (step === 1) {
+        funnelAnswers.interest = value;
+        goFunnelStep(2);
+      } else if (step === 2) {
+        funnelAnswers.experience = value;
+        goFunnelStep(3);
+      } else if (step === 3) {
+        funnelAnswers.mode = value;
+        showFunnelResult();
+      }
+    }
+
+    function goFunnelStep(step) {
+      document.querySelectorAll('.funnel-step').forEach(el => el.classList.add('hidden'));
+      const targetStep = document.getElementById('funnel-step-' + step);
+      if (targetStep) targetStep.classList.remove('hidden');
+
+      const stepLabel = document.getElementById('funnel-step-label');
+      const percentLabel = document.getElementById('funnel-percent-label');
+      const progressBar = document.getElementById('funnel-progress-bar');
+      const progressWrapper = document.getElementById('funnel-progress-wrapper');
+
+      if (progressWrapper) progressWrapper.classList.remove('hidden');
+
+      if (step === 1) {
+        if (stepLabel) stepLabel.textContent = 'Question 1 of 3';
+        if (percentLabel) percentLabel.textContent = '33% Completed';
+        if (progressBar) progressBar.style.width = '33%';
+      } else if (step === 2) {
+        if (stepLabel) stepLabel.textContent = 'Question 2 of 3';
+        if (percentLabel) percentLabel.textContent = '66% Completed';
+        if (progressBar) progressBar.style.width = '66%';
+      } else if (step === 3) {
+        if (stepLabel) stepLabel.textContent = 'Question 3 of 3';
+        if (percentLabel) percentLabel.textContent = '100% Ready';
+        if (progressBar) progressBar.style.width = '100%';
+      }
+      lucide.createIcons();
+    }
+
+    function showFunnelResult() {
+      document.querySelectorAll('.funnel-step').forEach(el => el.classList.add('hidden'));
+      const progressWrapper = document.getElementById('funnel-progress-wrapper');
+      if (progressWrapper) progressWrapper.classList.add('hidden');
+
+      const resultStep = document.getElementById('funnel-step-result');
+      if (resultStep) resultStep.classList.remove('hidden');
+
+      const course = courseRecommendations[funnelAnswers.interest] || courseRecommendations.web;
+
+      const titleEl = document.getElementById('result-course-title');
+      const descEl = document.getElementById('result-course-desc');
+      const badgeEl = document.getElementById('result-course-badge');
+      const outcomeEl = document.getElementById('result-outcome-text');
+      const oldPriceEl = document.getElementById('result-old-price');
+      const newPriceEl = document.getElementById('result-new-price');
+      const discountEl = document.getElementById('result-discount-badge');
+      const installmentEl = document.getElementById('result-installment-text');
+      const enrollBtn = document.getElementById('result-enroll-btn');
+
+      if (titleEl) titleEl.textContent = course.title;
+      if (descEl) descEl.textContent = course.desc;
+      if (badgeEl) badgeEl.textContent = course.badge;
+      if (outcomeEl) outcomeEl.textContent = course.outcome;
+      if (oldPriceEl) oldPriceEl.textContent = course.oldPrice;
+      if (newPriceEl) newPriceEl.textContent = course.newPrice;
+      if (discountEl) discountEl.textContent = course.discount;
+      if (installmentEl) installmentEl.textContent = course.installment;
+
+      if (enrollBtn) {
+        enrollBtn.onclick = function () {
+          openEnrollDrawer(course.enrollTrack);
+        };
+      }
+
+      lucide.createIcons();
+    }
+
+    function resetFunnel() {
+      goFunnelStep(1);
+    }
+
+    // 5. FAQ Accordion Toggle
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all other faqs
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // 6. Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // 7. Modals and Drawers Handlers
+    function openEnrollDrawer(courseName) {
+      document.getElementById('drawer-course-name').textContent = courseName || 'Reserve Your Seat';
+      document.getElementById('enroll-drawer').classList.remove('hidden');
+    }
+    function closeEnrollDrawer() {
+      document.getElementById('enroll-drawer').classList.add('hidden');
+    }
+
+    // SYLLABUS DATA DICTIONARY (MATCHING SCREENSHOT 1 & ALL 6 COURSES)
+    const courseSyllabusData = {
+      'fullstack': {
+        categoryTag: 'WEB & SOFTWARE DEV · CAMPUS & ONLINE',
+        title: 'Full-Stack MERN & Next.js 16 Professional',
+        desc: 'Master React 19, Next.js 16, Node.js, Express, MongoDB, Tailwind CSS, and production REST APIs with live client projects and international freelance placement.',
+        duration: '4 Months (48 Classes)',
+        projects: '12 Production Projects',
+        rating: '4.9 (1,420 reviews)',
+        modules: [
+          'Modern JavaScript ES6+, Asynchronous Programming & DOM Mastery',
+          'React 19 Core, Hooks, State Architecture & Component Patterns',
+          'Next.js 16 App Router, Server Components & SEO Architecture',
+          'Backend Engineering: Node.js, Express & RESTful API Design',
+          'MongoDB Database Modeling, Aggregations & Authentication (JWT/NextAuth)',
+          'Fiverr Gig Ranking, Upwork Bidding & Remote Developer Job Prep'
+        ],
+        tools: ['React 19', 'Next.js 16', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'TypeScript', 'Git/GitHub', 'Postman'],
+        instructor: {
+          name: 'Abir Mahamud',
+          role: 'Sr. Full-Stack Trainer · Remote Team Lead',
+          exp: '★ 5+ Years Industry Experience',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/300x300-abir-mahamud-removebg-preview-1787993055.webp',
+          initials: 'AM'
+        },
+        price: '৳12,000',
+        originalPrice: '৳20,000',
+        discount: '40% OFF',
+        enrollCourseName: 'Full-Stack Web Development'
+      },
+      'marketing': {
+        categoryTag: 'DIGITAL MARKETING · CAMPUS & ONLINE',
+        title: 'Digital Marketing & AI Growth Automation',
+        desc: 'Master advanced SEO, Google Ads, Meta Ads Manager, GA4 Server-Side tracking, and AI content automation for international agency scaling.',
+        duration: '3.5 Months (42 Classes)',
+        projects: '8 Live Ad Campaigns',
+        rating: '4.9 (1,890 reviews)',
+        modules: [
+          'Comprehensive Market Research, Competitor Analysis & Funnel Strategy',
+          'High-Conversion Meta Ads (Facebook & Instagram) with CAPI Tracking',
+          'Google Search, Display & Performance Max Ad Campaigns',
+          'Technical & On-Page SEO, Keyword Clustering & Authority Link Building',
+          'Google Analytics 4 (GA4) Server-Side Tracking & Data Studio Dashboards',
+          'AI Automation: ChatGPT Prompts, Midjourney & Automated Copy Systems'
+        ],
+        tools: ['Meta Ads Manager', 'Google Ads', 'GA4 Analytics', 'Google Tag Manager', 'Ahrefs', 'Semrush', 'ChatGPT 4o', 'Canva Pro'],
+        instructor: {
+          name: 'MD SOHEL RANA',
+          role: 'Asst. Head of Trainer · Performance Marketer',
+          exp: '★ 9+ Years Industry Experience',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/gray-colour-bleser-removebg-preview-1787992624.webp',
+          initials: 'SR'
+        },
+        price: '৳10,000',
+        originalPrice: '৳18,000',
+        discount: '44% OFF',
+        enrollCourseName: 'Digital Marketing & AI'
+      },
+      'graphics': {
+        categoryTag: 'GRAPHICS & MULTIMEDIA · CAMPUS OFFLINE',
+        title: 'Advanced Graphic Design for Global Freelancing',
+        desc: 'Master Adobe Photoshop, Illustrator, InDesign, visual brand identities, packaging design, and client acquisition on Fiverr & 99designs.',
+        duration: '3.5 Months (42 Classes)',
+        projects: '15 Real Projects',
+        rating: '4.9 (540 reviews)',
+        modules: [
+          'Color Theory, Typography & Visual Composition',
+          'Adobe Illustrator Vector Graphics & Logo Mastery',
+          'Photoshop Photo Manipulation & Retouching',
+          'Corporate Identity Kits & Print Production',
+          'Social Media Ad Design & Carousel Campaigns',
+          'Fiverr Gig Ranking, Upwork Bidding & Client Communication'
+        ],
+        tools: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'Lightroom', 'Behance', 'Figma'],
+        instructor: {
+          name: 'Nishith Kumar Roy',
+          role: 'Sr. Trainer Graphic Design · Fiverr Pro Seller',
+          exp: '★ 10+ Years Industry Experience',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/508343460-4369326063295340-2188575041029001359-n-nishith-roy-removebg-preview-1787992993.webp',
+          initials: 'NR'
+        },
+        price: '৳10,500',
+        originalPrice: '৳16,000',
+        discount: '34% OFF',
+        enrollCourseName: 'Graphic Design & UI/UX'
+      },
+      'cyber': {
+        categoryTag: 'NETWORKING & CYBER · CAMPUS HARDWARE LAB',
+        title: 'Cyber Security, CCNA & MikroTik Administration',
+        desc: 'Hands-on practical training in Cisco hardware routing, Linux server administration, vulnerability assessment, and enterprise network defense.',
+        duration: '4.5 Months (52 Classes)',
+        projects: '10 Enterprise Network Setups',
+        rating: '4.8 (980 reviews)',
+        modules: [
+          'TCP/IP Architecture, Subnetting & Network Protocols Deep-Dive',
+          'Cisco CCNA Routing & Switching Configuration on Real Physical Gear',
+          'MikroTik RouterOS (MTCNA), Bandwidth Management & Queues',
+          'Linux Server Hardening, Firewall (iptables/UFW) & Secure SSH',
+          'Vulnerability Assessment, Penetration Testing & Wireshark Traffic Analysis',
+          'SOC Defensive Operations, Incident Handling & IT Job Interview Prep'
+        ],
+        tools: ['Cisco Packet Tracer', 'MikroTik Winbox', 'Kali Linux', 'Wireshark', 'Nmap', 'VMware', 'Putty'],
+        instructor: {
+          name: 'Md. Kabir Hossain',
+          role: 'Lead Network Engineer · MikroTik Certified',
+          exp: '★ 7+ Years Industry Experience',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/kabbbiir-removebg-preview-1787992836.webp',
+          initials: 'KH'
+        },
+        price: '৳14,000',
+        originalPrice: '৳22,000',
+        discount: '36% OFF',
+        enrollCourseName: 'Cyber Security & CCNA'
+      },
+      'video': {
+        categoryTag: 'VIDEO & 3D ANIMATION · CAMPUS & ONLINE',
+        title: 'Motion Graphics, 3D & Commercial Video Editing',
+        desc: 'Learn Premiere Pro, After Effects, and Blender 3D animation for YouTube creators, commercial advertisements, and high-paying overseas clients.',
+        duration: '3.5 Months (42 Classes)',
+        projects: '14 Video Productions',
+        rating: '4.9 (1,110 reviews)',
+        modules: [
+          'Timeline Mastery, Pacing & Storytelling in Premiere Pro',
+          'Color Grading with Lumetri, Audio Engineering & Sound Design',
+          'After Effects Motion Graphics, Kinetic Typography & Lower Thirds',
+          'VFX Compositing, Green Screen Removal & Visual Masking',
+          'Blender 3D Modeling, Texturing, Lighting & Product Animation',
+          'Video Showreel Assembly & International Creator Client Bidding'
+        ],
+        tools: ['Adobe Premiere Pro', 'After Effects', 'Blender 3D', 'Audition', 'DaVinci Resolve', 'Photoshop'],
+        instructor: {
+          name: 'Md. Likhon Mia',
+          role: 'Senior Motion Artist · Commercial Director',
+          exp: '★ 6+ Years Industry Experience',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/photo-likhon-ahamed-removebg-preview-1787992668.webp',
+          initials: 'LM'
+        },
+        price: '৳11,000',
+        originalPrice: '৳18,000',
+        discount: '39% OFF',
+        enrollCourseName: 'Motion Graphics & Video Editing'
+      },
+      'cbta': {
+        categoryTag: 'GOVT. CBT&A · NATIONAL SKILLS AUTHORITY',
+        title: 'Competency-Based Training & Assessment (NSDA Level 3/4)',
+        desc: 'Official National Skills Development Authority (NSDA) Level 3 & 4 qualification for IT Support and Graphic Design. Employer-recognized national credential.',
+        duration: '3 Months (360 Hours)',
+        projects: 'NSDA Benchmark Competencies',
+        rating: '5.0 (850 reviews)',
+        modules: [
+          'Work in Accordance with Workplace Environmental Health & Safety (OSH)',
+          'Maintain Computer Hardware, Operating Systems & Peripherals',
+          'Install, Configure & Troubleshoot Local Area Networks (LAN)',
+          'Perform Basic System Security, Data Backup & Restore Procedures',
+          'NSDA Standard Portfolio Demonstration & Evidence Documentation',
+          'Final Assessment Simulation with Certified NSDA External Assessors'
+        ],
+        tools: ['Windows / Linux OS', 'Networking Toolkits', 'Diagnostic Tools', 'NSDA CBT&A Modules', 'Hardware Benches'],
+        instructor: {
+          name: 'National Assessment Board',
+          role: 'Government Certified Lead Mentors · NSDA Level 4',
+          exp: '★ 12+ Years Institutional Excellence',
+          image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/300x300-abir-mahamud-removebg-preview-1787993055.webp',
+          initials: 'NS'
+        },
+        price: '৳8,500',
+        originalPrice: '৳15,000',
+        discount: '43% OFF',
+        enrollCourseName: 'Competency-Based Training (NSDA)'
+      }
+    };
+
+    let activeSyllabusCourse = 'Full-Stack Web Development';
+
+    function openSyllabusModal(titleOrKey) {
+      let key = 'graphics'; // default matching screenshot
+      const str = (titleOrKey || '').toLowerCase();
+      if (str.includes('web') || str.includes('mern') || str.includes('stack')) key = 'fullstack';
+      else if (str.includes('market') || str.includes('seo') || str.includes('growth')) key = 'marketing';
+      else if (str.includes('graph') || str.includes('ui/ux') || str.includes('design') || str.includes('figma')) key = 'graphics';
+      else if (str.includes('cyber') || str.includes('net') || str.includes('ccna') || str.includes('mikrotik')) key = 'cyber';
+      else if (str.includes('motion') || str.includes('video') || str.includes('3d') || str.includes('blender')) key = 'video';
+      else if (str.includes('cbta') || str.includes('nsda') || str.includes('competency')) key = 'cbta';
+
+      const data = courseSyllabusData[key] || courseSyllabusData['graphics'];
+      activeSyllabusCourse = data.enrollCourseName;
+
+      // Populate Header
+      document.getElementById('modal-category-tag').textContent = data.categoryTag;
+      document.getElementById('modal-course-title').textContent = data.title;
+      document.getElementById('modal-course-desc').textContent = data.desc;
+      document.getElementById('modal-duration').textContent = data.duration;
+      document.getElementById('modal-projects').textContent = data.projects;
+      document.getElementById('modal-rating').textContent = data.rating;
+
+      // Populate Modules List
+      const modulesContainer = document.getElementById('modal-modules-list');
+      modulesContainer.innerHTML = data.modules.map((mod, idx) => `
+        <div class="p-3 sm:p-3.5 rounded-xl bg-slate-50 border border-slate-200/90 hover:border-brand-emerald/40 hover:bg-white transition flex items-center gap-3.5 group">
+          <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-brand-subtle text-brand-forest font-black text-xs flex items-center justify-center shrink-0 border border-brand-forest/20 group-hover:bg-brand-forest group-hover:text-white transition">
+            ${idx + 1}
+          </span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-800">${mod}</span>
+        </div>
+      `).join('');
+
+      // Populate Tools Badges
+      const toolsContainer = document.getElementById('modal-tools-list');
+      toolsContainer.innerHTML = data.tools.map(tool => `
+        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-800 font-semibold text-xs border border-slate-200 hover:bg-brand-subtle hover:text-brand-forest transition">
+          ${tool}
+        </span>
+      `).join('');
+
+      // Populate Instructor
+      const imgEl = document.getElementById('modal-instructor-img');
+      const initialsEl = document.getElementById('modal-instructor-initials');
+      if (data.instructor.image) {
+        imgEl.src = data.instructor.image;
+        imgEl.style.display = 'block';
+        initialsEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        initialsEl.textContent = data.instructor.initials || 'TR';
+        initialsEl.style.display = 'flex';
+      }
+      document.getElementById('modal-instructor-name').textContent = 'Instructor: ' + data.instructor.name;
+      document.getElementById('modal-instructor-role').textContent = data.instructor.role;
+      document.getElementById('modal-instructor-exp-text').textContent = data.instructor.exp;
+
+      // Populate Pricing
+      document.getElementById('modal-price').textContent = data.price;
+      document.getElementById('modal-original-price').textContent = data.originalPrice;
+      document.getElementById('modal-discount').textContent = data.discount;
+
+      // Show Modal
+      document.getElementById('syllabus-modal').classList.remove('hidden');
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function closeSyllabusModal() {
+      document.getElementById('syllabus-modal').classList.add('hidden');
+    }
+
+    function enrollFromSyllabus() {
+      closeSyllabusModal();
+      openEnrollDrawer(activeSyllabusCourse || 'Course Enrollment');
+    }
+
+    function openSeminarModal() {
+      document.getElementById('seminar-modal').classList.remove('hidden');
+    }
+    function closeSeminarModal() {
+      document.getElementById('seminar-modal').classList.add('hidden');
+    }
+
+    function openDistrictModal() {
+      document.getElementById('district-modal').classList.remove('hidden');
+    }
+    function closeDistrictModal() {
+      document.getElementById('district-modal').classList.add('hidden');
+    }
+
+    function openVideoModal() {
+      const iframe = document.getElementById('youtube-iframe');
+      iframe.src = "https://www.youtube.com/embed/TGkfyzeaKBs?autoplay=1";
+      document.getElementById('video-modal').classList.remove('hidden');
+    }
+    function closeVideoModal() {
+      const iframe = document.getElementById('youtube-iframe');
+      iframe.src = "";
+      document.getElementById('video-modal').classList.add('hidden');
+    }
+
+    // Form submission simulations with user confirmation
+    function handleEnrollSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your scholarship seat application has been reserved. Our central admissions coordinator will contact you via WhatsApp shortly with batch verification details.');
+      closeEnrollDrawer();
+    }
+
+    function handleSeminarSubmit(e) {
+      e.preventDefault();
+      alert('Registration successful! The Zoom access link and Free Career Roadmap PDF have been dispatched to your mobile number.');
+      closeSeminarModal();
+    }
+
+    // =========================================================================
+    // TRAINER PROFILE & FACULTY DIRECTORY SYSTEM
+    // =========================================================================
+    const trainersData = {
+      '18766': {
+        id: '18766',
+        name: 'MD SOHEL RANA',
+        category: 'marketing',
+        designation: 'Assistant Head of Trainer',
+        dept: 'Digital Marketing & Growth',
+        experience: '9+ Years Industry Exp',
+        rating: '4.9 (1,890 Students)',
+        specialty: 'SEO, PPC & Performance Marketing',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/gray-colour-bleser-removebg-preview-1787992624.webp',
+        bio: 'Strategic Digital Marketing Specialist expert in driving brand growth through data-backed SEO, Google Search Console, Meta CAPI, and high-ROI multi-channel paid acquisition. Has led 150+ successful commercial marketing campaigns for North American and European businesses.',
+        skills: ['Advanced SEO', 'Google Ads', 'Meta Ads Manager', 'GA4 Server-Side', 'Technical Audits', 'Conversion ROI'],
+        courses: ['Digital Marketing & AI Growth Automation', 'Corporate Performance Marketing'],
+        achievements: ['Fiverr Top-Rated Plus Seller', 'Managed $500K+ Ad Spend', 'Certified Google Partner']
+      },
+      '18825': {
+        id: '18825',
+        name: 'Dewan Nahin Raza',
+        category: 'marketing',
+        designation: 'Sr. Trainer (Digital Marketing)',
+        dept: 'Conversion & Growth Strategy',
+        experience: '6+ Years Industry Exp',
+        rating: '4.8 (1,450 Students)',
+        specialty: 'Conversion Rate Optimization (CRO)',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/unnamed-dewan-nahin-raza-removebg-preview-1787993175.webp',
+        bio: 'Data-driven Digital Marketing professional focused on scaling brand reach and sales conversion through innovative multi-channel funnel strategies, email automation, and social media audience segmentation.',
+        skills: ['Conversion Rate Optimization', 'Sales Funnels', 'Meta Ads', 'Email Marketing', 'Audience Analytics'],
+        courses: ['Digital Marketing & AI Growth Automation', 'E-Commerce Growth Masterclass'],
+        achievements: ['Scaled 30+ DTC Brands', 'Upwork Top-Rated Specialist', 'HubSpot Inbound Certified']
+      },
+      '18724': {
+        id: '18724',
+        name: 'Anoy Chandra Pal',
+        category: 'marketing',
+        designation: 'Sr. Trainer (Digital Marketing & AI)',
+        dept: 'AI Automation & Paid Media',
+        experience: '8+ Years Industry Exp',
+        rating: '4.9 (1,620 Students)',
+        specialty: 'AI Marketing & Programmatic Ads',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/anoy-anoy-chandra-pal-removebg-preview-1787992792.webp',
+        bio: 'Dynamic specialist in AI automation workflows, high-ROI paid media algorithms, ChatGPT prompt engineering, and enterprise digital marketing solutions. Pioneer of automated lead nurture pipelines in Bangladesh.',
+        skills: ['AI Automation', 'ChatGPT & Midjourney', 'Meta CAPI', 'Programmatic Advertising', 'Workflow Automation'],
+        courses: ['Digital Marketing & AI Growth Automation', 'AI Tools for Creators & Marketers'],
+        achievements: ['Over 1,600 Graduates Placed', 'AI Workshop Keynote Speaker', 'Meta Certified Media Buyer']
+      },
+      '18762': {
+        id: '18762',
+        name: 'Nishith Kumar Roy',
+        category: 'graphics',
+        designation: 'Sr. Trainer (Graphic Design & UI/UX)',
+        dept: 'Visual Arts & Brand Systems',
+        experience: '10+ Years Industry Exp',
+        rating: '4.9 (2,100 Students)',
+        specialty: 'Brand Identity & Figma UI/UX',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/508343460-4369326063295340-2188575041029001359-n-nishith-roy-removebg-preview-1787992993.webp',
+        bio: 'Creative Graphic Design expert specializing in high-impact visual storytelling, packaging, commercial brand identities, and mobile application UI/UX in Figma. Mentored over 2,000 professional designers globally.',
+        skills: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma UI/UX', 'Brand Architecture', 'Packaging & Print', 'InDesign'],
+        courses: ['Graphic Design & UI/UX Masterclass', 'Advanced Visual Branding'],
+        achievements: ['99designs Top-Level Contest Winner', 'Behance Curated Portfolio', '10+ Years Agency Leadership']
+      },
+      '18670': {
+        id: '18670',
+        name: 'Md. Likhon Mia',
+        category: 'cyber',
+        designation: 'Trainer - Motion Graphics & Video',
+        dept: 'Video Editing & 3D Animation',
+        experience: '6+ Years Industry Exp',
+        rating: '4.9 (1,110 Students)',
+        specialty: 'Premiere Pro & After Effects VFX',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/photo-likhon-ahamed-removebg-preview-1787992668.webp',
+        bio: 'Senior Motion Artist and Commercial Director with over 6 years of industry experience creating high-impact motion graphics, YouTube commercial edits, and 3D product animations for international creators and brands.',
+        skills: ['Premiere Pro', 'After Effects', 'Blender 3D', 'Color Grading', 'Sound Design', 'DaVinci Resolve'],
+        courses: ['Motion Graphics, 3D & Commercial Video Editing'],
+        achievements: ['14+ Commercial Showreels', 'Produced 300+ YouTube Edits', 'Upwork Video Specialist']
+      },
+      '18666': {
+        id: '18666',
+        name: 'Abir Mahamud',
+        category: 'web',
+        designation: 'Trainer - Web & Software Development',
+        dept: 'Full-Stack Web Engineering',
+        experience: '5+ Years Industry Exp',
+        rating: '4.9 (1,420 Students)',
+        specialty: 'React, Next.js & Node.js',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/1733649646580-abir-mahamud-removebg-preview-1787992694.webp',
+        bio: 'Full-Stack Software Engineer building scalable enterprise web applications. Specializes in modern Next.js 16, React 19, Node.js, Express, and MongoDB architectures with clean component design and API security.',
+        skills: ['React 19', 'Next.js 16', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'REST & GraphQL'],
+        courses: ['Full-Stack MERN & Next.js 16 Professional'],
+        achievements: ['12+ Enterprise Projects Deployed', 'Upwork Top-Rated Dev', 'Open Source Contributor']
+      },
+      '18662': {
+        id: '18662',
+        name: 'Md. Kabir Hossain',
+        category: 'cyber',
+        designation: 'Trainer - Cyber Security & Networking',
+        dept: 'Network Infrastructure & Security',
+        experience: '7+ Years Industry Exp',
+        rating: '4.8 (980 Students)',
+        specialty: 'CCNA, MikroTik & Cyber Defense',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/photo-kabir-removebg-preview-1787992817.webp',
+        bio: 'Certified Network Security Engineer specializing in enterprise Cisco routing, MikroTik ISP infrastructure, Linux server hardening, and vulnerability penetration assessment for institutional clients.',
+        skills: ['CCNA Routing & Switching', 'MikroTik MTCNA', 'Linux Hardening', 'Firewall Management', 'Penetration Testing'],
+        courses: ['Cyber Security, CCNA & MikroTik Administration'],
+        achievements: ['Cisco CCNA Certified', 'MikroTik Certified Engineer', '7+ Years ISP Consulting']
+      },
+      '18672': {
+        id: '18672',
+        name: 'Md. Solaiman Sheikh Nishan',
+        category: 'marketing',
+        designation: 'Sr. Trainer (Digital Marketing)',
+        dept: 'Social Media & Brand Growth',
+        experience: '4+ Years Industry Exp',
+        rating: '4.8 (1,150 Students)',
+        specialty: 'Social Media Marketing & Video Ads',
+        image: 'https://erp-back.e-laeltd.com/storage/images/users/profile/photo-solaiman-sheikh-nishan-removebg-preview-1787992850.webp',
+        bio: 'Hands-on Social Media Marketer with proven records managing high-volume viral campaigns, TikTok and Meta video ads, and organic community growth across international e-commerce stores.',
+        skills: ['Meta Video Ads', 'TikTok Marketing', 'Viral Copywriting', 'Influencer Outreach', 'Shopify Growth'],
+        courses: ['Digital Marketing & AI Growth Automation'],
+        achievements: ['Managed 50+ E-Commerce Stores', 'Top Rated Freelancer', '1,100+ Students Mentored']
+      }
+    };
+
+    let currentTrainerId = '18766';
+    let currentTrainerFilter = 'all';
+
+    function openTrainerModal(id) {
+      const trainer = trainersData[id] || trainersData['18766'];
+      currentTrainerId = id;
+
+      const fullLink = document.getElementById('trainer-modal-fullpage-link');
+      if (fullLink) fullLink.href = 'trainer-profile.html?id=' + id;
+      document.getElementById('trainer-modal-img').src = trainer.image;
+      document.getElementById('trainer-modal-img').alt = trainer.name;
+      document.getElementById('trainer-modal-dept').textContent = trainer.dept;
+      document.getElementById('trainer-modal-name').textContent = trainer.name;
+      document.getElementById('trainer-modal-designation').textContent = trainer.designation;
+      document.getElementById('trainer-modal-exp').textContent = trainer.experience;
+      document.getElementById('trainer-modal-rating').innerHTML = `<i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> ${trainer.rating}`;
+      document.getElementById('trainer-modal-bio').textContent = trainer.bio;
+
+      // Populate Skills
+      const skillsContainer = document.getElementById('trainer-modal-skills');
+      skillsContainer.innerHTML = '';
+      trainer.skills.forEach(skill => {
+        const badge = document.createElement('span');
+        badge.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60';
+        badge.textContent = skill;
+        skillsContainer.appendChild(badge);
+      });
+
+      // Populate Courses
+      const coursesContainer = document.getElementById('trainer-modal-courses');
+      coursesContainer.innerHTML = '';
+      trainer.courses.forEach(c => {
+        const item = document.createElement('div');
+        item.className = 'flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:bg-emerald-50/50 hover:border-emerald-200 transition';
+        item.innerHTML = `
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+            <span class="font-bold text-slate-800 text-xs">${c}</span>
+          </div>
+          <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded">Admission Open</span>
+        `;
+        coursesContainer.appendChild(item);
+      });
+
+      // Populate Achievements
+      const achContainer = document.getElementById('trainer-modal-achievements');
+      achContainer.innerHTML = '';
+      trainer.achievements.forEach(ach => {
+        const li = document.createElement('li');
+        li.className = 'flex items-center gap-2';
+        li.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-brand-emerald shrink-0"></i> <span>${ach}</span>`;
+        achContainer.appendChild(li);
+      });
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+
+      const modal = document.getElementById('trainer-profile-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTrainerModal() {
+      const modal = document.getElementById('trainer-profile-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function enrollWithMentor() {
+      closeTrainerModal();
+      const trainer = trainersData[currentTrainerId];
+      if (trainer && trainer.courses && trainer.courses.length > 0) {
+        openEnrollModal(trainer.courses[0]);
+      } else {
+        openEnrollModal('Full-Stack Web Development');
+      }
+    }
+
+    function openAllTrainersModal() {
+      renderTrainersDirectory();
+      const modal = document.getElementById('all-trainers-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    function closeAllTrainersModal() {
+      const modal = document.getElementById('all-trainers-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function setTrainerFilter(cat) {
+      currentTrainerFilter = cat;
+      document.querySelectorAll('.trainer-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === cat) {
+          btn.className = 'trainer-filter-btn px-3 py-2 rounded-xl font-bold bg-brand-emerald text-white transition whitespace-nowrap cursor-pointer';
+        } else {
+          btn.className = 'trainer-filter-btn px-3 py-2 rounded-xl font-bold bg-white/10 text-white/80 hover:bg-white/20 transition whitespace-nowrap cursor-pointer';
+        }
+      });
+      renderTrainersDirectory();
+    }
+
+    function filterTrainersDirectory() {
+      renderTrainersDirectory();
+    }
+
+    function renderTrainersDirectory() {
+      const container = document.getElementById('trainers-directory-grid');
+      if (!container) return;
+      const searchVal = (document.getElementById('trainer-search-input')?.value || '').toLowerCase().trim();
+
+      const list = Object.values(trainersData).filter(t => {
+        const matchesCategory = currentTrainerFilter === 'all' || t.category === currentTrainerFilter;
+        const matchesSearch = !searchVal ||
+          t.name.toLowerCase().includes(searchVal) ||
+          t.designation.toLowerCase().includes(searchVal) ||
+          t.specialty.toLowerCase().includes(searchVal) ||
+          t.skills.some(s => s.toLowerCase().includes(searchVal));
+        return matchesCategory && matchesSearch;
+      });
+
+      container.innerHTML = '';
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500">
+            <i data-lucide="user-x" class="w-8 h-8 mx-auto text-slate-400 mb-2"></i>
+            <p class="font-bold">No trainers match your search.</p>
+            <p class="text-xs mt-1">Try another keyword or select "All".</p>
+          </div>
+        `;
+      } else {
+        list.forEach(t => {
+          const card = document.createElement('div');
+          card.className = 'bg-white rounded-2xl p-4 border border-slate-200/90 hover:border-brand-emerald/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group';
+          card.innerHTML = `
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden bg-gradient-to-b from-[#F3F7F5] via-[#E8F3ED] to-[#D8EADB] border border-emerald-100/70 mb-3 shadow-inner">
+                <span class="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-white/90 text-emerald-800 shadow-sm border border-emerald-200/60 z-10">
+                  ${t.experience}
+                </span>
+                <img src="${t.image}" alt="${t.name}" class="w-full h-full object-contain object-bottom pt-2 group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <h4 class="text-sm font-extrabold text-slate-900 leading-snug group-hover:text-brand-forest transition-colors">${t.name}</h4>
+              <p class="text-[11px] font-bold text-brand-emerald mt-0.5 line-clamp-1">${t.designation}</p>
+              <div class="mt-2 text-[10px] text-slate-500 line-clamp-1">
+                <span class="text-slate-400">Spec:</span> <strong class="text-slate-700">${t.specialty}</strong>
+              </div>
+            </div>
+            <a href="trainer-profile.html?id=${t.id}" class="mt-3 w-full py-2 px-2.5 rounded-xl bg-slate-50 hover:bg-brand-emerald text-slate-700 hover:text-white border border-slate-200/80 hover:border-brand-emerald text-[11px] font-bold transition-all flex items-center justify-center gap-1 shadow-sm">
+              <span>View Full Authority Profile</span>
+              <i data-lucide="arrow-right" class="w-3 h-3"></i>
+            </a>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+  
+    // =========================================================================
+    // SUCCESS VIDEO MODAL HANDLER
+    // =========================================================================
+    function openSuccessVideoModal(url) {
+      const modal = document.getElementById('success-video-modal');
+      const frame = document.getElementById('success-video-frame');
+      if (modal && frame) {
+        frame.src = url;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+
+    function closeSuccessVideoModal() {
+      const modal = document.getElementById('success-video-modal');
+      const frame = document.getElementById('success-video-frame');
+      if (modal && frame) {
+        frame.src = '';
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+  </script>
+  <!-- ========================================================================= -->
+  <!-- SUCCESS STORY VIDEO POPUP MODAL                                           -->
+  <!-- ========================================================================= -->
+  <div id="success-video-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md hidden transition-opacity duration-300"
+    onclick="if(event.target === this) closeSuccessVideoModal()">
+    <div class="bg-slate-900 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl border border-white/20 relative">
+      <button onclick="closeSuccessVideoModal()"
+        class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/70 hover:bg-rose-600 text-white flex items-center justify-center transition cursor-pointer shadow-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="relative aspect-video w-full bg-black">
+        <iframe id="success-video-frame" src="" class="w-full h-full" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,537 @@
+<!-- ========================================================================= -->
+  <!-- 10b. STUDENT REVIEWS & FEEDBACK (SMOOTH MOVING SLIDER & TRUST BANNER)     -->
+  <!-- ========================================================================= -->
+  <section id="student-feedback-section" class="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200 relative overflow-hidden">
+    
+    <!-- Moving Ambient Background Animations -->
+    <style>
+      @keyframes feedbackGlow1 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+        50% { transform: translate(60px, -40px) scale(1.15); opacity: 0.45; }
+      }
+      @keyframes feedbackGlow2 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+        50% { transform: translate(-50px, 35px) scale(1.18); opacity: 0.4; }
+      }
+      .feedback-orb-1 {
+        animation: feedbackGlow1 16s ease-in-out infinite;
+      }
+      .feedback-orb-2 {
+        animation: feedbackGlow2 20s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Floating Background Orbs -->
+    <div class="feedback-orb-1 absolute top-10 left-10 w-[480px] h-[480px] bg-emerald-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="feedback-orb-2 absolute bottom-10 right-10 w-[520px] h-[520px] bg-teal-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header (Clean, bold without eyebrow pill) -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            Student Feedback &amp; Reviews
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+            Real stories of career transformation, international client contracts, and marketplace success from students across all 64 district branches.
+          </p>
+        </div>
+
+        <!-- Manual Navigation Controls & Active Motion Badge -->
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="feedback-slider-prev" aria-label="Previous Review"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button id="feedback-slider-next" aria-label="Next Review"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Rating & Verified Score Summary Banner (Exact concept from Trainer Page) -->
+      <div class="bg-gradient-to-r from-emerald-50/70 via-white to-teal-50/60 rounded-3xl p-6 sm:p-7 border border-emerald-200/80 shadow-xs mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Left: Star & Total Count -->
+        <div class="flex items-center gap-5 text-center md:text-left">
+          <div class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight flex items-center gap-1.5">
+            <span>4.9</span>
+            <span class="text-amber-400 text-3xl sm:text-4xl">★</span>
+          </div>
+          <div class="border-l border-slate-200 pl-5">
+            <div class="flex items-center justify-center md:justify-start gap-1 text-amber-400 mb-1">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-slate-800">
+              Overall Student Rating · <span class="text-brand-forest font-black">14,800+ Verified Reviews</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-0.5">Verified across 64 physical district campuses &amp; live online interactive cohorts.</p>
+          </div>
+        </div>
+
+        <!-- Right: Trust Metrics -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 text-xs">
+          <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-800 font-bold shadow-2xs flex items-center gap-2">
+            <i data-lucide="thumbs-up" class="w-4 h-4 text-emerald-600"></i>
+            <span>98% Positive Feedback</span>
+          </span>
+          <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-800 font-bold shadow-2xs flex items-center gap-2">
+            <i data-lucide="briefcase" class="w-4 h-4 text-blue-600"></i>
+            <span>89% Freelance &amp; Job Success</span>
+          </span>
+          <span class="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-800 font-bold shadow-2xs flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-forest"></i>
+            <span>64 District Presence</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Continuous Smooth Moving Slider Track -->
+      <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Edge Fades -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-14 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-14 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Scrollable Track -->
+        <div id="feedback-slider-scroll"
+          class="flex gap-5 sm:gap-6 overflow-x-auto py-4 select-none cursor-grab active:cursor-grabbing"
+          style="scrollbar-width: none; -ms-overflow-style: none;">
+
+          <!-- CARD 1: Farhan Tanvir -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <!-- Author Header -->
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-emerald-100 border-2 border-emerald-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="ফারহান তানভীর" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      ফারহান তানভীর
+                    </h4>
+                    <p class="text-xs text-slate-500">MERN Stack · Dhaka Central Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <!-- Rating Stars -->
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <!-- Review Text -->
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “নন-সিএসই ব্যাকগ্রাউন্ড থেকে এসে এতো সহজে ওয়েব ডেভেলপমেন্ট শিখবো ভাবিনি। মেন্টরদের লাইভ প্রজেক্ট সাপোর্ট ও গিটহাব রিভিউ আমাকে ৩য় মাসেই আপওয়ার্কে $২,১০০ আয়ের সুযোগ করে দিয়েছে।”
+              </p>
+            </div>
+
+            <!-- Achievement Badge Footer -->
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Upwork Top Rated · $2,100/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- CARD 2: সাদিয়া আফরোজ -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-rose-100 border-2 border-rose-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80" alt="সাদিয়া আফরোজ" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      সাদিয়া আফরোজ
+                    </h4>
+                    <p class="text-xs text-slate-500">Digital Marketing · Bogura Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “বগুড়া ক্যাম্পাসের বাস্তবমুখী কম্পিউটার ল্যাব ও মেন্টরদের ২৪/৭ সাপোর্ট অতুলনীয়। এখন আমি লোকাল ই-কমার্স এবং ইউএসএ ক্লায়েন্টের সোশ্যাল অ্যাডস সম্পূর্ণ নিজে ম্যানেজ করছি।”
+              </p>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Remote Agency Lead · $1,600/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- CARD 3: মাহমুদুল হাসান -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-blue-100 border-2 border-blue-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="মাহমুদুল হাসান" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      মাহমুদুল হাসান
+                    </h4>
+                    <p class="text-xs text-slate-500">Cyber Security · Chattogram Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “থিওরি নয়, একদম রিয়েল ভালনারেবিলিটি ল্যাবে কাজ করানো হয়েছে। কোর্স শেষ হওয়ার আগেই বাগ ক্রাউড ও হ্যাকারওয়ান প্ল্যাটফর্মে আমি $১,৯৫০ বাউন্টি অর্জন করতে সক্ষম হয়েছি।”
+              </p>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Bounty Hall of Fame · $1,950
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- CARD 4: নিশাত তাসনিম -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-purple-100 border-2 border-purple-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80" alt="নিশাত তাসনিম" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      নিশাত তাসনিম
+                    </h4>
+                    <p class="text-xs text-slate-500">UI/UX &amp; Product Design · Sylhet</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “Figma অটো লেআউট ও ডিজাইন সিস্টেম আর্কিটেকচারের ক্লাসগুলো চোখ খুলে দিয়েছে। কোর্স চলাকালীন তৈরি করা কেস স্টাডি দিয়েই আমি Fiverr-এ সরাসরি ৫-তারকা রেটিং পেয়েছি।”
+              </p>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="figma" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Top Rated Fiverr · $1,800/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- CARD 5: রাকিবুল ইসলাম -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-amber-100 border-2 border-amber-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80" alt="রাকিবুল ইসলাম" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      রাকিবুল ইসলাম
+                    </h4>
+                    <p class="text-xs text-slate-500">Graphic Design · Khulna Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “খুলনা ক্যাম্পাস থেকে লাইভ প্রজেক্টে কাজ করার অভিজ্ঞতা দুর্দান্ত। কোর্স শেষেও ক্যারিয়ার সাপোর্ট উইং আমাকে ক্লায়েন্ট ইন্টারভিউ ক্র্যাক করতে সার্বক্ষণিক মেন্টরিং দিয়েছে।”
+              </p>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Level 2 Seller · $1,750/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- CARD 6: অনন্যা চৌধুরী -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-teal-100 border-2 border-teal-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80" alt="অনন্যা চৌধুরী" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      অনন্যা চৌধুরী
+                    </h4>
+                    <p class="text-xs text-slate-500">Python &amp; AI · Cumilla Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “প্রতিটি মডিউলের পর রিয়েল-ওয়ার্ল্ড অ্যাসাইনমেন্ট দিতে হতো, যা আমার আত্মবিশ্বাস বহুগুণ বাড়িয়ে দেয়। বর্তমানে সফটওয়্যার কোম্পানিতে সফটওয়্যার ডেভেলপার হিসেবে ক্যারিয়ার শুরু করেছি।”
+              </p>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="briefcase" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Software Engineer · Tech Agency
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- ==================== DUPLICATE SET FOR INFINITE SEAMLESS LOOP ==================== -->
+          <!-- DUPLICATE CARD 1 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-emerald-100 border-2 border-emerald-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="ফারহান তানভীর" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      ফারহান তানভীর
+                    </h4>
+                    <p class="text-xs text-slate-500">MERN Stack · Dhaka Central Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “নন-সিএসই ব্যাকগ্রাউন্ড থেকে এসে এতো সহজে ওয়েব ডেভেলপমেন্ট শিখবো ভাবিনি। মেন্টরদের লাইভ প্রজেক্ট সাপোর্ট ও গিটহাব রিভিউ আমাকে ৩য় মাসেই আপওয়ার্কে $২,১০০ আয়ের সুযোগ করে দিয়েছে।”
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Upwork Top Rated · $2,100/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- DUPLICATE CARD 2 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-rose-100 border-2 border-rose-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80" alt="সাদিয়া আফরোজ" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      সাদিয়া আফরোজ
+                    </h4>
+                    <p class="text-xs text-slate-500">Digital Marketing · Bogura Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “বগুড়া ক্যাম্পাসের বাস্তবমুখী কম্পিউটার ল্যাব ও মেন্টরদের ২৪/৭ সাপোর্ট অতুলনীয়। এখন আমি লোকাল ই-কমার্স এবং ইউএসএ ক্লায়েন্টের সোশ্যাল অ্যাডস সম্পূর্ণ নিজে ম্যানেজ করছি।”
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Remote Agency Lead · $1,600/mo
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+          <!-- DUPLICATE CARD 3 -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-500/50 hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden bg-blue-100 border-2 border-blue-500/20 shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80" alt="মাহমুদুল হাসান" class="w-full h-full object-cover">
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                      মাহমুদুল হাসান
+                    </h4>
+                    <p class="text-xs text-slate-500">Cyber Security · Chattogram Campus</p>
+                  </div>
+                </div>
+                <i data-lucide="quote" class="w-6 h-6 text-slate-200 group-hover:text-emerald-400 group-hover:scale-110 transition-all shrink-0"></i>
+              </div>
+              <div class="flex items-center gap-1 text-amber-400 mb-3 text-xs">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                <span class="text-[11px] font-bold text-slate-500 ml-1.5">5.0 / 5.0</span>
+              </div>
+              <p class="text-slate-700 text-sm leading-relaxed sm:leading-[1.7] line-clamp-4">
+                “থিওরি নয়, একদম রিয়েল ভালনারেবিলিটি ল্যাবে কাজ করানো হয়েছে। কোর্স শেষ হওয়ার আগেই বাগ ক্রাউড ও হ্যাকারওয়ান প্ল্যাটফর্মে আমি $১,৯৫০ বাউন্টি অর্জন করতে সক্ষম হয়েছি।”
+              </p>
+            </div>
+            <div class="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200/60">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+                Bounty Hall of Fame · $1,950
+              </span>
+              <span class="text-[11px] font-medium text-slate-400">Verified Alumni</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA: View All Reviews -->
+      <div class="mt-12 text-center">
+        <a href="https://e-laeltd.com/reviews" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-900 font-extrabold text-sm sm:text-base border border-slate-300 hover:border-emerald-600 shadow-xs hover:shadow-lg transition-all duration-300 group cursor-pointer">
+          <i data-lucide="message-square" class="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform"></i>
+          <span>সকল শিক্ষার্থীর রিভিউ ও ফিডব্যাক দেখুন</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Script for Smooth Auto-Glide & Controls -->
+    <script>
+      (function() {
+        const slider = document.getElementById('feedback-slider-scroll');
+        const prevBtn = document.getElementById('feedback-slider-prev');
+        const nextBtn = document.getElementById('feedback-slider-next');
+        if (!slider) return;
+
+        let isPaused = false;
+        let animationFrameId;
+        const glideSpeed = 0.7; // Ultra smooth continuous gliding
+
+        function autoGlideReviews() {
+          if (!isPaused && slider) {
+            slider.scrollLeft += glideSpeed;
+            if (slider.scrollLeft >= (slider.scrollWidth / 2)) {
+              slider.scrollLeft = 0;
+            }
+          }
+          animationFrameId = requestAnimationFrame(autoGlideReviews);
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        animationFrameId = requestAnimationFrame(autoGlideReviews);
+
+        // Hover & Touch to Pause
+        slider.addEventListener('mouseenter', () => { isPaused = true; });
+        slider.addEventListener('mouseleave', () => { isPaused = false; });
+        slider.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+        slider.addEventListener('touchend', () => { isPaused = false; });
+
+        // Prev & Next Buttons
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: -420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: 420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+      })();
+    </script>
+  </section>

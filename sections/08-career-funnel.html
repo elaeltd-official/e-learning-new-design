@@ -1,0 +1,192 @@
+  <!-- ========================================================================= -->
+  <!-- 8. SIMPLE, COMPACT & SLEEK CAREER COURSE MATCH FUNNEL                       -->
+  <!-- ========================================================================= -->
+  <section id="career-funnel-section" class="py-10 sm:py-12 bg-[#F8FAF9]">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Compact Funnel Box -->
+      <div class="bg-white rounded-2xl p-5 sm:p-7 border border-slate-200 shadow-sm relative">
+
+        <!-- Simple Section Header (Short Height) -->
+        <div class="text-center max-w-xl mx-auto mb-5">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+            Not Sure Which Course is Right for You?
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Answer 3 simple questions to find your matched program, discount &amp; 0% installment options.
+          </p>
+        </div>
+
+        <!-- Sleek Mini Progress Bar -->
+        <div id="funnel-progress-wrapper" class="mb-5 max-w-md mx-auto">
+          <div class="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1.5">
+            <span id="funnel-step-label">Step 1 of 3</span>
+            <span id="funnel-percent-label" class="text-brand-forest">33% Completed</span>
+          </div>
+          <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+            <div id="funnel-progress-bar" class="bg-brand-forest h-full w-1/3 transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <!-- ================= STEP 1: TRACK (CLEAN BUTTONS, NO ICONS, NO DESCRIPTIONS) ================= -->
+        <div id="funnel-step-1" class="funnel-step">
+          <div class="text-center mb-4">
+            <h3 class="text-sm sm:text-base font-bold text-slate-800">1. Select your preferred career track:</h3>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+            <button onclick="handleFunnelSelect(1, 'web')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Web &amp; Software Dev
+            </button>
+
+            <button onclick="handleFunnelSelect(1, 'graphics')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Graphics &amp; UI/UX
+            </button>
+
+            <button onclick="handleFunnelSelect(1, 'marketing')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Digital Marketing &amp; AI
+            </button>
+
+            <button onclick="handleFunnelSelect(1, 'cyber')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Cyber Security &amp; CCNA
+            </button>
+
+            <button onclick="handleFunnelSelect(1, 'cbta')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Govt. CBT&amp;A (NSDA)
+            </button>
+
+            <button onclick="handleFunnelSelect(1, 'institute')"
+              class="py-3 px-3 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Institute Program &amp; AI
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= STEP 2: EXPERIENCE (CLEAN BUTTONS) ================= -->
+        <div id="funnel-step-2" class="funnel-step hidden">
+          <div class="text-center mb-4">
+            <h3 class="text-sm sm:text-base font-bold text-slate-800">2. Select your current skill level:</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+            <button onclick="handleFunnelSelect(2, 'beginner')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Complete Beginner (Starting from zero)
+            </button>
+
+            <button onclick="handleFunnelSelect(2, 'basic')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Basic Computer User
+            </button>
+
+            <button onclick="handleFunnelSelect(2, 'upskill')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Intermediate / Upskilling
+            </button>
+          </div>
+
+          <div class="pt-3 text-center">
+            <button onclick="goFunnelStep(1)"
+              class="text-xs font-semibold text-slate-400 hover:text-slate-600 transition">
+              &larr; Back to Previous Step
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= STEP 3: LEARNING FORMAT (CLEAN BUTTONS) ================= -->
+        <div id="funnel-step-3" class="funnel-step hidden">
+          <div class="text-center mb-4">
+            <h3 class="text-sm sm:text-base font-bold text-slate-800">3. Select your preferred study format:</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl mx-auto">
+            <button onclick="handleFunnelSelect(3, 'physical')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              District Campus (In-Person Lab)
+            </button>
+
+            <button onclick="handleFunnelSelect(3, 'online')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              Live Online Interactive Classes
+            </button>
+
+            <button onclick="handleFunnelSelect(3, 'emi')"
+              class="py-3.5 px-4 rounded-xl border border-slate-200 hover:border-brand-forest bg-white hover:bg-brand-subtle/50 text-center font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-forest transition">
+              0% Monthly Installment (EMI Plan)
+            </button>
+          </div>
+
+          <div class="pt-3 text-center">
+            <button onclick="goFunnelStep(2)"
+              class="text-xs font-semibold text-slate-400 hover:text-slate-600 transition">
+              &larr; Back to Previous Step
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= STEP 4: COMPACT RESULT BANNER ================= -->
+        <div id="funnel-step-result" class="funnel-step hidden">
+          <div
+            class="p-5 sm:p-6 rounded-2xl bg-brand-subtle/40 border border-brand-forest/20 flex flex-col md:flex-row items-center justify-between gap-5">
+
+            <!-- Result Left: Info -->
+            <div class="space-y-1.5 text-center md:text-left">
+              <span id="result-course-badge"
+                class="inline-block px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-brand-forest text-white">
+                Matched Program
+              </span>
+              <h3 id="result-course-title" class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">
+                Full-Stack MERN &amp; Next.js 16 Professional
+              </h3>
+              <p id="result-course-desc" class="text-xs text-slate-600 max-w-xl">
+                Master React 19, Next.js 16, Node.js, Express, MongoDB with 1-on-1 marketplace account approval.
+              </p>
+              <div
+                class="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-xs text-slate-700 font-semibold pt-0.5">
+                <span id="result-installment-text" class="text-brand-forest font-bold">0% EMI: 3x ৳4,666/mo</span>
+                <span class="text-slate-300">•</span>
+                <span id="result-outcome-text">Remote Dev ($1,500+/mo)</span>
+                <span class="text-slate-300">•</span>
+                <span>64 District Lab Access</span>
+              </div>
+            </div>
+
+            <!-- Result Right: Price & CTA Actions -->
+            <div class="flex flex-col sm:flex-row md:flex-col items-center gap-3 shrink-0 text-center">
+              <div>
+                <span id="result-old-price" class="text-xs text-slate-400 line-through">৳ 22,000</span>
+                <span id="result-new-price" class="text-xl sm:text-2xl font-black text-brand-forest ml-1.5">৳
+                  14,000</span>
+                <div id="result-discount-badge" class="text-[10px] font-bold text-brand-emerald">36% Scholarship Applied
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <button id="result-enroll-btn" onclick="openEnrollDrawer('Full-Stack Web Development')"
+                  class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-brand-forest hover:bg-brand-dark transition shadow-sm whitespace-nowrap">
+                  Enroll Now
+                </button>
+                <button onclick="openEnrollDrawer('Career Advisor')"
+                  class="px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 transition whitespace-nowrap">
+                  Talk to Advisor
+                </button>
+                <button onclick="resetFunnel()" title="Retake Quiz"
+                  class="p-2.5 rounded-xl text-xs font-bold text-slate-500 bg-white hover:bg-slate-50 border border-slate-200 transition">
+                  <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+

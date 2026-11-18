@@ -1,0 +1,30 @@
+  <!-- ========================================================================= -->
+  <!-- 15. STICKY FLOATING QUICK-ENROLLMENT BOTTOM BAR                            -->
+  <!-- ========================================================================= -->
+  <div
+    class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 py-3 px-4 z-40 shadow-2xl flex items-center justify-between sm:justify-around text-xs">
+    <div class="flex items-center gap-3">
+      <span
+        class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-subtle text-brand-forest font-bold text-[11px]">
+        <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+        Govt. Subsidized Admissions Open
+      </span>
+      <span class="text-slate-700 font-semibold">
+        Next Batch: <strong>Batch 42 (Nov 2026)</strong> • 0% Installments Available
+      </span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <a href="https://wa.me/8801791111890" target="_blank"
+        class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 text-emerald-700 font-bold hover:bg-emerald-100 transition border border-emerald-200">
+        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+        <span>WhatsApp</span>
+      </a>
+      <button onclick="openEnrollDrawer('Sticky Bar')"
+        class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-forest to-brand-emerald text-white font-extrabold shadow-md hover:shadow-lg transition flex items-center gap-1.5">
+        <span>Quick Apply</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </button>
+    </div>
+  </div>
+

@@ -1,0 +1,427 @@
+  <!-- ========================================================================= -->
+  <!-- 6. INTERACTIVE 64-DISTRICT PHYSICAL CAMPUS LOCATOR (BRAND DIFFERENTIATOR)  -->
+  <!-- ========================================================================= -->
+  <section id="district-section" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Find Your District Physical Campus
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          You don't need to relocate to Dhaka. Every district in Bangladesh has an active e-LAE computer lab,
+          in-person trainer support, and high-speed fiber internet.
+        </p>
+      </div>
+
+      <!-- District Cards Grid (Real Data from e-laeltd.com) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="district-cards-grid">
+
+        <!-- 1. Bogura Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="bogura bogra">
+          <!-- Real District Map Image -->
+          <a href="https://www.google.com/maps/place/e+learning+and+earning+Ltd+-+Bogura/@24.8399974,89.3651907,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Bogura Campus location in Google Maps">
+            <img src="assets/maps/bogura.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/bogura-1791088939.webp'"
+              alt="Bogura Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Bogura Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Suborna Tower (2nd Floor), Khandar Bazar, East Side of Shaheed Chandu Stadium, Bogura</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01332-852665</strong> / 01791-090477</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>bogura@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Bogura District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Gopalganj Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="gopalganj gopalgonj">
+          <a href="https://www.google.com/maps/place/E-Learning+and+Earning+Limited,+Gopalganj/@23.0114574,89.8308168,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Gopalganj Campus location in Google Maps">
+            <img src="assets/maps/gopalganj.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/gopalganj-1791111313.webp'"
+              alt="Gopalganj Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Gopalganj Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Dr. Layek Uddin Shopping Complex (4th Floor), 246 Notun Kacha Bazar, Gopalganj</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01332-852786</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>gopalganj@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Gopalganj District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Sylhet Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="sylhet">
+          <a href="https://www.google.com/maps/place/Bholananda-Uttoron+Technical+Training+Center/@24.898401,91.8702613,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Sylhet Campus location in Google Maps">
+            <img src="assets/maps/sylhet.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/sylhet-1791099167.webp'"
+              alt="Sylhet Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Sylhet Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Bholananda-Uttaran Technical Training Center (1st-2nd Fl), Chouhatta, Sylhet</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01791-111890</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>sylhet@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Sylhet District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Cumilla Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="cumilla comilla">
+          <a href="https://www.google.com/maps/place/E-Learning+%26+Earning+Ltd+Cumilla/@23.4229063,91.1697791,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Cumilla Campus location in Google Maps">
+            <img src="assets/maps/cumilla.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/cumilla-1791111890.webp'"
+              alt="Cumilla Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Cumilla Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Al Amin Bhawan (3rd Floor), (Opposite Haji Akram Uddin School), Paduar Bazar, Cumilla</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01332-852570</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>cumilla@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Cumilla District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Chattogram Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="chattogram chittagong ctg">
+          <a href="https://www.google.com/maps/place/e-Learning+%26+Earning+Limited/@22.3344393,91.8095018,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Chattogram Campus location in Google Maps">
+            <img src="assets/maps/chattogram.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/chittagong-1791106741.webp'"
+              alt="Chattogram Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Chattogram Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>RF Johura Tower (Lift-5), Sheikh Mujib Road, Double Mooring, Agrabad, Chattogram</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01791-111890</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>chattogram@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Chattogram District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Rangpur Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="rangpur">
+          <a href="https://www.google.com/maps/place/E-Learning+%26+Earning+LTD,+Rangpur/@25.7171641,89.2641826,13z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Rangpur Campus location in Google Maps">
+            <img src="assets/maps/rangpur.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/rangpur-1791106010.webp'"
+              alt="Rangpur Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Rangpur Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Mobarak Complex Bhaban (2nd Floor), Shaheed Abu Said Chattar, Kurigram Road, Rangpur</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01332-852786</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>rangpur@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Rangpur District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Khulna Campus -->
+        <div
+          class="district-item rounded-2xl bg-white border border-slate-200 hover:border-brand-emerald/60 transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="khulna">
+          <a href="https://www.google.com/maps/place/e-Learning+%26+Earning+Ltd.,+Khulna/@22.9005813,89.4986251,15z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Khulna Campus location in Google Maps">
+            <img src="assets/maps/khulna.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/khulna-1791106515.webp'"
+              alt="Khulna Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white/95 text-brand-forest shadow-sm backdrop-blur-sm">
+              Active Lab
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Khulna Campus</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>IT Training &amp; Incubation Center, Road No-6, KUET, Yogipole, Dighalia, Khulna</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01791-090477</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>khulna@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Khulna District Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-subtle text-brand-forest text-xs font-bold hover:bg-brand-forest hover:text-white transition">
+              Visit Lab &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Dhaka Central Campus (HQ) -->
+        <div
+          class="district-item rounded-2xl bg-white border border-brand-emerald/40 hover:border-brand-emerald transition card-hover overflow-hidden group flex flex-col justify-between"
+          data-name="dhaka mirpur uttara motijheel kallyanpur">
+          <a href="https://www.google.com/maps/place/e-Learning+%26+Earning+Ltd./@23.7777018,90.3610806,17z"
+            target="_blank" class="block relative h-36 bg-slate-100 overflow-hidden group/map"
+            title="Click to open Dhaka Central Campus location in Google Maps">
+            <img src="assets/maps/dhaka.webp"
+              onerror="this.src='https://erp-back.e-laeltd.com/storage/images/branches/headoffice-1791092968.webp'"
+              alt="Dhaka Head Office Campus Map"
+              class="w-full h-full object-cover group-hover/map:scale-105 transition-transform duration-300">
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none">
+            </div>
+            <span
+              class="absolute top-2.5 left-2.5 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-gold text-white shadow-sm backdrop-blur-sm">
+              HQ Campus
+            </span>
+            <span
+              class="absolute bottom-2 right-2 text-[10px] font-semibold text-white/90 bg-black/60 px-2 py-0.5 rounded backdrop-blur-sm flex items-center gap-1 group-hover/map:bg-brand-forest transition">
+              <i data-lucide="map-pin" class="w-2.5 h-2.5 text-brand-emerald"></i>
+              <span>Google Maps &rarr;</span>
+            </span>
+          </a>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-black text-slate-900">Dhaka Central Campus (HQ)</h3>
+              <p class="text-xs text-slate-600 mt-1.5 flex items-start gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-emerald flex-shrink-0 mt-0.5"></i>
+                <span>Khaja IT Park (2nd - 6th Floor), 07 South Kallyanpur, Mirpur Road, Dhaka-1207</span>
+              </p>
+              <div class="mt-3 space-y-1 text-xs text-slate-600">
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span><strong>01791-111890</strong></span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>info@e-laeltd.com</span>
+                </div>
+              </div>
+            </div>
+            <button onclick="openEnrollDrawer('Dhaka Central Lab')"
+              class="mt-4 w-full py-2 rounded-xl bg-brand-forest text-white text-xs font-bold hover:bg-brand-dark transition">
+              Visit HQ &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- District Modal Trigger -->
+      <div class="mt-8 text-center">
+        <p class="text-xs text-slate-500">
+          Showing 8 of 64 districts.
+          <button onclick="openDistrictModal()" class="text-brand-emerald font-bold hover:underline">
+            Click here to view full directory for all 64 districts &rarr;
+          </button>
+        </p>
+      </div>
+
+    </div>
+  </section>
+

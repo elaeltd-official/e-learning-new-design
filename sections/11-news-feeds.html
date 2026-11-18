@@ -1,0 +1,281 @@
+<!-- ========================================================================= -->
+  <!-- 10.5 NEWS FEEDS & NATIONAL MEDIA COVERAGE (MODERN BENTO GRID PRESS HUB)   -->
+  <!-- ========================================================================= -->
+  <section id="news-feeds-section"
+    class="py-14 sm:py-18 lg:py-20 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
+    
+    <!-- Moving Background Animations -->
+    <style>
+      @keyframes newsOrbFloat1 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.35; }
+        50% { transform: translate(70px, 35px) scale(1.2); opacity: 0.55; }
+      }
+      @keyframes newsOrbFloat2 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+        50% { transform: translate(-65px, -30px) scale(1.15); opacity: 0.45; }
+      }
+      @keyframes newsGridGlide {
+        0% { background-position: 0 0; }
+        100% { background-position: 64px 64px; }
+      }
+      .news-animated-grid {
+        background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+        background-size: 32px 32px;
+        animation: newsGridGlide 28s linear infinite;
+      }
+      .news-orb-1 {
+        animation: newsOrbFloat1 15s ease-in-out infinite;
+      }
+      .news-orb-2 {
+        animation: newsOrbFloat2 18s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Moving Grid Pattern -->
+    <div
+      class="news-animated-grid absolute inset-0 [mask-image:radial-gradient(ellipse_75%_65%_at_50%_30%,#000_70%,transparent_100%)] opacity-35 pointer-events-none">
+    </div>
+
+    <!-- Animated Floating Ambient Glow Orbs -->
+    <div class="news-orb-1 absolute -top-24 left-1/4 w-[450px] h-[450px] bg-emerald-400/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="news-orb-2 absolute top-1/3 -right-20 w-[500px] h-[500px] bg-teal-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          News Feeds
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+          Stay informed with our latest news, government AI initiative coverage &amp; national media reports across Bangladesh.
+        </p>
+      </div>
+
+      <!-- Modern Bento Grid Press Hub Layout (Refined Tighter Gap) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4.5 items-stretch">
+
+        <!-- ==================== BENTO HERO CARD (7 Cols Desktop) ==================== -->
+        <div class="lg:col-span-7 flex flex-col">
+          <a href="https://www.rupalibangladesh.com/national-news/134040"
+            target="_blank" rel="nofollow noopener noreferrer"
+            class="group bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-500/40 p-6 sm:p-7 flex flex-col justify-between h-full transition-all duration-300 relative overflow-hidden">
+            
+            <div>
+              <!-- Featured Image with Bottom Outlet Chip -->
+              <div class="w-full aspect-[16/9.5] sm:aspect-[16/9] rounded-2xl overflow-hidden mb-5 relative bg-slate-900 border border-slate-200/60 shadow-inner">
+                <img src="assets/news/news-featured-minister.webp"
+                  alt="এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-650407--.webp';"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+
+                <!-- Bottom Right Outlet Chip -->
+                <div class="absolute bottom-3.5 right-3.5 sm:bottom-4 sm:right-4 z-10">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                    <span>Rupali Bangladesh</span>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Date Meta -->
+              <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 mb-3">
+                <i data-lucide="calendar" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Published 2026</span>
+              </div>
+
+              <!-- Main Title (Comfortable Line-Height) -->
+              <h3 class="text-xl sm:text-2xl lg:text-[26px] font-black text-slate-900 group-hover:text-emerald-700 transition-colors leading-[1.4] mb-3.5 tracking-tight">
+                এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী
+              </h3>
+
+              <!-- Summary Description (Comfortable Spacing) -->
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed sm:leading-[1.7] line-clamp-3 mb-6">
+                দেশের তরুণ প্রজন্মকে আধুনিক কৃত্রিম বুদ্ধিমত্তা (AI) ও ফ্রিল্যান্সিং দক্ষতায় গড়ে তুলতে ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের দেশব্যাপী এআই প্রশিক্ষণ কর্মশালার আনুষ্ঠানিক উদ্বোধন।
+              </p>
+            </div>
+
+            <!-- Footer Action Button -->
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-slate-800 group-hover:text-emerald-700 transition-colors mt-auto">
+              <span class="flex items-center gap-1.5">
+                <span>সম্পূর্ণ প্রেস কভারেজ পড়ুন</span>
+                <span class="text-xs font-normal text-slate-400">(Read Full Coverage)</span>
+              </span>
+              <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-all transform group-hover:translate-x-1">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- ==================== BENTO RIGHT GRID (5 Cols Desktop, 4 Compact Cards, Refined Gap) ==================== -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 lg:gap-3.5">
+
+          <!-- Bento Card 1: Ekattor TV -->
+          <a href="https://ekattor.tv/country/rajshahi/93379/%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A7%9C%E0%A6%BE-%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%80-%E0%A6%8F%E0%A6%86%E0%A6%87-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A7%87%E0%A6%B0-%E0%A6%AF%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BE-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81"
+            target="_blank" rel="nofollow noopener noreferrer"
+            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
+            
+            <!-- Thumbnail with Play indicator -->
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
+              <img src="assets/news/news-ekattor-tv.webp"
+                alt="বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-947975--.webp';"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
+              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-rose-600/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
+                <i data-lucide="tv" class="w-3 h-3 text-white"></i> TV
+              </span>
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0 w-full">
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <span class="font-bold text-rose-600 flex items-center gap-1">
+                  <span>Ekattor TV</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </div>
+              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
+                বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
+                জেলা পর্যায়ে তরুণদের প্রযুক্তিগত কর্মসংস্থান সৃষ্টিতে বিশেষ এআই বুটক্যাম্প।
+              </p>
+              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
+                <span>Published 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bento Card 2: Deepto News -->
+          <a href="https://deeptonews.com/%e0%a6%a6%e0%a7%87%e0%a6%b6%e0%a6%ac%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%aa%e0%a7%80-%e0%a6%8f%e0%a6%86%e0%a6%87-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%a3/#google_vignette"
+            target="_blank" rel="nofollow noopener noreferrer"
+            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
+            
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
+              <img src="assets/news/news-deepto-tv.webp"
+                alt="দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-830325--.webp';"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
+              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-amber-600/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
+                <i data-lucide="radio" class="w-3 h-3 text-white"></i> Media
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0 w-full">
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <span class="font-bold text-amber-700 flex items-center gap-1">
+                  <span>Deepto News</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </div>
+              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
+                দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
+                ৬৪ জেলায় আধুনিক কম্পিউটার ল্যাব ও মেন্টরশিপের মাধ্যমে প্রশিক্ষণ কর্মসূচি।
+              </p>
+              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
+                <span>Published 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bento Card 3: The Daily Star Bangla -->
+          <a href="https://bangla.thedailystar.net/news/bangladesh/news-3948571"
+            target="_blank" rel="nofollow noopener noreferrer"
+            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
+            
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
+              <img src="assets/news/news-daily-star.webp"
+                alt="বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-629591--.webp';"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
+              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-blue-700/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
+                <i data-lucide="newspaper" class="w-3 h-3 text-white"></i> Daily
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0 w-full">
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <span class="font-bold text-blue-700 flex items-center gap-1">
+                  <span>The Daily Star Bangla</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </div>
+              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
+                বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
+                তথ্যপ্রযুক্তি ও যুব দক্ষতা উন্নয়ন কেন্দ্রের আঞ্চলিক সম্প্রসারণ প্রসঙ্গ।
+              </p>
+              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
+                <span>Published 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bento Card 4: BSS News -->
+          <a href="https://www.bssnews.net/bangla/national/329238"
+            target="_blank" rel="nofollow noopener noreferrer"
+            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
+            
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
+              <img src="assets/news/news-bss-news.webp"
+                alt="কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, শুরু হলো দেশব্যাপী এআই প্রশিক্ষণ কর্মসূচি"
+                loading="lazy"
+                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-255214--.webp';"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
+              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-emerald-700/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
+                <i data-lucide="building-2" class="w-3 h-3 text-white"></i> Agency
+              </span>
+            </div>
+
+            <div class="flex-1 min-w-0 w-full">
+              <div class="flex items-center justify-between text-xs mb-1.5">
+                <span class="font-bold text-emerald-700 flex items-center gap-1">
+                  <span>BSS News (বাসস)</span>
+                </span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+              </div>
+              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
+                কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
+                বাংলাদেশ সংবাদ সংস্থায় প্রকাশিত যুব উন্নয়ন বিষয়ক জাতীয় প্রতিবেদন।
+              </p>
+              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
+                <span>Published 2026</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Button (All News & Media Coverage) -->
+      <div class="flex justify-center mt-12 sm:mt-14">
+        <a href="https://e-laeltd.com/news-feeds" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-forest hover:bg-emerald-800 text-white font-extrabold shadow-lg shadow-brand-forest/20 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base group">
+          <i data-lucide="newspaper" class="w-4 h-4 text-emerald-300 group-hover:text-white transition-colors"></i>
+          <span>সব সংবাদ ও জাতীয় প্রেস কভারেজ দেখুন</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>

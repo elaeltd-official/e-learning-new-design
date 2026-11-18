@@ -1,0 +1,856 @@
+  <!-- ========================================================================= -->
+  <!-- 5. DETAILED INC. 1000 COURSE CATALOG (THE REQUESTED CORE MODULE)           -->
+  <!-- ========================================================================= -->
+  <section id="courses-section" class="py-20 bg-[#F8FAF9]">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="mb-10">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
+          <div class="max-w-3xl">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+              Elite IT Training Programs Built for Global Jobs
+            </h2>
+            <p class="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
+              Explore our most popular and top-rated IT and freelancing courses. Master in-demand digital skills chosen
+              by thousands of learners to accelerate your career, secure remote work, and succeed online.
+            </p>
+          </div>
+
+          <!-- All Courses View Button (Requested by user) -->
+          <div class="flex-shrink-0 flex items-center gap-3">
+            <button onclick="filterCourses('all')"
+              class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand-forest to-brand-emerald hover:from-brand-dark hover:to-brand-forest text-white font-extrabold text-sm shadow-lg shadow-brand-forest/20 hover:shadow-brand-forest/35 transition transform hover:-translate-y-0.5 whitespace-nowrap">
+              <i data-lucide="layout-grid" class="w-4 h-4"></i>
+              <span>View All Courses (30+)</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Course Category Filter Tabs (Single Line, No Wrap) -->
+        <div class="w-full border-t border-slate-200/80 pt-6 mt-6">
+          <div class="flex items-center justify-start xl:justify-center gap-2.5 overflow-x-auto no-scrollbar py-1">
+            <button onclick="filterCourses('all')" data-filter="all"
+              class="category-btn active whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-brand-forest text-white shadow-md">
+              <span>All Programs</span>
+              <span class="text-xs font-normal opacity-90">(30+)</span>
+            </button>
+            <button onclick="filterCourses('web')" data-filter="web"
+              class="category-btn whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+              <span>Web &amp; Software</span>
+              <span class="text-xs text-slate-400 font-normal">(11)</span>
+            </button>
+            <button onclick="filterCourses('graphics')" data-filter="graphics"
+              class="category-btn whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+              <span>Graphics &amp; UI/UX</span>
+              <span class="text-xs text-slate-400 font-normal">(5)</span>
+            </button>
+            <button onclick="filterCourses('marketing')" data-filter="marketing"
+              class="category-btn whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+              <span>Digital Marketing &amp; AI</span>
+              <span class="text-xs text-slate-400 font-normal">(3)</span>
+            </button>
+            <button onclick="filterCourses('cyber')" data-filter="cyber"
+              class="category-btn whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+              <span>Cyber &amp; Networking</span>
+              <span class="text-xs text-slate-400 font-normal">(4)</span>
+            </button>
+            <button onclick="filterCourses('cbta')" data-filter="cbta"
+              class="category-btn whitespace-nowrap flex-shrink-0 inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">
+              <span>Govt. CBT&amp;A</span>
+              <span class="text-xs text-slate-400 font-normal">(NSDA)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Course Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="course-cards-container">
+
+        <!-- ================= CARD 1: FULL STACK WEB ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="web">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/course-categories/web-and-software-courses-icon-1776257996.webp"
+                alt="Web &amp; Software Development" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  BESTSELLER
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  NSDA LEVEL 3 ALIGNED
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 14 Seats Left in Batch 42
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Full-Stack MERN &amp; Next.js 16 Professional
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Build modern, production-grade web applications. Master React 19, Next.js, Node.js, Express, MongoDB,
+                Tailwind, and REST APIs.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,420 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  3,850+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  12 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">12,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 20,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Full-Stack Web Development')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Full-Stack Web Development')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD 2: DIGITAL MARKETING & AI ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="marketing">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/course-categories/digital-marketing-1776314518.webp"
+                alt="Digital Marketing &amp; AI Growth" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-amber-500 text-white tracking-wider shadow">
+                  HIGH EARNINGS
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  AI AUTOMATION 2026
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 9 Seats Left in Batch 42
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3.5 Months (42 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Digital Marketing &amp; AI Growth Automation
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Master advanced SEO, Google Ads, Meta Ads Manager, GA4 Server-Side tracking, and AI content automation
+                for international agency scaling.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,890 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  4,200+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  8 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">10,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 18,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    44% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳5,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Digital Marketing & AI')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Digital Marketing & AI')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD 3: GRAPHIC DESIGN & UI/UX ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="graphics">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/course-categories/graphics-and-multimedia-1776314260.webp"
+                alt="Graphic Design &amp; UI/UX" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-purple-600 text-white tracking-wider shadow">
+                  POPULAR
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  FIGMA &amp; ADOBE
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-emerald-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                  Admissions Open Batch 42
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Graphic Design &amp; UI/UX Masterclass
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Create conversion-focused brand identities, commercial packaging, mobile app UI in Figma, and
+                high-impact marketplace assets.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,670 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  3,500+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  15 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">10,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 16,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    38% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳5,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Graphic Design & UI/UX')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Graphic Design & UI/UX')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD 4: CYBER SECURITY & CCNA ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="cyber">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img src="https://erp-back.e-laeltd.com/storage/images/course-categories/cyber-security-1791872274.webp"
+                alt="Cyber Security &amp; CCNA" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-emerald-600 text-white tracking-wider shadow">
+                  HIGH DEMAND
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  CCNA + MIKROTIK
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  11 Seats Left in Batch 42
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4.5 Months (52 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Cyber Security, CCNA &amp; MikroTik Administration
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Hands-on practical training in hardware routing, Linux server administration, vulnerability assessment,
+                and enterprise network defense.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(980 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,100+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  10 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">14,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 22,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    36% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,666</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Cyber Security & CCNA')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Cyber Security & CCNA')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD 5: MOTION GRAPHICS & VIDEO ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="graphics">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img src="https://erp-back.e-laeltd.com/storage/images/course-categories/other-courses-1776321931.webp"
+                alt="Motion Graphics &amp; Video Editing" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-red-600 text-white tracking-wider shadow">
+                  TRENDING
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  AFTER EFFECTS &amp; 3D
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  8 Seats Remaining
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3.5 Months (42 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Motion Graphics, 3D &amp; Commercial Video Editing
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Learn Premiere Pro, After Effects, and Blender 3D animation for YouTube creators, commercial
+                advertisements, and high-paying overseas clients.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,110 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,800+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  14 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">11,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 18,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    39% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳5,500</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Motion Graphics & Video Editing')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Motion Graphics & Video Editing')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= CARD 6: NSDA CBT&A PROGRAM ================= -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 overflow-hidden flex flex-col justify-between shadow-sm"
+          data-category="cbta">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/course-categories/714207721-1021041150491636-5143568291155439496-n-1782036986.webp"
+                alt="Competency Based Training NSDA" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-emerald-700 text-white tracking-wider shadow">
+                  GOVT. CERTIFICATE
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  PMO / NSDA ALIGNED
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-emerald-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                  Quarterly National Assessment
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3 Months (360 Hours)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                Competency-Based Training &amp; Assessment (CBT&amp;A)
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Official National Skills Development Authority (NSDA) Level 3 &amp; 4 qualification for IT Support and
+                Graphic Design. Employer-recognized national credential.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  5.0
+                  <span class="text-slate-400 font-normal text-[11px]">(850 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,950+ Certified
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  6 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box from Screenshot -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">8,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 15,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    43% OFF
+                  </span>
+                </div>
+
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,250</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Competency-Based Training (NSDA)')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 transition text-center flex items-center justify-center gap-1.5 shadow-xs">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <button onclick="openEnrollDrawer('Competency-Based Training (NSDA)')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>Enroll Now</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Advisor CTA -->
+  <section id="advisor-cta" class="py-12 bg-brand-subtle">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-brand-forest flex items-center justify-center text-white">
+            <i data-lucide="help-circle" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900">Need Guidance?</h3>
+            <p class="text-sm text-slate-600">Not sure which course is right for you? Talk with our Career Advisors</p>
+          </div>
+        </div>
+        <button onclick="openEnrollDrawer('Career Advisor')"
+          class="px-6 py-3 rounded-xl bg-brand-forest text-white font-bold hover:bg-brand-dark transition">
+          Talk to Advisor
+        </button>
+      </div>
+    </div>
+  </section>
+

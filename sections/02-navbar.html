@@ -1,0 +1,482 @@
+  <!-- ========================================================================= -->
+  <!-- 1. ENTERPRISE INC. 1000 NAVIGATION BAR (STICKY + GLASS)                    -->
+  <!-- ========================================================================= -->
+  <!-- ========================================================================= -->
+  <!-- 1. ENTERPRISE HEADER WITH FULL-WIDTH CONTAINER-ALIGNED MEGA MENU            -->
+  <!-- ========================================================================= -->
+  <!-- ========================================================================= -->
+  <!-- 1. ENTERPRISE HEADER WITH FULL-WIDTH CONTAINER-ALIGNED MEGA MENU            -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300"
+    id="main-header">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="flex items-center justify-between h-20 gap-2 xl:gap-4 flex-nowrap">
+
+        <!-- Brand Logo & Institutional Badge (Smaller size as requested) -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="https://e-laeltd.com" class="flex items-center group py-1">
+            <img src="assets/logo.webp" alt="e-Learning & Earning Ltd."
+              class="h-8 sm:h-8.5 xl:h-9 w-auto object-contain transition-transform group-hover:scale-105">
+          </a>
+
+          <div
+            class="hidden 2xl:flex items-center pl-3.5 border-l border-slate-200 text-[11px] text-slate-500 leading-tight">
+            <i data-lucide="shield-check" class="w-4 h-4 text-brand-emerald mr-1.5 flex-shrink-0"></i>
+            <span>Govt. Aligned &amp;<br>NSDA Registered</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation Links (Single Line, Container-Aligned, Full-Width Mega Menu) -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 2xl:gap-3 shrink-0 static">
+
+          <!-- 1. FULL-WIDTH COURSES MEGA MENU (with bug-free mouse tracking) -->
+          <div class="group h-full flex items-center" id="courses-menu-group">
+            <button id="courses-menu-btn"
+              class="flex items-center gap-1.5 px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-brand-emerald"></i>
+              <span>Courses</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+
+            <!-- FULL-WIDTH MEGA MENU DROPDOWN (Spans 100% of 1380px container, Tall/Long height, Solid White, All 9 Categories) -->
+            <div id="courses-mega-menu"
+              class="absolute top-[calc(100%-2px)] left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 w-auto bg-white rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.2)] border border-slate-200/90 p-7 xl:p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-['']">
+
+              <!-- Top Bar with Catalog Link (Red-marked left badge removed) -->
+              <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-emerald"></span>
+                  <span>Explore All Course Categories &amp; Tracks</span>
+                </div>
+                <a href="https://e-laeltd.com/courses"
+                  class="text-xs font-extrabold text-brand-forest hover:text-brand-emerald flex items-center gap-1.5 transition group/all">
+                  <span>Browse Full Course Catalog (30+)</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/all:translate-x-1 transition"></i>
+                </a>
+              </div>
+
+              <!-- 3-Column x 3-Row Grid: ALL 9 CATEGORIES WITH UNIQUE PILL BADGE BUTTONS -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-7">
+
+                <!-- 1. Web & Software Development -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="code-2" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Web &amp; Software Development
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Master full-stack MERN, Next.js, Python Django &amp; enterprise web software development with live
+                      client projects.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/web-software-development" onclick="filterCourses('web')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 transition group/btn shadow-xs">
+                      <span>11 Web &amp; Software Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 2. Graphics and Multimedia -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="palette" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Graphics and Multimedia
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Industry-grade UI/UX design in Figma, brand identity, 3D Blender modeling, CGI &amp; commercial
+                      video editing.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/graphic-multimedia" onclick="filterCourses('graphics')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white border border-purple-200/80 transition group/btn shadow-xs">
+                      <span>5 Creative &amp; 3D Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 3. Digital Marketing -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Digital Marketing
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Performance Meta &amp; Google Ads, technical SEO audits, GA4 data analytics, and AI-driven growth
+                      automation.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/digital-marketing" onclick="filterCourses('marketing')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-800 hover:bg-amber-600 hover:text-white border border-amber-200/80 transition group/btn shadow-xs">
+                      <span>3 Marketing &amp; AI Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 4. Networking -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Networking
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Hands-on Cisco CCNA routing, MikroTik MTCNA administration, physical router hardware labs &amp;
+                      server configuration.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/networking" onclick="filterCourses('cyber')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-50 text-cyan-800 hover:bg-cyan-600 hover:text-white border border-cyan-200/80 transition group/btn shadow-xs">
+                      <span>CCNA &amp; Server Labs</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 5. Cyber Security -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="shield" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Cyber Security
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Certified ethical hacking, SOC defensive operations, threat intelligence, vulnerability assessment
+                      &amp; Linux defense.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/cyber-security" onclick="filterCourses('cyber')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white border border-emerald-200/80 transition group/btn shadow-xs">
+                      <span>4 Cyber Defense Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 6. Competency Based Training (CBT&A) -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Competency Based Training
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      National Skills Development Authority (NSDA) certified Level 3 &amp; Level 4 IT support and
+                      graphics assessment tracks.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/competency-based-training" onclick="filterCourses('cbta')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-teal-50 text-teal-800 hover:bg-teal-600 hover:text-white border border-teal-200/80 transition group/btn shadow-xs">
+                      <span>NSDA L3/L4 Certified</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 7. Basic -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="monitor" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Basic
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Fundamental computer literacy, advanced Microsoft Excel formulas, corporate office documentation
+                      &amp; typing speed.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/basic" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition group/btn shadow-xs">
+                      <span>2 Office &amp; Excel Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 8. Institute Program -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Institute Program
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Cutting-edge AI prompt engineering, international B2B lead generation &amp; specialized
+                      institutional corporate programs.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/institute-program" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-50 text-orange-800 hover:bg-orange-600 hover:text-white border border-orange-200/80 transition group/btn shadow-xs">
+                      <span>AI &amp; Lead Gen Programs</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 9. Others -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Others
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Professional English communication for global freelancing, 1-on-1 marketplace account approvals
+                      &amp; career coaching.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/other-courses" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-800 hover:bg-slate-700 hover:text-white border border-slate-200 transition group/btn shadow-xs">
+                      <span>Freelance &amp; Placement</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2. 64 DISTRICT CAMPUSES -->
+          <a href="https://e-laeltd.com/branch"
+            class="px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-emerald"></span>
+            </span>
+            <span>64 District Campuses</span>
+          </a>
+
+          <!-- 3. SUCCESS STORIES (Solid White Dropdown) -->
+          <div class="relative group">
+            <a href="https://e-laeltd.com/success-stories"
+              class="flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <span>Success Stories</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </a>
+
+            <!-- Solid White Submenu -->
+            <div
+              class="absolute top-full left-0 w-64 p-2.5 bg-white rounded-2xl shadow-2xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-3 group-hover:translate-y-1 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <a href="https://e-laeltd.com/success-stories"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="star" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Student Success Stories</span>
+              </a>
+              <a href="https://e-laeltd.com/success-freelancers"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="badge-dollar-sign" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Verified Freelancers</span>
+              </a>
+              <a href="https://e-laeltd.com/recent-job-placements"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="briefcase" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Job Placements</span>
+              </a>
+              <a href="https://dydaiproject.com/apply" target="_blank"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-brand-forest bg-brand-subtle/50 transition">
+                <i data-lucide="external-link" class="w-4 h-4 text-brand-emerald"></i>
+                <span>DYD AI Project 64</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. FACULTY & MENTORS -->
+          <a href="https://e-laeltd.com/trainers"
+            class="px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+            Faculty &amp; Mentors
+          </a>
+
+          <!-- 5. INSIGHTS / NEWS (Solid White Dropdown) -->
+          <div class="relative group">
+            <a href="https://e-laeltd.com/news-feeds"
+              class="flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <span>Insights</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </a>
+
+            <!-- Solid White Submenu -->
+            <div
+              class="absolute top-full right-0 w-60 p-2.5 bg-white rounded-2xl shadow-2xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-3 group-hover:translate-y-1 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <a href="https://e-laeltd.com/news-feeds"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="newspaper" class="w-4 h-4 text-brand-emerald"></i>
+                <span>News &amp; Updates</span>
+              </a>
+              <a href="https://e-laeltd.com/blog"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="book-open" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Latest Blogs</span>
+              </a>
+              <a href="https://e-laeltd.com/image-gallery"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="image" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Campus Photo Gallery</span>
+              </a>
+              <a href="https://e-laeltd.com/video-gallery"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="video" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Video Gallery</span>
+              </a>
+              <a href="https://e-laeltd.com/about"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="info" class="w-4 h-4 text-brand-emerald"></i>
+                <span>About Us</span>
+              </a>
+              <a href="https://e-laeltd.com/contact"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="phone-call" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Contact &amp; Support</span>
+              </a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Right Action Button: ONLY ENROLL NOW (Free Seminar removed as requested) -->
+        <div class="hidden sm:flex items-center gap-2.5 shrink-0">
+          <button onclick="openEnrollDrawer('Header Navigation')"
+            class="group inline-flex items-center gap-2 px-5 py-2.5 text-xs xl:text-sm font-extrabold text-white bg-gradient-to-r from-brand-forest to-brand-emerald hover:from-brand-dark hover:to-brand-forest rounded-xl shadow-md shadow-brand-forest/25 hover:shadow-xl hover:shadow-brand-forest/35 transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">
+            <span>Apply Now</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
+          class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu (Solid White Background) -->
+    <div id="mobile-menu"
+      class="lg:hidden hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 max-h-[80vh] overflow-y-auto shadow-2xl">
+      <div class="pb-2 mb-2 border-b border-slate-100">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3">Main Navigation</span>
+      </div>
+      <a href="https://e-laeltd.com/courses" onclick="toggleMobileMenu()"
+        class="flex items-center justify-between px-3 py-2.5 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <span class="flex items-center gap-2.5"><i data-lucide="layout-grid" class="w-4 h-4 text-brand-emerald"></i> All
+          Courses</span>
+        <span class="text-xs bg-brand-subtle text-brand-forest px-2 py-0.5 rounded-full font-bold">30+</span>
+      </a>
+      <a href="https://e-laeltd.com/branch" onclick="toggleMobileMenu()"
+        class="flex items-center justify-between px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <span class="flex items-center gap-2.5"><i data-lucide="map-pin" class="w-4 h-4 text-brand-emerald"></i> 64
+          District Branches</span>
+        <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+      </a>
+      <a href="https://e-laeltd.com/success-stories" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="star" class="w-4 h-4 text-brand-emerald"></i> Success Stories
+      </a>
+      <a href="https://e-laeltd.com/trainers" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="users" class="w-4 h-4 text-brand-emerald"></i> Faculty Mentors
+      </a>
+      <a href="https://e-laeltd.com/news-feeds" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="newspaper" class="w-4 h-4 text-brand-emerald"></i> Blogs &amp; News
+      </a>
+      <a href="https://e-laeltd.com/about" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="info" class="w-4 h-4 text-brand-emerald"></i> About e-LAE Ltd
+      </a>
+      <a href="https://e-laeltd.com/contact" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="phone-call" class="w-4 h-4 text-brand-emerald"></i> Contact &amp; Support
+      </a>
+      <div class="pt-3">
+        <button onclick="toggleMobileMenu(); openEnrollDrawer('Mobile Navigation')"
+          class="w-full py-2.5 text-center font-bold text-white bg-brand-forest rounded-xl shadow-md flex items-center justify-center gap-2">
+          Enroll Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
