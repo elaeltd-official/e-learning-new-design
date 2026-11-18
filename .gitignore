@@ -31,3 +31,5 @@ desktop.ini
 node_modules/
 .vscode/
 .idea/
+
+scratch/
