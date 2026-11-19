@@ -127,6 +127,117 @@
       animation: gridGlide 30s linear infinite;
     }
 
+
+    /* Advanced Learning Visuals & Moving Background Animations */
+    @keyframes floatDrift {
+
+      0%,
+      100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+      }
+
+      33% {
+        transform: translateY(-10px) translateX(6px) rotate(1.5deg);
+      }
+
+      66% {
+        transform: translateY(6px) translateX(-4px) rotate(-1deg);
+      }
+    }
+
+    @keyframes floatDriftRev {
+
+      0%,
+      100% {
+        transform: translateY(0px) translateX(0px) rotate(0deg);
+      }
+
+      33% {
+        transform: translateY(10px) translateX(-6px) rotate(-1.5deg);
+      }
+
+      66% {
+        transform: translateY(-6px) translateX(4px) rotate(1deg);
+      }
+    }
+
+    @keyframes orbitRotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes pulseGlowAura {
+
+      0%,
+      100% {
+        opacity: 0.25;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.45;
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes circuitFlow {
+      0% {
+        stroke-dashoffset: 100;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .animate-float-drift {
+      animation: floatDrift 8s ease-in-out infinite;
+    }
+
+    .animate-float-drift-rev {
+      animation: floatDriftRev 9s ease-in-out infinite;
+    }
+
+    .animate-orbit-slow {
+      animation: orbitRotate 35s linear infinite;
+    }
+
+    .animate-pulse-aura {
+      animation: pulseGlowAura 5s ease-in-out infinite;
+    }
+
+    /* Floating Learning Material Badge */
+    .learning-visual-pill {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .learning-visual-pill:hover {
+      border-color: rgba(16, 185, 129, 0.6);
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 15px 30px -5px rgba(5, 150, 105, 0.18);
+    }
+
+    /* Blueprint Dot Matrix Pattern */
+    .blueprint-dots-bg {
+      background-image: radial-gradient(rgba(16, 185, 129, 0.14) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Subtle Circuit & Node SVG Flow */
+    .circuit-stroke {
+      stroke-dasharray: 8 6;
+      animation: circuitFlow 15s linear infinite;
+    }
+
     /* Card Glow & Glass */
     .glass-card-elevated {
       background: rgba(255, 255, 255, 0.92);
@@ -194,6 +305,11 @@
       grid-template-rows: 1fr;
     }
 
+    .curriculum-module-content>div {
+      overflow: hidden;
+      min-height: 0;
+    }
+
     .curriculum-module-item.active .curriculum-icon {
       transform: rotate(180deg);
       background-color: #059669;
@@ -207,23 +323,60 @@
   <!-- ========================================================================= -->
   <!-- DYNAMIC AMBIENT BACKGROUND GLOW ORBS & MESH (NON-PLAIN LUXURY BACKDROP)   -->
   <!-- ========================================================================= -->
-  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden select-none">
     <!-- Top Fluid Glow Orb -->
     <div
-      class="absolute -top-32 left-1/4 w-[750px] h-[750px] bg-gradient-to-br from-emerald-400/18 via-teal-300/12 to-transparent rounded-full blur-3xl animate-float-slow">
+      class="absolute -top-32 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-emerald-400/22 via-teal-300/15 to-transparent rounded-full blur-3xl animate-float-slow">
     </div>
     <!-- Right Ambient Glow Orb -->
     <div
-      class="absolute top-1/3 -right-28 w-[650px] h-[650px] bg-gradient-to-bl from-teal-400/14 via-emerald-300/10 to-transparent rounded-full blur-3xl animate-float-slow-reverse">
+      class="absolute top-1/3 -right-28 w-[700px] h-[700px] bg-gradient-to-bl from-teal-400/18 via-emerald-300/12 to-transparent rounded-full blur-3xl animate-float-slow-reverse">
     </div>
     <!-- Lower Ambient Orb -->
     <div
-      class="absolute top-2/3 -left-28 w-[700px] h-[700px] bg-gradient-to-tr from-emerald-500/12 via-amber-300/10 to-transparent rounded-full blur-3xl animate-float-slow">
+      class="absolute top-2/3 -left-28 w-[750px] h-[750px] bg-gradient-to-tr from-emerald-500/16 via-amber-300/12 to-transparent rounded-full blur-3xl animate-float-slow">
     </div>
     <!-- Moving Grid Lines Pattern -->
     <div
-      class="ambient-grid-pattern absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_80%_60%_at_50%_25%,#000_70%,transparent_100%)]">
+      class="ambient-grid-pattern absolute inset-0 opacity-45 [mask-image:radial-gradient(ellipse_80%_60%_at_50%_25%,#000_70%,transparent_100%)]">
     </div>
+
+    <!-- Floating Learning Visual Glyphs & Watermarks (Clean, Subtle, Semi-Transparent) -->
+    <!-- Glyph 1: Code / Function Tag -->
+    <div
+      class="animate-float-drift absolute top-36 left-12 text-emerald-800/10 font-mono text-3xl font-black hidden lg:block">
+      &lt;AI_Agent /&gt;
+    </div>
+    <!-- Glyph 2: n8n Node Node Icon -->
+    <div
+      class="animate-float-drift-rev absolute top-1/4 right-16 text-teal-800/10 font-mono text-2xl font-bold hidden lg:block">
+      workflow.execute()
+    </div>
+    <!-- Glyph 3: Database & Vector -->
+    <div
+      class="animate-float-drift absolute top-1/2 left-8 text-emerald-700/8 font-mono text-2xl font-black hidden xl:block">
+      Vector_DB.query()
+    </div>
+    <!-- Glyph 4: JSON Status -->
+    <div
+      class="animate-float-drift-rev absolute top-2/3 right-10 text-emerald-800/10 font-mono text-xl font-bold hidden xl:block">
+      { "status": 200, "ai": "active" }
+    </div>
+    <!-- Glyph 5: Certificate / NSDA -->
+    <div
+      class="animate-float-drift absolute bottom-40 left-16 text-amber-700/10 font-mono text-2xl font-bold hidden lg:block">
+      NSDA_Level_4_Standard
+    </div>
+
+    <!-- Connecting Circuit SVG Traces (Clean subtle connecting lines) -->
+    <svg class="absolute inset-0 w-full h-full opacity-25" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 50 150 Q 300 200 600 120 T 1200 180" fill="none" stroke="rgba(16,185,129,0.35)" stroke-width="1.5"
+        class="circuit-stroke" />
+      <path d="M 100 650 Q 450 720 850 630 T 1400 700" fill="none" stroke="rgba(13,148,136,0.25)" stroke-width="1.2"
+        class="circuit-stroke" />
+      <circle cx="600" cy="120" r="4" fill="rgba(16,185,129,0.6)" />
+      <circle cx="850" cy="630" r="4" fill="rgba(13,148,136,0.6)" />
+    </svg>
   </div>
 
   <!-- ========================================================================= -->
@@ -787,9 +940,51 @@
   </div>
 
   <!-- ========================================================================= -->
-  <!-- 3. HIGH-CONVERTING HERO SECTION (RICH CRO STUDIO SHOWCASE)                 -->
+  <!-- 3. HIGH-CONVERTING HERO SECTION (RICH CRO STUDIO SHOWCASE WITH LEARNING VISUALS) -->
   <!-- ========================================================================= -->
   <section class="relative pt-10 sm:pt-14 pb-16 sm:pb-20 border-b border-slate-200/80 overflow-hidden">
+
+    <!-- Hero Background Learning Graphics & Dynamic Circuit Nodes -->
+    <div class="blueprint-dots-bg absolute inset-0 opacity-40 pointer-events-none"></div>
+
+    <!-- Floating Learning Visual Pill 1: Top Left AI Agent Engine -->
+    <div
+      class="animate-float-drift absolute top-8 left-8 sm:left-14 hidden xl:flex items-center gap-2.5 px-4 py-2 rounded-2xl learning-visual-pill text-xs font-bold text-slate-800 z-10 select-none">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+      <i data-lucide="cpu" class="w-4 h-4 text-emerald-600"></i>
+      <span>Autonomous Agent Engine • v2.6 Running</span>
+      <span
+        class="px-1.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[10px] font-black uppercase">Live</span>
+    </div>
+
+    <!-- Floating Learning Visual Pill 2: Left Middle JSON Workflow Code Badge -->
+    <div
+      class="animate-float-drift-rev absolute top-64 -left-2 sm:left-6 hidden 2xl:flex items-center gap-2 px-3.5 py-2 rounded-xl learning-visual-pill text-[11px] font-mono text-slate-700 z-10 select-none">
+      <span class="text-emerald-600 font-bold">{</span>
+      <span class="text-slate-500">"n8n_trigger":</span> <span class="text-emerald-700 font-bold">"Webhook"</span>,
+      <span class="text-slate-500">"agent":</span> <span class="text-teal-700 font-bold">"Active"</span>
+      <span class="text-emerald-600 font-bold">}</span>
+    </div>
+
+    <!-- Floating Learning Visual Pill 3: Top Right Certificate Authority -->
+    <div
+      class="animate-float-drift absolute top-12 right-10 hidden xl:flex items-center gap-2.5 px-4 py-2 rounded-2xl learning-visual-pill text-xs font-bold text-slate-800 z-10 select-none">
+      <div class="w-7 h-7 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0">
+        <i data-lucide="award" class="w-4 h-4"></i>
+      </div>
+      <div>
+        <div class="text-[10px] text-slate-400 font-semibold leading-none">Govt. Endorsed</div>
+        <div class="text-xs font-black text-slate-900">NSDA &amp; DYD Skill Standard</div>
+      </div>
+    </div>
+
+    <!-- Floating Learning Visual Pill 4: Bottom Right Workflow Success Node -->
+    <div
+      class="animate-float-drift-rev absolute bottom-6 right-12 hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-950/90 border border-emerald-500/40 shadow-xl text-white text-[11px] font-mono z-10 select-none">
+      <i data-lucide="git-branch" class="w-3.5 h-3.5 text-emerald-400"></i>
+      <span>api.call("Claude-3.5-Sonnet") ➔</span>
+      <span class="px-1.5 py-0.2 rounded bg-emerald-500/25 text-emerald-300 text-[10px] font-bold">200 OK</span>
+    </div>
 
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -1011,7 +1206,26 @@
   <!-- ========================================================================= -->
   <!-- 4. COURSE OVERVIEW & 2026 AI TECH STACK                                   -->
   <!-- ========================================================================= -->
-  <section id="sec-overview" class="py-16 sm:py-20 relative border-b border-slate-200">
+  <section id="sec-overview"
+    class="py-16 sm:py-20 relative border-b border-slate-200 overflow-hidden bg-gradient-to-b from-white via-emerald-50/30 to-[#F8FAF9]">
+
+    <!-- Background Moving Mesh & Dotted Texture -->
+    <div class="blueprint-dots-bg absolute inset-0 opacity-45 pointer-events-none"></div>
+    <div
+      class="absolute -top-24 right-1/4 w-[500px] h-[500px] bg-emerald-400/12 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <!-- Floating Micro Tech Chips -->
+    <div
+      class="animate-float-drift absolute top-10 right-8 hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-emerald-300/60 shadow-xs text-[11px] font-mono text-emerald-800">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-600"></i>
+      <span>No-Code AI Architecture</span>
+    </div>
+    <div
+      class="animate-float-drift-rev absolute bottom-12 left-10 hidden xl:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-teal-300/60 shadow-xs text-[11px] font-mono text-teal-800">
+      <i data-lucide="layers" class="w-3.5 h-3.5 text-teal-600"></i>
+      <span>Multi-App Cloud Pipeline</span>
+    </div>
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
@@ -1038,60 +1252,90 @@
             তৈরি হবে প্রোজেক্ট</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3">
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              n8n
+          <!-- 1. n8n -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-rose-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M14.5 9.5C13.1 9.5 12 10.6 12 12C12 13.4 13.1 14.5 14.5 14.5C15.9 14.5 17 13.4 17 12C17 10.6 15.9 9.5 14.5 9.5Z"
+                  fill="#EA4B71" />
+                <path
+                  d="M5.5 9.5C4.1 9.5 3 10.6 3 12C3 13.4 4.1 14.5 5.5 14.5C6.9 14.5 8 13.4 8 12C8 10.6 6.9 9.5 5.5 9.5Z"
+                  fill="#EA4B71" />
+                <path
+                  d="M18.5 4.5C17.1 4.5 16 5.6 16 7C16 8.4 17.1 9.5 18.5 9.5C19.9 9.5 21 8.4 21 7C21 5.6 19.9 4.5 18.5 4.5Z"
+                  fill="#EA4B71" />
+                <path d="M8 12H12M14.5 9.5L18.5 7" stroke="#EA4B71" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">n8n Workflow</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">ভিজ্যুয়াল অটোমেশন</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">n8n Workflow</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">ভিজ্যুয়াল অটোমেশন</div>
           </div>
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              AI
+          <!-- 2. Claude 3.5 Sonnet -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-amber-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L14.2 8.3L20.5 10.5L14.2 12.7L12 19L9.8 12.7L3.5 10.5L9.8 8.3L12 2Z" fill="#D97706" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">Claude 3.5 Sonnet</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">এডভান্সড রিজননিং</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">Claude 3.5 Sonnet</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">এডভান্সড রিজননিং</div>
           </div>
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              GPT
+          <!-- 3. OpenAI GPT-4o -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.5 10.2C20.2 7.8 18.4 6 16 5.8C15.6 4.3 14.3 3.1 12.6 3C11 2.9 9.4 3.7 8.6 5C6.7 5.4 5.2 6.9 4.9 8.8C3.5 9.8 2.8 11.5 3.1 13.2C3.4 14.9 4.6 16.2 6.2 16.7C6.4 18.4 7.6 19.8 9.3 20.3C11 20.8 12.8 20.3 14 19.1C15.2 19.7 16.7 19.6 17.8 18.8C18.9 18 19.5 16.7 19.5 15.3C20.6 14.3 21 12.8 20.7 11.3L20.5 10.2Z"
+                  stroke="#059669" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="12" r="2.5" fill="#059669" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">OpenAI GPT-4o</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">টুল কলিং ও ভিশন</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">OpenAI GPT-4o</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">টুল কলিং ও ভিশন</div>
           </div>
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              Make
+          <!-- 4. Make.com -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12L9 4L14 12L19 4L21 20H16L14 12L12 20H8L10 12L5 20H3L4 12Z" fill="#7C3AED" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">Make.com</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">ক্লাউড ইন্টিগ্রেশন</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">Make.com</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">ক্লাউড ইন্টিগ্রেশন</div>
           </div>
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              API
+          <!-- 5. REST & Webhooks -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-sky-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#0284C7" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">REST &amp; Webhooks</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">ডেটা পাইপলাইন</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">REST &amp; Webhooks</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">ডেটা পাইপলাইন</div>
           </div>
 
-          <div class="p-4 rounded-2xl glass-card-elevated text-center">
-            <div
-              class="w-11 h-11 rounded-xl bg-green-50 text-green-700 flex items-center justify-center font-black mx-auto mb-2 text-sm shadow-xs">
-              WA
+          <!-- 6. WhatsApp & TG API -->
+          <div class="py-3 px-3 rounded-2xl glass-card-elevated text-center flex flex-col items-center justify-between">
+            <div class="w-8 h-8 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-1.5 shadow-2xs">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.6 3.4 17.1L2 22L7.1 20.7C8.5 21.5 10.2 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2Z"
+                  fill="#16A34A" />
+                <path
+                  d="M16.5 14.5C16.3 14.8 15.2 15.4 14.7 15.4C14.3 15.5 13.7 15.5 11.9 14.7C9.7 13.8 8.2 11.5 8.1 11.3C8 11.1 7.1 10 7.1 8.8C7.1 7.6 7.7 7 8 6.7C8.2 6.5 8.5 6.4 8.7 6.4C8.9 6.4 9.1 6.4 9.2 6.4C9.4 6.4 9.6 6.5 9.7 6.7C9.9 7.1 10.3 8.1 10.3 8.3C10.4 8.5 10.3 8.7 10.2 8.8C10.1 9 10 9.1 9.8 9.3C9.7 9.4 9.5 9.6 9.7 9.9C9.9 10.2 10.6 11.3 11.6 12.2C12.9 13.4 14 13.7 14.3 13.9C14.6 14 14.8 14 14.9 13.8C15.1 13.6 15.5 13.1 15.7 12.8C15.9 12.5 16.1 12.6 16.3 12.7C16.5 12.8 17.6 13.3 17.8 13.4C18 13.5 18.2 13.6 18.2 13.7C18.2 13.9 18.2 14.2 16.5 14.5Z"
+                  fill="white" />
+              </svg>
             </div>
-            <div class="text-sm font-bold text-slate-900">WhatsApp &amp; TG API</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">বট ডেভেলপমেন্ট</div>
+            <div class="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">WhatsApp &amp; TG API</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">বট ডেভেলপমেন্ট</div>
           </div>
 
         </div>
@@ -1103,7 +1347,20 @@
   <!-- ========================================================================= -->
   <!-- 5. CORE LEARNING COMPETENCIES (৩টি প্রধান স্তম্ভ)                         -->
   <!-- ========================================================================= -->
-  <section id="sec-competencies" class="py-16 sm:py-20 relative border-b border-slate-200">
+  <section id="sec-competencies" class="py-16 sm:py-20 relative border-b border-slate-200 overflow-hidden bg-[#F8FAF9]">
+
+    <!-- Background Connecting SVG Circuit Flow -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-35">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 0 300 Q 350 180 700 300 T 1400 300" fill="none" stroke="rgba(16,185,129,0.3)" stroke-width="2"
+          class="circuit-stroke" />
+        <circle cx="350" cy="240" r="5" fill="#10b981" />
+        <circle cx="700" cy="300" r="5" fill="#0d9488" />
+        <circle cx="1050" cy="240" r="5" fill="#f59e0b" />
+      </svg>
+    </div>
+    <div class="absolute top-1/2 -left-20 w-[450px] h-[450px] bg-teal-400/10 rounded-full blur-3xl pointer-events-none">
+    </div>
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
@@ -1368,7 +1625,21 @@
   <!-- ========================================================================= -->
   <!-- 7. GOVT PERKS & 64-DISTRICT LAB FACILITIES                                -->
   <!-- ========================================================================= -->
-  <section id="sec-facilities" class="py-16 sm:py-20 relative border-b border-slate-200">
+  <section id="sec-facilities"
+    class="py-16 sm:py-20 relative border-b border-slate-200 overflow-hidden bg-gradient-to-b from-[#F8FAF9] via-emerald-50/40 to-white">
+
+    <!-- 64 District Node Matrix Background Visual -->
+    <div class="blueprint-dots-bg absolute inset-0 opacity-50 pointer-events-none"></div>
+    <div
+      class="absolute top-0 right-10 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <!-- Floating District Network Badge -->
+    <div
+      class="animate-float-drift absolute top-10 left-10 hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-emerald-400/50 shadow-md text-xs font-bold text-slate-800 select-none">
+      <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-500 animate-bounce"></i>
+      <span>৬৪ জেলায় সক্রিয় কম্পিউটার ল্যাব সুবিধা</span>
+    </div>
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
@@ -1438,12 +1709,23 @@
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 8. OSTAD-STYLE INTERACTIVE SYLLABUS ACCORDION                             -->
+  <!-- 8. OSTAD-STYLE INTERACTIVE SYLLABUS ACCORDION (2-COLUMN BALANCED LAYOUT)   -->
   <!-- ========================================================================= -->
-  <section id="sec-curriculum" class="py-16 sm:py-20 relative border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="sec-curriculum" class="py-16 sm:py-20 relative border-b border-slate-200 overflow-hidden bg-white">
 
-      <div class="text-center mb-10 sm:mb-12">
+    <!-- Background Syllabus Lined Watermark -->
+    <div
+      class="absolute inset-0 pointer-events-none opacity-20 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_40%,#000_60%,transparent_100%)]"
+      style="background-image: linear-gradient(to bottom, rgba(16, 185, 129, 0.15) 1px, transparent 1px); background-size: 100% 32px;">
+    </div>
+    <div
+      class="absolute -top-32 left-1/3 w-[550px] h-[550px] bg-emerald-400/12 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
         <span
           class="text-xs font-black tracking-wider uppercase text-emerald-700 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-300">
           Complete Syllabus &amp; Roadmap
@@ -1454,232 +1736,1541 @@
         <p class="text-slate-600 text-sm sm:text-base mt-2">
           ৮টি সমন্বিত মডিউলে বিভক্ত ৪০+ লাইভ সেশন, বাস্তব এসাইনমেন্ট ও ৭টি ক্যাপস্টোন প্রজেক্ট
         </p>
+        <!-- Expand / Collapse All Toggle Button -->
+        <div class="mt-4 flex items-center justify-center gap-3">
+          <button type="button" onclick="toggleAllCurriculumModules()"
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 hover:border-emerald-500 text-xs font-bold text-slate-700 shadow-2xs hover:shadow-xs transition cursor-pointer">
+            <i data-lucide="chevrons-up-down" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <span id="toggle-all-curriculum-label">সবগুলো বন্ধ করুন</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Syllabus Accordion Items -->
-      <div class="space-y-3.5" id="curriculum-accordion">
+      <!-- 2-COLUMN BALANCED MODULE GRID (Left & Right Column) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 items-start" id="curriculum-accordion">
 
-        <!-- Module 1 (Active by default) -->
-        <div
-          class="curriculum-module-item active border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-black">মডিউল ০১</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                AI ও LLM পরিচিতি: প্রম্পট ইঞ্জিনিয়ারিং ও এআই ফাউন্ডেশন
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+        <!-- ============== LEFT COLUMN (Modules 01, 03, 05, 07) ============== -->
+        <div class="space-y-4 sm:space-y-5">
+          <!-- MODULE 01 -->
+          <div id="curriculum-module-1"
+            class="curriculum-module-item active border border-emerald-500/40 rounded-2xl overflow-hidden bg-white shadow-sm transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-gradient-to-r from-emerald-50/40 via-white to-white transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-emerald-600 text-white shadow-xs text-xs font-black shrink-0">মডিউল
+                    ০১</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    AI ও LLM পরিচিতি: প্রম্পট ইঞ্জিনিয়ারিং ও এআই ফাউন্ডেশন
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  লার্জ ল্যাঙ্গুয়েজ মডেলের অভ্যন্তরীণ কার্যপ্রণালী, টোকেন অপ্টিমাইজেশন ও প্রম্পট প্যাটার্ন আয়ত্ত করে
+                  এআই সিস্টেমকে নিখুঁত ও ব্যবসায়িক কাজে ব্যবহারযোগ্য নির্দেশনায় পরিচালনা করার আধুনিক কৌশল শিখবেন
+                  হাতে-কলমে বাস্তব অনুশীলনের মাধ্যমে, যা কাজের গতি বাড়াবে বহুগুণ।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• LLM (GPT-4o, Claude 3.5, Gemini, Llama 3) কীভাবে চিন্তা করে ও কাজ করে।</p>
-                <p>• Few-Shot, Chain-of-Thought এবং Role-Based প্রম্পটিং দিয়ে সঠিক আউটপুট বের করার কৌশল।</p>
-                <p>• টোকেন অপটিমাইজেশন ও এআই এথিক্স গাইডলাইন।</p>
-                <div class="pt-2 flex items-center gap-2 text-emerald-700 font-bold text-xs">
-                  <i data-lucide="folder-check" class="w-4 h-4"></i>
-                  <span>অ্যাসাইনমেন্ট ১: বিজনেস ইমেইল ও সোশ্যাল পোস্ট ড্রাফটিং বট</span>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- 1. 4 KPI Metric Strips (No Icons / Logos per user request) -->
+                  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5">
+                    <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
+                      <div class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wide">লাইভ
+                        ক্লাস</div>
+                      <div class="text-sm sm:text-base font-black text-slate-900 mt-0.5">৪টি লাইভ ক্লাস</div>
+                      <div class="text-[10px] text-slate-400 mt-0.5">৬ ঘণ্টা সরাসরি ল্যাব</div>
+                    </div>
+                    <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
+                      <div class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wide">রিয়েল
+                        প্রজেক্ট</div>
+                      <div class="text-sm sm:text-base font-black text-slate-900 mt-0.5">১টি প্রজেক্ট</div>
+                      <div class="text-[10px] text-slate-400 mt-0.5">হ্যান্ডস-অন পোর্টফোলিও</div>
+                    </div>
+                    <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
+                      <div class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wide">রেকর্ডেড
+                        ভিডিও</div>
+                      <div class="text-sm sm:text-base font-black text-slate-900 mt-0.5">৬টি ভিডিও</div>
+                      <div class="text-[10px] text-slate-400 mt-0.5">লাইফটাইম রিসোর্স</div>
+                    </div>
+                    <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs">
+                      <div class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wide">কুইজ ও
+                        টাস্ক</div>
+                      <div class="text-sm sm:text-base font-black text-slate-900 mt-0.5">২টি অ্যাসেসমেন্ট</div>
+                      <div class="text-[10px] text-slate-400 mt-0.5">মেন্টর রিভিউ ও গ্রেডিং</div>
+                    </div>
+                  </div>
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              LLM ও জেনারেটিভ AI ফান্ডামেন্টালস আর্কিটেকচার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              GPT-4o ও Claude 3.5 Sonnet মডেল আর্কিটেকচার, কনটেক্সট উইন্ডো লিমিটেশন, টোকেন ক্যালকুলেশন ও
+                              এআই কীভাবে চিন্তা করে তার বাস্তব ফ্রেমওয়ার্ক শেখানো হবে।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              প্রম্পট ইঞ্জিনিয়ারিং মাস্টারি (Few-Shot, Chain-of-Thought & Role Play)
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ব্যবসায়িক সমস্যা সমাধানে Role-Play, Chain-of-Thought এবং Context Engineering টেকনিক প্রয়োগ
+                              করে নিখুঁত ও হ্যালুসিনেশন-মুক্ত আউটপুট বের করার কৌশল।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              AI টোকেন অপ্টিমাইজেশন, কস্ট কন্ট্রোল ও হ্যালুসিনেশন ফিল্টার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              কোম্পানির এআই এপিআই বিলিং ৬০% পর্যন্ত কমানোর প্রম্পট কম্প্রেশন মেথড এবং সিস্টেম গার্ডরেইল
+                              তৈরি করে ভুল তথ্য প্রতিরোধ করার ব্যবহারিক গাইডলাইন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪৫ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: স্বয়ংক্রিয় এআই বিজনেস কন্টেন্ট ও ইমেইল ড্রাফটিং বট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              Claude 3.5 দিয়ে এমন একটি সিস্টেম তৈরি যা ক্লায়েন্টের ইনকামিং ইমেইল পড়ে স্বয়ংক্রিয়ভাবে
+                              পারসোনালাইজড রিপ্লাই ও সোশ্যাল পোস্ট ড্রাফট করে ড্রাফটে রাখবে।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০১ ও প্রম্পট অডিট কুইজ
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              বাস্তব ৩টি ভিন্ন বিজনেস কেস-স্টাডির জন্য কাস্টম প্রম্পট সিস্টেম আর্কিটেকচার ডিজাইন করে
+                              সাবমিট করা এবং মেন্টরদের কাছ থেকে পারসোনালাইজড ফিডব্যাক গ্রহণ।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ টেস্ট
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 3. Tools Covered in this Module (Course Tools Design with Gemini, Claude, ChatGPT, Copilot) -->
+                  <div class="pt-3 border-t border-slate-200/80">
+                    <div class="flex items-center justify-between mb-2.5">
+                      <div class="text-xs font-black text-slate-900 flex items-center gap-1.5">
+                        <span class="w-1.5 h-3.5 rounded-full bg-emerald-500"></span>
+                        এই মডিউলে ব্যবহৃত টুলস ও প্রযুক্তি:
+                      </div>
+                      <span class="text-[11px] text-slate-600 font-medium">৪টি এআই প্ল্যাটফর্ম</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                      <!-- Tool 1: Gemini -->
+                      <div
+                        class="rounded-xl border border-slate-200 bg-white p-3 text-center shadow-2xs hover:shadow-md hover:border-sky-400 hover:-translate-y-0.5 transition-all group cursor-pointer">
+                        <div
+                          class="w-8 h-8 rounded-lg bg-sky-50 flex items-center justify-center mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M12 2C12 7.523 7.523 12 2 12C7.523 12 12 16.477 12 22C12 16.477 16.477 12 22 12C16.477 12 12 7.523 12 2Z"
+                              fill="url(#geminiGradMod)" />
+                            <defs>
+                              <linearGradient id="geminiGradMod" x1="2" y1="2" x2="22" y2="22"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4285F4" />
+                                <stop offset="0.5" stop-color="#9B72CB" />
+                                <stop offset="1" stop-color="#D96570" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                        </div>
+                        <div class="font-bold text-slate-900 text-xs sm:text-[13px] leading-tight">Google Gemini</div>
+                        <div class="text-[10px] text-slate-600 mt-0.5 leading-tight">মাল্টিমোডাল এআই</div>
+                      </div>
+
+                      <!-- Tool 2: Claude -->
+                      <div
+                        class="rounded-xl border border-slate-200 bg-white p-3 text-center shadow-2xs hover:shadow-md hover:border-amber-400 hover:-translate-y-0.5 transition-all group cursor-pointer">
+                        <div
+                          class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
+                              fill="#D97757" />
+                            <path d="M18 16L18.8 19.2L22 20L18.8 20.8L18 24L17.2 20.8L14 20L17.2 19.2L18 16Z"
+                              fill="#D97757" opacity="0.7" />
+                          </svg>
+                        </div>
+                        <div class="font-bold text-slate-900 text-xs sm:text-[13px] leading-tight">Claude 3.5</div>
+                        <div class="text-[10px] text-slate-600 mt-0.5 leading-tight">এডভান্সড রিজননিং</div>
+                      </div>
+
+                      <!-- Tool 3: ChatGPT -->
+                      <div
+                        class="rounded-xl border border-slate-200 bg-white p-3 text-center shadow-2xs hover:shadow-md hover:border-emerald-400 hover:-translate-y-0.5 transition-all group cursor-pointer">
+                        <div
+                          class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                          <svg class="w-4 h-4 text-[#10A37F]" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                              d="M20.5 10.2a5.4 5.4 0 0 0-.44-4.22 5.56 5.56 0 0 0-5.46-2.77A5.5 5.5 0 0 0 10.4 1.5a5.57 5.57 0 0 0-5.32 3.86 5.5 5.5 0 0 0-3.5 2.54 5.55 5.55 0 0 0 .54 6.1 5.43 5.43 0 0 0 .44 4.22 5.56 5.56 0 0 0 5.46 2.77A5.5 5.5 0 0 0 12.2 22.5a5.57 5.57 0 0 0 5.32-3.86 5.5 5.5 0 0 0 3.5-2.54 5.55 5.55 0 0 0-.52-5.9zm-7.6 10.68a3.89 3.89 0 0 1-2.48-.9l.13-.08 4.14-2.39a.83.83 0 0 0 .42-.72v-5.85l1.75 1.01a.1.1 0 0 1 .05.08v5.04a3.9 3.9 0 0 1-4.01 3.81zm-8.32-4.14a3.86 3.86 0 0 1-.5-2.61l.13.08 4.14 2.39a.84.84 0 0 0 .84 0l5.06-2.92v2.02a.1.1 0 0 1-.04.09l-4.36 2.52a3.9 3.9 0 0 1-5.27-1.57zm-1.52-8.36a3.88 3.88 0 0 1 1.98-1.72v.16l4.14 2.39a.83.83 0 0 0 .84 0l5.06-2.92-1.75-1.01a.1.1 0 0 1-.05-.08H8.56a3.9 3.9 0 0 1-3.9 3.9v-.72zm12.35 1.34l-5.06-2.92v-2.02a.1.1 0 0 1 .04-.09l4.36-2.52a3.9 3.9 0 0 1 5.27 1.57 3.86 3.86 0 0 1 .5 2.61l-.13-.08-4.14-2.39a.84.84 0 0 0-.84 0zm2.25 5.4l-4.14-2.39a.83.83 0 0 0-.84 0l-5.06 2.92 1.75 1.01a.1.1 0 0 1 .05.08h4.37a3.9 3.9 0 0 1 3.9-3.9v.72a3.88 3.88 0 0 1-.03-.34zm-8.24-1.28l2.25-1.3 2.25 1.3v2.6l-2.25 1.3-2.25-1.3v-2.6z" />
+                          </svg>
+                        </div>
+                        <div class="font-bold text-slate-900 text-xs sm:text-[13px] leading-tight">ChatGPT</div>
+                        <div class="text-[10px] text-slate-600 mt-0.5 leading-tight">প্রম্পট ও ক্যানভাস</div>
+                      </div>
+
+                      <!-- Tool 4: Copilot -->
+                      <div
+                        class="rounded-xl border border-slate-200 bg-white p-3 text-center shadow-2xs hover:shadow-md hover:border-purple-400 hover:-translate-y-0.5 transition-all group cursor-pointer">
+                        <div
+                          class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center mx-auto mb-1.5 group-hover:scale-110 transition-transform">
+                          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                            <path
+                              d="M12.5 3C7.25 3 3 7.25 3 12.5C3 15.35 4.26 17.9 6.27 19.64C6.27 19.64 8.73 17.5 10.5 15.5C12.27 13.5 13.5 10.5 13.5 8.5C13.5 6.5 12.5 3 12.5 3Z"
+                              fill="url(#copilotGrad1Mod)" />
+                            <path
+                              d="M11.5 21C16.75 21 21 16.75 21 11.5C21 8.65 19.74 6.1 17.73 4.36C17.73 4.36 15.27 6.5 13.5 8.5C11.73 10.5 10.5 13.5 10.5 15.5C10.5 17.5 11.5 21 11.5 21Z"
+                              fill="url(#copilotGrad2Mod)" />
+                            <defs>
+                              <linearGradient id="copilotGrad1Mod" x1="3" y1="3" x2="13.5" y2="19.64"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0078D4" />
+                                <stop offset="0.5" stop-color="#00A4EF" />
+                                <stop offset="1" stop-color="#2ED3B7" />
+                              </linearGradient>
+                              <linearGradient id="copilotGrad2Mod" x1="21" y1="21" x2="10.5" y2="4.36"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#E83B86" />
+                                <stop offset="0.5" stop-color="#FF5B45" />
+                                <stop offset="1" stop-color="#FFB900" />
+                              </linearGradient>
+                            </defs>
+                          </svg>
+                        </div>
+                        <div class="font-bold text-slate-900 text-xs sm:text-[13px] leading-tight">MS Copilot</div>
+                        <div class="text-[10px] text-slate-600 mt-0.5 leading-tight">এন্টারপ্রাইজ এআই</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 4. Career Path & Learning Outcomes -->
+                  <div class="p-3 sm:p-3.5 rounded-xl bg-emerald-50/50 border border-emerald-200/80 space-y-1.5">
+                    <div class="text-xs font-bold text-emerald-950">মডিউল শেষে ক্যারিয়ার আউটকাম ও দক্ষতা:</div>
+                    <ul class="space-y-1 text-[11px] text-slate-600">
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-emerald-600 font-bold">✓</span>
+                        <span><strong>টার্গেট রোল:</strong> Prompt Engineer / AI Content Strategist
+                          ($25–$45/ঘণ্টা)</span>
+                      </li>
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-emerald-600 font-bold">✓</span>
+                        <span><strong>দক্ষতা:</strong> যেকোনো এজেন্সির জন্য কাস্টম প্রম্পট সিস্টেম ও কন্টেন্ট ড্রাফটার
+                          বট তৈরি।</span>
+                      </li>
+                      <li class="flex items-start gap-1.5">
+                        <span class="text-emerald-600 font-bold">✓</span>
+                        <span><strong>পোর্টফোলিও:</strong> আপনার প্রোফাইলে ১টি ভেরিফাইড এআই ড্রাফটিং বট প্রজেক্ট যুক্ত
+                          হবে।</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Module 2 -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-black">মডিউল ০২</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                n8n ও Make.com দিয়ে ভিজ্যুয়াল নো-কোড ওয়ার্কফ্লো
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+          <!-- MODULE 03 -->
+          <div id="curriculum-module-3"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৩</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    অটোনোমাস এআই এজেন্ট: টুল কলিং, ফাংশন ও মেমরি
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  সাধারণ চ্যাটবটের বাইরে গিয়ে যে এআই নিজেই সিদ্ধান্ত নেয়, রিয়েল-টাইম ওয়েব সার্চ ও ডেটাবেজ চেক করে
+                  স্বয়ংক্রিয় অ্যাকশন চালায়—এমন বুদ্ধিমান এজেন্ট আর্কিটেকচার, কাস্টম ফাংশন কলিং এবং মেমরি সেশন ট্র্যাকিং
+                  তৈরি করার উচ্চমানের টেকনিক শিখবেন এই মডিউলে।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• n8n ক্লাউড ও সেলফ-হোস্টেড ইনস্টলেশন সেটআপ।</p>
-                <p>• ট্রিগার, অ্যাকশন, কন্ডিশনাল ব্রাঞ্চিং এবং ডেটা ট্রান্সফর্মেশন।</p>
-                <p>• গুগল শিটস, এয়ারটেবিল ও ড্রাইভের সাথে ক্লাউড অটোমেশন পাইপলাইন।</p>
-                <div class="pt-2 flex items-center gap-2 text-emerald-700 font-bold text-xs">
-                  <i data-lucide="folder-check" class="w-4 h-4"></i>
-                  <span>অ্যাসাইনমেন্ট ২: লিড স্ক্র্যাপিং থেকে স্বয়ংক্রিয় শিট আপডেট সিস্টেম</span>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অটোনোমাস এআই এজেন্টের মৌলিক আর্কিটেকচার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              সাধারণ চ্যাটবট বনাম অটোনোমাস এজেন্টের মূল পার্থক্য, ডিসিশন মেকিং লুপ এবং গোল-ওরিয়েন্টেড
+                              অ্যাকশন প্ল্যানিং সিস্টেমের পূর্ণাঙ্গ বিশ্লেষণ।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              টুল কলিং (Tool Calling) ও কাস্টম ফাংশন এক্সিকিউশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              এআই মডেলকে এক্সটার্নাল এপিআই, ক্যালকুলেটর ও ডাটাবেজ সার্চ টুলের সাথে সংযুক্ত করে
+                              রিয়েল-টাইম তথ্য পাওয়ার অটোমেশন টেকনিক।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              কনভারসেশন মেমরি ও স্টেট ম্যানেজমেন্ট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ইউজারের দীর্ঘ চ্যাট ইতিহাস মনে রাখার শর্ট-টার্ম ও লং-টার্ম মেমরি বাফার সেটআপ, যাতে এআই
+                              পূর্বের প্রসঙ্গের সঠিক সূত্র ধরে উত্তর দিতে পারে।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪৫ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: ইন্টেলিজেন্ট ওয়েব রিসার্চ ও সামারি এজেন্ট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              একটি কীওয়ার্ড দিলে স্বয়ংক্রিয়ভাবে গুগল ও উইকিপিডিয়া সার্চ করে তথ্য যাচাই ও ৩ প্যারার
+                              এক্সিকিউটিভ রিপোর্ট তৈরি করার সম্পূর্ণ এআই এজেন্ট।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০৩: কাস্টম টুল-কলিং এজেন্ট তৈরি
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              লাইভ ওয়েদার এপিআই ও কারেন্সি কনভার্টার ব্যবহার করে ইউজারের জটিল প্রশ্নের সঠিক উত্তর দিতে
+                              পারে এমন একটি এজেন্ট তৈরি ও সাবমিট করা।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Module 3 -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-black">মডিউল ০৩</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                অটোনোমাস এআই এজেন্ট: টুল কলিং, ফাংশন ও মেমরি
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+          <!-- MODULE 05 -->
+          <div id="curriculum-module-5"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৫</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    RAG ও ভেক্টর ডেটাবেজ: কোম্পানির নিজস্ব ডেটায় এআই
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  কোম্পানির শত শত পৃষ্ঠার অভ্যন্তরীণ পিডিএফ ম্যানুয়াল, ইনভয়েস ও পলিসি ডকুমেন্ট Pinecone ভেক্টর ডেটাবেজে
+                  এমবেড করে নিখুঁত তথ্য খোঁজার জন্য Retrieval-Augmented Generation (RAG) সিস্টেম তৈরি করার এন্টারপ্রাইজ
+                  লেভেল জ্ঞান অর্জন করবেন হাতে-কলমে।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• সাধারণ চ্যাটবট বনাম ডিসিশন-মেকিং অটোনোমাস এজেন্টের পার্থক্য।</p>
-                <p>• OpenClaw ও LangChain ভিত্তিক Tool Calling এবং কাস্টম API এক্সিকিউশন।</p>
-                <p>• কনভারসেশন মেমরি উইন্ডো ও ইউজার সেশন ট্র্যাকিং।</p>
-                <div class="pt-2 flex items-center gap-2 text-emerald-700 font-bold text-xs">
-                  <i data-lucide="folder-check" class="w-4 h-4"></i>
-                  <span>অ্যাসাইনমেন্ট ৩: লাইভ স্টক/ওয়েদার ডেটা ফেচ করে সিদ্ধান্ত নেওয়া এজেন্ট</span>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              RAG (Retrieval-Augmented Generation) আর্কিটেকচার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              এলএলএম মডেলকে কোম্পানির অভ্যন্তরীণ তথ্যের সাথে সিনক্রোনাইজ রাখার কৌশল এবং আরএজি পাইপলাইনের
+                              তিনটি প্রধান স্তম্ভের বিস্তারিত গাইড।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              Pinecone ভেক্টর ডেটাবেজ ও টেক্সট এমবেডিংস
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              পিডিএফ বা টেক্সট ডকুমেন্টকে ছোট ছোট চাঙ্কে ভাগ করে ভেক্টর এমবেডিংয়ে রূপান্তর এবং ক্লাউড
+                              ভেক্টর ডাটাবেজে হাই-স্পিড ইনডেক্সিং।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              সিমিলারিটি সার্চ ও কনটেক্সট রিট্রিভাল অপ্টিমাইজেশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ইউজারের প্রশ্নের সাথে সবচেয়ে প্রাসঙ্গিক প্যারাগ্রাফগুলো ফিল্টার করে এআই প্রম্পটে যুক্ত
+                              করার র‍্যাঙ্কিং টেকনিক।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪৫ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: কোম্পানির ইন্টারনাল পলিসি ও নলেজবেস বট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              কোম্পানির ১০০ পাতার এইচআর নীতিমালা পিডিএফ আপলোড করে পলিসি সংক্রান্ত যেকোনো প্রশ্নের নিখুঁত
+                              পেজ-রেফারেন্স সহ উত্তর দেওয়া নলেজ বট।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০৫: নিজস্ব ডকুমেন্টে আরএজি সিস্টেম বিল্ড
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              যেকোনো একটি প্রোডাক্ট ম্যানুয়াল বা বই আপলোড করে সেখান থেকে যেকোনো টেকনিক্যাল প্রশ্নের
+                              উত্তর খোঁজার আরএজি বট তৈরি ও প্রেজেন্টেশন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Module 4 -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-black">মডিউল ০৪</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                ওমনিচ্যানেল মেসেজিং বট (WhatsApp, Telegram ও Email)
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+          <!-- MODULE 07 -->
+          <div id="curriculum-module-7"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৭</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    মাল্টি-এজেন্ট সিস্টেম ও ক্লাউড প্রোডাকশন ডিপ্লয়মেন্ট
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  একাধিক স্পেশালাইজড এআই এজেন্টকে একটি সমন্বিত ভার্চুয়াল টিম হিসেবে পরিচালনা করুন। সিকিউরিটি, রেট-লিমিট
+                  ও ফেইল-সেফ এরর হ্যান্ডলিং বজায় রেখে ক্লাউড ভিপিএস ও ডকারে ২৪/৭ প্রোডাকশন গ্রেড অটোমেশন চালু রাখার
+                  অত্যাধুনিক কৌশলগুলো আয়ত্ত করুন।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• মেটা ক্লাউড এপিআই দিয়ে হোয়াটসঅ্যাপ বিজনেস অটোমেশন।</p>
-                <p>• টেলিগ্রাম বটফাদার কনফিগারেশন ও ইনস্ট্যান্ট নোটিফিকেশন সিস্টেম।</p>
-                <p>• ইনবক্স ইমেইল পড়ে স্বয়ংক্রিয়ভাবে রিপ্লাই ও টাস্ক শিডিউলিং।</p>
-                <div class="pt-2 flex items-center gap-2 text-emerald-700 font-bold text-xs">
-                  <i data-lucide="folder-check" class="w-4 h-4"></i>
-                  <span>অ্যাসাইনমেন্ট ৪: ফুল-স্কেল হোয়াটসঅ্যাপ কাস্টমার সাপোর্ট বট</span>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              মাল্টি-এজেন্ট কোলাবরেশন ফ্রেমওয়ার্ক
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              একটি কাজের জন্য রিসার্চার, রাইটার ও এডিটর এজেন্টের সমন্বয়ে টিম গঠন এবং সুপারভাইজার
+                              এজেন্টের মাধ্যমে আউটপুট কোয়ালিটি নিশ্চিতকরণ।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              সিকিউরিটি গার্ডরেইল ও ফেইল-সেফ এরর হ্যান্ডলিং
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              এপিআই ফেইল করলে অটো-রিট্রাই লজিক, রেট-লিমিট বাইপাসিং এবং সংবেদনশীল ক্লায়েন্ট ডাটা যাতে
+                              ফাঁস না হয় তার জন্য ডেটা স্যানিটাইজেশন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              ক্লাউড ভিপিএস ও ডকার কনটেইনারে ২৪/৭ রানিং বট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              হেটজনার বা ডিজিটাল ওশেন ক্লাউড সার্ভারে n8n ও এআই বট ডিপ্লয় করে কখনো ক্র্যাশ না করে
+                              সার্বক্ষণিক ব্যাকগ্রাউন্ডে চালানোর নিয়মাবলী।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪৫ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: ফুল্লি অটোনোমাস মার্কেট রিসার্চ টিম
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ৩টি এআই এজেন্টের টিম যা প্রতিদ্বন্দ্বী কোম্পানির প্রাইসিং ডাটা ট্র্যাক করে, উইকলি সামারি
+                              রিপোর্ট লেখে এবং স্বয়ংক্রিয়ভাবে সিইওকে ইমেইল পাঠায়।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০৭: রেসিলিয়েন্ট অটোমেশন পাইপলাইন ডিজাইন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              একটি ফল্ট-টলারেন্ট ওয়ার্কফ্লো তৈরি যেখানে কোনো এপিআই ডাউন হলে অল্টারনেট ব্যাকআপ এপিআই
+                              স্বয়ংক্রিয়ভাবে কাজ শুরু করবে।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- Module 5 -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-black">মডিউল ০৫</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                RAG সিস্টেম ও ভেক্টর ডেটাবেজ (কোম্পানির নিজস্ব ডেটা দিয়ে AI)
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+        <!-- ============== RIGHT COLUMN (Modules 02, 04, 06, 08) ============== -->
+        <div class="space-y-4 sm:space-y-5">
+          <!-- MODULE 02 -->
+          <div id="curriculum-module-2"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০২</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    n8n ও Make.com দিয়ে ভিজ্যুয়াল নো-কোড ওয়ার্কফ্লো
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  কোনো কোডিং ছাড়াই ড্র্যাগ-অ্যান্ড-ড্রপ ইন্টারফেসে জটিল ক্লাউড অটোমেশন তৈরি করুন। গুগল শিটস, এয়ারটেবিল,
+                  ড্রাইভ ও ইমেইলকে একসাথে সংযুক্ত করে কোম্পানির ঘণ্টার পর ঘণ্টা অপচয় হওয়া ম্যানুয়াল কাজগুলো সম্পূর্ণ
+                  স্বয়ংক্রিয় করার পূর্ণাঙ্গ গাইড ও বাস্তব প্রজেক্ট।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• Retrieval-Augmented Generation (RAG) আর্কিটেকচার কনসেপ্ট।</p>
-                <p>• Pinecone / Qdrant ভেক্টর ডেটাবেজে টেক্সট এমবেডিং স্টোর করা।</p>
-                <p>• কোম্পানির ১০০ পাতার PDF বা নীতিমালা পড়ে সঠিক উত্তর দেওয়া AI Bot।</p>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              n8n ক্লাউড ও সেলফ-হোস্টেড এনভায়রনমেন্ট সেটআপ
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ক্লাউড ও লোকাল সার্ভারে n8n ইনস্টলেশন, ইউজার ইন্টারফেস পরিচিতি, সিকিউর ক্রেডেনশিয়াল
+                              ম্যানেজমেন্ট এবং নোড কানেক্টিভিটির বেসিক ফান্ডামেন্টালস।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              ট্রিগার, লজিক ব্রাঞ্চিং ও ডাটা ট্রান্সফর্মেশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ইফ-এলস কন্ডিশন, লুপ, ফিল্টার এবং নো-কোড জেসন ডাটা পার্সিংয়ের মাধ্যমে জটিল বিজনেস লজিককে
+                              কোনো কোডিং ছাড়াই স্বয়ংক্রিয় ওয়ার্কফ্লোতে রূপান্তর।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              গুগল শিটস, এয়ারটেবিল ও ড্রাইভ অটোমেশন পাইপলাইন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              স্প্রেডশীটে নতুন রো যোগ হলে স্বয়ংক্রিয় ফোল্ডার তৈরি, ফাইল কনভার্সন এবং মাল্টি-প্ল্যাটফর্ম
+                              ডাটাবেজ সিঙ্কিংয়ের রিয়েল-টাইম কনফিগারেশন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৫০ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: লিড স্ক্র্যাপিং থেকে স্বয়ংক্রিয় শিট আপডেট সিস্টেম
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ওয়েবসাইট বা ফর্ম থেকে আসা নতুন লিড ডাটা ভ্যালিডেট করে গুগল শিটে ক্যাটাগরাইজড উপায়ে সংরক্ষণ
+                              ও তাৎক্ষণিক টিম অ্যালার্ট পাঠানোর লাইভ প্রজেক্ট।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০২: মাল্টি-স্টেপ ওয়ার্কফ্লো চ্যালেঞ্জ
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              গুগল ফর্ম সাবমিশন থেকে ৩টি ভিন্ন ডেটাসেট তৈরি ও ইমেইল নোটিফিকেশন পাঠানোর একটি কার্যকরী
+                              এন্ড-টু-এন্ড n8n ওয়ার্কফ্লো জমা দেওয়া।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Module 6 -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-black">মডিউল ০৬</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                মাল্টি-এজেন্ট সিস্টেম ও প্রোডাকশন ডিপ্লয়মেন্ট
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+          <!-- MODULE 04 -->
+          <div id="curriculum-module-4"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৪</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    হোয়াটসঅ্যাপ ও টেলিগ্রাম এআই বট অটোমেশন
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  মেটা ক্লাউড এপিআই এবং টেলিগ্রাম বটফাদার কনফিগার করে ২৪/৭ গ্রাহক সেবা, লিড জেনারেশন ও ইনস্ট্যান্ট
+                  নোটিফিকেশন প্রদানকারী এআই বিজনেস চ্যাটবট বানান, যা স্বয়ংক্রিয়ভাবে ক্লায়েন্টের তথ্য সংগ্রহ করে
+                  ড্যাশবোর্ডে পাঠাতে সক্ষম এবং কাস্টমার সন্তুষ্টি বাড়ায়।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• একাধিক এআই এজেন্ট যখন একটি টিমের মতো মিলেমিশে কাজ করে।</p>
-                <p>• সিকিউরিটি, রেট-লিমিট ও ফেইল-সেফ এরর রিকভারি।</p>
-                <p>• ক্লাউড সার্ভারে ২৪/৭ রানিং বট ডিপ্লয় করার গাইডলাইন।</p>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              মেটা ক্লাউড এপিআই ও হোয়াটসঅ্যাপ বিজনেস সেটআপ
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              অফিশিয়াল মেটা ডেভেলপার অ্যাকাউন্ট তৈরি, ফোন নাম্বার ভেরিফিকেশন, মেসেজ টেমপ্লেট অনুমোদন এবং
+                              ওয়েব-হুক লিসেনার কনফিগারেশন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              টেলিগ্রাম বটফাদার ও ইন্টারঅ্যাক্টিভ বাটন মেনু
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              টেলিগ্রাম এপিআই টোকেন দিয়ে স্বয়ংক্রিয় চ্যাটবট তৈরি, ইনলাইন কিবোর্ড মেনু এবং গ্রুপ অ্যাডমিন
+                              অটোমেশন কমান্ডের লাইভ সেটআপ।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              স্মার্ট ইনবক্স ও অটো-রিপ্লাই শিডিউলার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              গ্রাহকের মেসেজ পড়ে কীওয়ার্ড ও ইন্টেন্ট অনুযায়ী সঠিক ডিপার্টমেন্টে রিডাইরেক্ট করা এবং
+                              অফ-আওয়ারে অটোমেটিক ফ্রেন্ডলি রিপ্লাই পাঠানো।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪০ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: ২৪/৭ সেলস ও কাস্টমার সাপোর্ট হোয়াটসঅ্যাপ বট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              প্রোডাক্ট ক্যাটালগ দেখানো, দামের হিসাব করা, অর্ডার কনফার্ম করে গুগল শিটে এন্ট্রি নেওয়া
+                              একটি পূর্ণাঙ্গ হোয়াটসঅ্যাপ বিজনেস অটোমেশন বট।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০৪: এআই চ্যাটবট রোলআউট টেস্ট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              একটি লাইভ ডেমো ব্যবসার জন্য ৫টি কমন এফএকিউ ও প্রোডাক্ট ইনকোয়ারির নিখুঁত উত্তর দিতে সক্ষম
+                              টেলিগ্রাম বট টেস্ট ও সাবমিট করা।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Module 7 & 8: Marketplace & Capstone -->
-        <div
-          class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md shadow-xs">
-          <button type="button" onclick="toggleCurriculumModule(this)"
-            class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 group cursor-pointer focus:outline-none">
-            <div class="flex items-center gap-3.5">
-              <span class="px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-black">মডিউল ০৭-০৮</span>
-              <span class="font-bold text-slate-900 text-sm sm:text-base group-hover:text-emerald-700">
-                আপওয়ার্ক-ফাইভার মাস্টারি, গ্লোবাল রিমোট জব ও ক্যাপস্টোন প্রজেক্ট
-              </span>
-            </div>
-            <div
-              class="curriculum-icon shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300">
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </div>
-          </button>
-          <div class="curriculum-module-content">
-            <div class="overflow-hidden">
+          <!-- MODULE 06 -->
+          <div id="curriculum-module-6"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৬</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    CRM ইন্টিগ্রেশন, কাস্টম Webhooks ও এপিআই কানেক্টিভিটি
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  HubSpot, Zoho ও Salesforce-এর মতো শীর্ষ সিআরএম-এর সাথে কাস্টম ওয়েবহুকস এবং রেস্ট এপিআই ইন্টিগ্রেট করে
+                  সেলস পাইপলাইন, পেমেন্ট গেটওয়ে ও গ্রাহক ফলো-আপ অটোমেশনের মাধ্যমে রিয়েল-টাইম ডেটা সিনক্রোনাইজেশন তৈরি
+                  করুন কোনো কোডিং ঝামেলা ছাড়াই।
+                </p>
+              </div>
               <div
-                class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 space-y-2">
-                <p>• $500–$2000 বাজেট ক্লায়েন্টদের খুঁজে বের করার সিক্রেট প্রপোজাল মেথড।</p>
-                <p>• লাইভ পোর্টফোলিও ডিফেন্স ও লাইভ ক্লায়েন্ট কমিউনিকেশন ট্রেইনিং।</p>
-                <p>• ক্যাপস্টোন প্রজেক্ট ভেরিফিকেশন ও NSDA সরকারি সার্টিফিকেট অ্যাসেসমেন্ট।</p>
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              রেস্ট এপিআই (REST API) ও কাস্টম ওয়েব-হুক আর্কিটেকচার
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              GET, POST, PUT রিকোয়েস্টের মেকানিজম, হেডার্স, অথেনটিকেশন বিয়ারার টোকেন এবং থার্ড-পার্টি
+                              প্ল্যাটফর্মের সাথে ডাটা আদান-প্রদান পদ্ধতি।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              HubSpot ও Zoho CRM অটোমেশন ইন্টিগ্রেশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              নতুন লিড আসলে স্বয়ংক্রিয়ভাবে ডিল তৈরি, স্টেজ আপডেট, টাস্ক অ্যাসাইন এবং সেলস
+                              রিপ্রেজেন্টেটিভদের কাছে ক্যালেন্ডার বুকিং লিংক পাঠানো।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              পেমেন্ট গেটওয়ে নোটিফিকেশনে স্বয়ংক্রিয় ইনভয়েসিং
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              বিকাশ বা স্ট্রাইপ পেমেন্ট সফল হওয়ার সাথে সাথে স্বয়ংক্রিয় পিডিএফ ক্যাশমেমো তৈরি ও গ্রাহকের
+                              হোয়াটসঅ্যাপে তাৎক্ষণিক রিসিট পাঠানো।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৫০ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              হ্যান্ডস-অন প্রজেক্ট: এন্ড-টু-এন্ড ই-কমার্স সেলস ও ফুলফিলমেন্ট পাইপলাইন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ওয়েবসাইট অর্ডার থেকে শুরু করে পেমেন্ট ভেরিফিকেশন, সিআরএম এন্ট্রি এবং কুরিয়ার সার্ভিস
+                              এপিআইতে পার্সেল বুকিংয়ের কমপ্লিট অটোমেশন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              অ্যাসাইনমেন্ট ০৬: মাল্টি-এপিআই কানেকশন টেস্ট
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              একটি কাস্টম ওয়েব-হুক ক্যাচ করে গুগল শিট ও স্ল্যাক চ্যানেলে ফরম্যাটেড ডাটা পুশ করার
+                              সম্পূর্ণ ফ্লো তৈরি করে মেন্টরকে দেখানো।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            অ্যাসাইনমেন্ট ও কুইজ
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
+          <!-- MODULE 08 -->
+          <div id="curriculum-module-8"
+            class="curriculum-module-item border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-xs transition">
+
+            <!-- Module Header (Click toggles collapse/open) -->
+            <button type="button" onclick="toggleCurriculumModule(this)"
+              class="w-full p-4 sm:p-5 text-left flex items-start justify-between gap-3 group cursor-pointer focus:outline-none bg-white hover:bg-slate-50/50 transition">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+                  <span
+                    class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs font-black shrink-0">মডিউল
+                    ০৮</span>
+                  <span
+                    class="font-extrabold text-slate-900 text-sm sm:text-[15px] group-hover:text-emerald-700 transition-colors">
+                    ক্যাপস্টোন প্রজেক্ট, ফ্রিল্যান্সিং ও ক্যারিয়ার প্লেসমেন্ট
+                  </span>
+                </div>
+                <!-- 250 Character Module Description -->
+                <p class="text-[12px] sm:text-[12.5px] text-slate-600 mt-2 leading-relaxed">
+                  আন্তর্জাতিক মার্কেটপ্লেসে এআই অটোমেশন সার্ভিস বিক্রি, হাই-টিকেটিং ক্লায়েন্ট প্রপোজাল তৈরি, লাইভ
+                  পোর্টফোলিও ডিফেন্স এবং সরাসরি ইন্ডাস্ট্রি মেন্টরদের তত্ত্বাবধানে ফুল-স্ট্যাক ক্যাপস্টোন প্রজেক্ট
+                  সম্পূর্ণ করার পূর্ণাঙ্গ ক্যারিয়ার পথনকশা।
+                </p>
+              </div>
+              <div
+                class="curriculum-icon shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-all duration-300 mt-0.5">
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              </div>
+            </button>
+
+            <!-- Module Content -->
+            <div class="curriculum-module-content">
+              <div class="overflow-hidden">
+                <div class="p-4 sm:p-5 border-t border-slate-100 bg-slate-50/30 space-y-5">
+                  <!-- Class Schedule & Lessons List -->
+                  <div>
+                    <div
+                      class="flex items-center justify-between py-2 px-1 text-[11px] font-black text-slate-500 uppercase tracking-wider border-b border-slate-200/70 mb-2">
+                      <span>ক্লাসের বিষয়বস্তু ও বিবরণ</span>
+                      <span class="text-right">ক্লাসের ধরন</span>
+                    </div>
+
+                    <div
+                      class="divide-y divide-slate-100 border border-slate-200/90 rounded-xl bg-white shadow-2xs overflow-hidden">
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০১</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              আন্তর্জাতিক মার্কেটপ্লেসে এআই অটোমেশন গিগ ও সার্ভিস সেল
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              Upwork ও Fiverr-এ হাই-টিকেটিং ($৫০০–$২,০০০) এআই অটোমেশন ক্লায়েন্ট খোঁজা, উইনিং প্রপোজাল
+                              রাইটিং এবং ডিসকভারি কল নেওয়ার কৌশল।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০২</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              লাইভ পোর্টফোলিও ডিফেন্স ও মক ক্লায়েন্ট ইন্টারভিউ
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ক্লায়েন্টের সামনে লাইভ ডেমো প্রদর্শন, টেকনিক্যাল অবজেকশন হ্যান্ডলিং এবং লং-টার্ম মাসিক
+                              রিটেইনার চুক্তিতে সাইন করানোর নেগোশিয়েশন মেথড।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-50 text-rose-700 border-rose-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                            লাইভ ক্লাস • ১.৫ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">০৩</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              গভর্নমেন্ট ও ইন্টারন্যাশনাল সার্টিফিকেট ভেরিফিকেশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              NSDA সরকারি সার্টিফিকেশন অ্যাসেসমেন্ট পরীক্ষার জন্য প্রয়োজনীয় ডকুমেন্টেশন, স্ট্যান্ডার্ড
+                              কমপ্লায়েন্স ও পোর্টফোলিও অডিট গাইডলাইন।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border-amber-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                            রেকর্ডেড ক্লাস • ৪৫ মিনিট
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-emerald-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">৪</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              ক্যাপস্টোন প্রজেক্ট: এন্টারপ্রাইজ গ্রেড এআই অটোমেশন সলিউশন
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              বাস্তব কোনো লোকাল বা গ্লোবাল কোম্পানির সম্পূর্ণ ম্যানুয়াল বিজনেস প্রসেসকে স্বয়ংক্রিয় করে
+                              রেজাল্ট-ড্রিভেন ফাইনাল প্রজেক্ট ডেলিভারি।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-300 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            লাইভ প্রজেক্ট ল্যাব • ২ ঘণ্টা
+                          </span>
+                        </div>
+                      </div>
+                      <!-- Row -->
+                      <div
+                        class="p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 hover:bg-slate-50/70 transition">
+                        <div class="flex items-start gap-2.5 min-w-0">
+                          <span
+                            class="w-5 h-5 rounded-md bg-purple-600 text-white text-[10px] font-black flex items-center justify-center shrink-0 mt-0.5">ক</span>
+                          <div>
+                            <h4 class="text-xs sm:text-[13px] font-bold text-slate-900 leading-snug">
+                              ফাইনাল অ্যাসেসমেন্ট ও গ্র্যাজুয়েশন ডে
+                            </h4>
+                            <p class="text-[11px] text-slate-600 mt-1 leading-relaxed">
+                              ইন্ডাস্ট্রি বিশেষজ্ঞদের প্যানেলের সামনে ফাইনাল প্রজেক্ট প্রেজেন্টেশন, কোয়ালিটি গ্রেডিং এবং
+                              টপ পারফর্মারদের সরাসরি জব রেফারেল প্রদান।
+                            </p>
+                          </div>
+                        </div>
+                        <div class="shrink-0 self-start sm:self-center pl-7 sm:pl-0">
+                          <span
+                            class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-50 text-purple-700 border-purple-200 border">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            সার্টিফিকেট অ্যাসেসমেন্ট
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-      </div>
-
-      <!-- Download Full Syllabus CTA -->
-      <div class="mt-8 text-center">
-        <a href="#sec-register"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-xs sm:text-sm border border-slate-200/90 shadow-xs transition">
-          <i data-lucide="download" class="w-4 h-4 text-emerald-700"></i>
-          <span>পূর্ণাঙ্গ সিলেবাস ও ব্রোশিউর ডাউনলোড করুন (PDF)</span>
-        </a>
       </div>
 
     </div>
@@ -1688,7 +3279,28 @@
   <!-- ========================================================================= -->
   <!-- 9. 7 HANDS-ON REAL WORLD PROJECTS SHOWCASE                                -->
   <!-- ========================================================================= -->
-  <section id="sec-projects" class="py-16 sm:py-20 relative border-b border-slate-200">
+  <section id="sec-projects" class="py-16 sm:py-20 relative border-b border-slate-200 overflow-hidden bg-[#F8FAF9]">
+
+    <!-- Blueprint Tech Grid & Glowing Orbs -->
+    <div class="blueprint-dots-bg absolute inset-0 opacity-55 pointer-events-none"></div>
+    <div
+      class="absolute top-1/3 -right-24 w-[600px] h-[600px] bg-teal-400/14 rounded-full blur-3xl pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-10 -left-20 w-[500px] h-[500px] bg-emerald-400/12 rounded-full blur-3xl pointer-events-none">
+    </div>
+
+    <!-- Floating Live Project Status Badges -->
+    <div
+      class="animate-float-drift absolute top-12 left-12 hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-emerald-400/40 shadow-sm text-xs font-mono text-emerald-900">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+      <span>API Endpoint: Live Production Ready</span>
+    </div>
+    <div
+      class="animate-float-drift-rev absolute top-12 right-12 hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-teal-400/40 shadow-sm text-xs font-mono text-teal-900">
+      <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i>
+      <span>Portfolio Ready Capstones</span>
+    </div>
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
@@ -1991,6 +3603,11 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+
+        <!-- Connecting Progressive Flow Line (Desktop) -->
+        <div
+          class="hidden md:block absolute top-1/2 left-12 right-12 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-600 -translate-y-12 z-0 opacity-30 rounded-full">
+        </div>
 
         <div class="p-6 rounded-3xl glass-card-elevated text-center relative">
           <div
@@ -2912,9 +4529,26 @@
     function toggleCurriculumModule(btn) {
       const item = btn.closest('.curriculum-module-item');
       if (!item) return;
-      const wasActive = item.classList.contains('active');
-      document.querySelectorAll('.curriculum-module-item').forEach(el => el.classList.remove('active'));
-      if (!wasActive) item.classList.add('active');
+      item.classList.toggle('active');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Toggle All Modules in Curriculum
+    function toggleAllCurriculumModules() {
+      const items = document.querySelectorAll('.curriculum-module-item');
+      const anyActive = Array.from(items).some(item => item.classList.contains('active'));
+      items.forEach(item => {
+        if (anyActive) {
+          item.classList.remove('active');
+        } else {
+          item.classList.add('active');
+        }
+      });
+      const lbl = document.getElementById('toggle-all-curriculum-label');
+      if (lbl) {
+        lbl.textContent = anyActive ? 'সবগুলো খুলুন' : 'সবগুলো বন্ধ করুন';
+      }
+      if (window.lucide) lucide.createIcons();
     }
 
     // Demo Modal Handlers
