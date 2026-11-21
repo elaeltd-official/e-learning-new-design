@@ -1,0 +1,3615 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমাদের সকল আইটি ও ক্যারিয়ার ডেভেলপমেন্ট কোর্সসমূহ | e-Learning &amp; Earning Ltd.</title>
+  <meta name="description"
+    content="আন্তর্জাতিক মার্কেটপ্লেস ও কর্পোরেট চাকুরির উপযোগী আধুনিক স্কিল ডেভেলপমেন্ট প্রোগ্রাম। হ্যান্ডস-অন ল্যাব প্রজেক্ট ও অভিজ্ঞ মেন্টরদের সরাসরি তত্ত্বাবধানে ক্যারিয়ার গড়ুন।">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://erp-back.e-laeltd.com/storage/images/settings/favicon.png">
+
+  <!-- Google Fonts: Hind Siliguri & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+            bengali: ['"Hind Siliguri"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              forest: '#034833',
+              emerald: '#059669',
+              night: '#0B1F17',
+              dark: '#032D20',
+              accent: '#10B981',
+              light: '#F8FAF9',
+              gold: '#F59E0B'
+            }
+          },
+          boxShadow: {
+            '2xs': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+            'xs': '0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.04)',
+            'glow-emerald': '0 0 25px -5px rgba(5, 150, 105, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #94A3B8;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #059669;
+    }
+
+    /* AI Moving Lights & Aurora Animations */
+    @keyframes aiAurora1 {
+
+      0%,
+      100% {
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+        opacity: 0.65;
+      }
+
+      33% {
+        transform: translate(75px, -45px) scale(1.22) rotate(6deg);
+        opacity: 0.9;
+      }
+
+      66% {
+        transform: translate(-50px, 35px) scale(0.92) rotate(-4deg);
+        opacity: 0.55;
+      }
+    }
+
+    @keyframes aiAurora2 {
+
+      0%,
+      100% {
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+        opacity: 0.6;
+      }
+
+      33% {
+        transform: translate(-65px, 50px) scale(1.18) rotate(-7deg);
+        opacity: 0.85;
+      }
+
+      66% {
+        transform: translate(55px, -40px) scale(0.9) rotate(5deg);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes aiAurora3 {
+
+      0%,
+      100% {
+        transform: translate(0px, 0px) scale(0.95);
+        opacity: 0.45;
+      }
+
+      50% {
+        transform: translate(45px, 55px) scale(1.2);
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes aiLightSweep {
+      0% {
+        transform: translateX(-150%) skewX(-25deg);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0.65;
+      }
+
+      80% {
+        opacity: 0.65;
+      }
+
+      100% {
+        transform: translateX(250%) skewX(-25deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes aiGridGlide {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 48px 48px;
+      }
+    }
+
+    @keyframes aiGlowPulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 25px -4px rgba(16, 185, 129, 0.4), 0 0 12px rgba(6, 182, 212, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 45px -2px rgba(16, 185, 129, 0.75), 0 0 28px rgba(6, 182, 212, 0.55);
+      }
+    }
+
+    .ai-aurora-1 {
+      animation: aiAurora1 18s ease-in-out infinite;
+    }
+
+    .ai-aurora-2 {
+      animation: aiAurora2 22s ease-in-out infinite;
+    }
+
+    .ai-aurora-3 {
+      animation: aiAurora3 26s ease-in-out infinite;
+    }
+
+    .ai-light-sweep-effect {
+      animation: aiLightSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .ai-grid-pattern {
+      background-image:
+        linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+      animation: aiGridGlide 30s linear infinite;
+    }
+
+    .ai-search-glow {
+      animation: aiGlowPulse 4s ease-in-out infinite;
+    }
+
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -10px rgba(3, 72, 51, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Filter tab active indicator */
+    .filter-tab.active {
+      background-color: #034833;
+      color: #ffffff;
+      border-color: #034833;
+      box-shadow: 0 4px 12px -2px rgba(3, 72, 51, 0.25);
+    }
+
+    .filter-tab.active .badge-count {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    /* SEO Content Box Accordion */
+    #seo-content-full {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    }
+
+    #seo-content-full.expanded {
+      max-height: 1400px;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F8FAF9] text-slate-800 font-sans antialiased selection:bg-brand-emerald selection:text-white">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-300"
+    id="main-header">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="flex items-center justify-between h-20 gap-2 xl:gap-4 flex-nowrap">
+
+        <!-- Brand Logo & Institutional Badge (Smaller size as requested) -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="https://e-laeltd.com" class="flex items-center group py-1">
+            <img src="assets/logo.webp" alt="e-Learning & Earning Ltd."
+              class="h-8 sm:h-8.5 xl:h-9 w-auto object-contain transition-transform group-hover:scale-105">
+          </a>
+
+          <div
+            class="hidden 2xl:flex items-center pl-3.5 border-l border-slate-200 text-[11px] text-slate-500 leading-tight">
+            <i data-lucide="shield-check" class="w-4 h-4 text-brand-emerald mr-1.5 flex-shrink-0"></i>
+            <span>Govt. Aligned &amp;<br>NSDA Registered</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation Links (Single Line, Container-Aligned, Full-Width Mega Menu) -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 2xl:gap-3 shrink-0 static">
+
+          <!-- 1. FULL-WIDTH COURSES MEGA MENU (with bug-free mouse tracking) -->
+          <div class="group h-full flex items-center" id="courses-menu-group">
+            <button id="courses-menu-btn"
+              class="flex items-center gap-1.5 px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <i data-lucide="layout-grid" class="w-3.5 h-3.5 text-brand-emerald"></i>
+              <span>Courses</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+
+            <!-- FULL-WIDTH MEGA MENU DROPDOWN (Spans 100% of 1380px container, Tall/Long height, Solid White, All 9 Categories) -->
+            <div id="courses-mega-menu"
+              class="absolute top-[calc(100%-2px)] left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 w-auto bg-white rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.2)] border border-slate-200/90 p-7 xl:p-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-['']">
+
+              <!-- Top Bar with Catalog Link (Red-marked left badge removed) -->
+              <div class="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-emerald"></span>
+                  <span>Explore All Course Categories &amp; Tracks</span>
+                </div>
+                <a href="courses.html"
+                  class="text-xs font-extrabold text-brand-forest hover:text-brand-emerald flex items-center gap-1.5 transition group/all">
+                  <span>Browse Full Course Catalog (30+)</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/all:translate-x-1 transition"></i>
+                </a>
+              </div>
+
+              <!-- 3-Column x 3-Row Grid: ALL 9 CATEGORIES WITH UNIQUE PILL BADGE BUTTONS -->
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-7">
+
+                <!-- 1. Web & Software Development -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="code-2" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Web &amp; Software Development
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Master full-stack MERN, Next.js, Python Django &amp; enterprise web software development with live
+                      client projects.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/web-software-development" onclick="filterCourses('web')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white border border-blue-200/80 transition group/btn shadow-xs">
+                      <span>11 Web &amp; Software Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 2. Graphics and Multimedia -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="palette" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Graphics and Multimedia
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Industry-grade UI/UX design in Figma, brand identity, 3D Blender modeling, CGI &amp; commercial
+                      video editing.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/graphic-multimedia" onclick="filterCourses('graphics')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-purple-50 text-purple-700 hover:bg-purple-600 hover:text-white border border-purple-200/80 transition group/btn shadow-xs">
+                      <span>5 Creative &amp; 3D Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 3. Digital Marketing -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Digital Marketing
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Performance Meta &amp; Google Ads, technical SEO audits, GA4 data analytics, and AI-driven growth
+                      automation.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/digital-marketing" onclick="filterCourses('marketing')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-50 text-amber-800 hover:bg-amber-600 hover:text-white border border-amber-200/80 transition group/btn shadow-xs">
+                      <span>3 Marketing &amp; AI Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 4. Networking -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="network" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Networking
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Hands-on Cisco CCNA routing, MikroTik MTCNA administration, physical router hardware labs &amp;
+                      server configuration.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/networking" onclick="filterCourses('cyber')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-50 text-cyan-800 hover:bg-cyan-600 hover:text-white border border-cyan-200/80 transition group/btn shadow-xs">
+                      <span>CCNA &amp; Server Labs</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 5. Cyber Security -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="shield" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Cyber Security
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Certified ethical hacking, SOC defensive operations, threat intelligence, vulnerability assessment
+                      &amp; Linux defense.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/cyber-security" onclick="filterCourses('cyber')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-800 hover:bg-emerald-600 hover:text-white border border-emerald-200/80 transition group/btn shadow-xs">
+                      <span>4 Cyber Defense Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 6. Competency Based Training (CBT&A) -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Competency Based Training
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      National Skills Development Authority (NSDA) certified Level 3 &amp; Level 4 IT support and
+                      graphics assessment tracks.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/competency-based-training" onclick="filterCourses('cbta')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-teal-50 text-teal-800 hover:bg-teal-600 hover:text-white border border-teal-200/80 transition group/btn shadow-xs">
+                      <span>NSDA L3/L4 Certified</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 7. Basic -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="monitor" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Basic
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Fundamental computer literacy, advanced Microsoft Excel formulas, corporate office documentation
+                      &amp; typing speed.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/basic" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-600 hover:text-white border border-indigo-200/80 transition group/btn shadow-xs">
+                      <span>2 Office &amp; Excel Tracks</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 8. Institute Program -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Institute Program
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Cutting-edge AI prompt engineering, international B2B lead generation &amp; specialized
+                      institutional corporate programs.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/institute-program" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-orange-50 text-orange-800 hover:bg-orange-600 hover:text-white border border-orange-200/80 transition group/btn shadow-xs">
+                      <span>AI &amp; Lead Gen Programs</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- 9. Others -->
+                <div
+                  class="flex flex-col justify-between p-3.5 rounded-2xl hover:bg-slate-50 border border-transparent hover:border-slate-100 transition group/cat">
+                  <div>
+                    <div class="flex items-center gap-2.5 mb-2">
+                      <span
+                        class="w-8 h-8 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover/cat:scale-105 transition">
+                        <i data-lucide="layers" class="w-4 h-4"></i>
+                      </span>
+                      <h4 class="text-sm font-black text-slate-900 group-hover/cat:text-brand-forest transition">
+                        Others
+                      </h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed pl-10 line-clamp-2">
+                      Professional English communication for global freelancing, 1-on-1 marketplace account approvals
+                      &amp; career coaching.
+                    </p>
+                  </div>
+                  <div class="pt-3.5 pl-10">
+                    <a href="https://e-laeltd.com/category/other-courses" onclick="filterCourses('all')"
+                      class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-800 hover:bg-slate-700 hover:text-white border border-slate-200 transition group/btn shadow-xs">
+                      <span>Freelance &amp; Placement</span>
+                      <i data-lucide="arrow-right"
+                        class="w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 2. 64 DISTRICT CAMPUSES -->
+          <a href="https://e-laeltd.com/branch"
+            class="px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-emerald"></span>
+            </span>
+            <span>64 District Campuses</span>
+          </a>
+
+          <!-- 3. SUCCESS STORIES (Solid White Dropdown) -->
+          <div class="relative group">
+            <a href="https://e-laeltd.com/success-stories"
+              class="flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <span>Success Stories</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </a>
+
+            <!-- Solid White Submenu -->
+            <div
+              class="absolute top-full left-0 w-64 p-2.5 bg-white rounded-2xl shadow-2xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-3 group-hover:translate-y-1 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <a href="https://e-laeltd.com/success-stories"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="star" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Student Success Stories</span>
+              </a>
+              <a href="https://e-laeltd.com/success-freelancers"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="badge-dollar-sign" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Verified Freelancers</span>
+              </a>
+              <a href="https://e-laeltd.com/recent-job-placements"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="briefcase" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Job Placements</span>
+              </a>
+              <a href="https://dydaiproject.com/apply" target="_blank"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-brand-forest bg-brand-subtle/50 transition">
+                <i data-lucide="external-link" class="w-4 h-4 text-brand-emerald"></i>
+                <span>DYD AI Project 64</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. FACULTY & MENTORS -->
+          <a href="https://e-laeltd.com/trainers"
+            class="px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+            Faculty &amp; Mentors
+          </a>
+
+          <!-- 5. INSIGHTS / NEWS (Solid White Dropdown) -->
+          <div class="relative group">
+            <a href="https://e-laeltd.com/news-feeds"
+              class="flex items-center gap-1 px-2.5 xl:px-3 py-2 text-xs xl:text-[13.5px] font-bold text-slate-700 hover:text-brand-forest hover:bg-slate-100/70 rounded-xl transition whitespace-nowrap">
+              <span>Insights</span>
+              <i data-lucide="chevron-down"
+                class="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200"></i>
+            </a>
+
+            <!-- Solid White Submenu -->
+            <div
+              class="absolute top-full right-0 w-60 p-2.5 bg-white rounded-2xl shadow-2xl border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-3 group-hover:translate-y-1 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <a href="https://e-laeltd.com/news-feeds"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="newspaper" class="w-4 h-4 text-brand-emerald"></i>
+                <span>News &amp; Updates</span>
+              </a>
+              <a href="https://e-laeltd.com/blog"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="book-open" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Latest Blogs</span>
+              </a>
+              <a href="https://e-laeltd.com/image-gallery"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="image" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Campus Photo Gallery</span>
+              </a>
+              <a href="https://e-laeltd.com/video-gallery"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="video" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Video Gallery</span>
+              </a>
+              <a href="https://e-laeltd.com/about"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="info" class="w-4 h-4 text-brand-emerald"></i>
+                <span>About Us</span>
+              </a>
+              <a href="https://e-laeltd.com/contact"
+                class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-slate-50 text-xs font-bold text-slate-800 hover:text-brand-forest transition">
+                <i data-lucide="phone-call" class="w-4 h-4 text-brand-emerald"></i>
+                <span>Contact &amp; Support</span>
+              </a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Right Action Button: ONLY ENROLL NOW (Free Seminar removed as requested) -->
+        <div class="hidden sm:flex items-center gap-2.5 shrink-0">
+          <button onclick="openEnrollDrawer('Header Navigation')"
+            class="group inline-flex items-center gap-2 px-5 py-2.5 text-xs xl:text-sm font-extrabold text-white bg-gradient-to-r from-brand-forest to-brand-emerald hover:from-brand-dark hover:to-brand-forest rounded-xl shadow-md shadow-brand-forest/25 hover:shadow-xl hover:shadow-brand-forest/35 transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">
+            <span>Apply Now</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()"
+          class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu (Solid White Background) -->
+    <div id="mobile-menu"
+      class="lg:hidden hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 max-h-[80vh] overflow-y-auto shadow-2xl">
+      <div class="pb-2 mb-2 border-b border-slate-100">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3">Main Navigation</span>
+      </div>
+      <a href="courses.html" onclick="toggleMobileMenu()"
+        class="flex items-center justify-between px-3 py-2.5 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <span class="flex items-center gap-2.5"><i data-lucide="layout-grid" class="w-4 h-4 text-brand-emerald"></i> All
+          Courses</span>
+        <span class="text-xs bg-brand-subtle text-brand-forest px-2 py-0.5 rounded-full font-bold">30+</span>
+      </a>
+      <a href="https://e-laeltd.com/branch" onclick="toggleMobileMenu()"
+        class="flex items-center justify-between px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <span class="flex items-center gap-2.5"><i data-lucide="map-pin" class="w-4 h-4 text-brand-emerald"></i> 64
+          District Branches</span>
+        <span class="w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
+      </a>
+      <a href="https://e-laeltd.com/success-stories" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="star" class="w-4 h-4 text-brand-emerald"></i> Success Stories
+      </a>
+      <a href="https://e-laeltd.com/trainers" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="users" class="w-4 h-4 text-brand-emerald"></i> Faculty Mentors
+      </a>
+      <a href="https://e-laeltd.com/news-feeds" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="newspaper" class="w-4 h-4 text-brand-emerald"></i> Blogs &amp; News
+      </a>
+      <a href="https://e-laeltd.com/about" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="info" class="w-4 h-4 text-brand-emerald"></i> About e-LAE Ltd
+      </a>
+      <a href="https://e-laeltd.com/contact" onclick="toggleMobileMenu()"
+        class="flex items-center gap-2.5 px-3 py-2 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
+        <i data-lucide="phone-call" class="w-4 h-4 text-brand-emerald"></i> Contact &amp; Support
+      </a>
+      <div class="pt-3">
+        <button onclick="toggleMobileMenu(); openEnrollDrawer('Mobile Navigation')"
+          class="w-full py-2.5 text-center font-bold text-white bg-brand-forest rounded-xl shadow-md flex items-center justify-center gap-2">
+          Enroll Now <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- ========================================================================= -->
+  <!-- VIBRANT AI HERO SECTION (AI-ERA MOVING LIGHTS & HIGH-TECH LUXURY BRANDING)-->
+  <!-- ========================================================================= -->
+  <section
+    class="relative pt-12 pb-20 sm:pt-16 sm:pb-24 overflow-hidden bg-gradient-to-b from-[#021F16] via-[#043324] to-[#0A261D] text-white border-b border-emerald-900/60">
+
+    <!-- Moving Cyber Grid Backdrop -->
+    <div
+      class="ai-grid-pattern absolute inset-0 [mask-image:radial-gradient(ellipse_80%_65%_at_50%_40%,#000_70%,transparent_100%)] opacity-35 pointer-events-none">
+    </div>
+
+    <!-- Vibrant Animated Moving Aurora Lights (Business Brand Palette: Emerald, Cyan, Teal, Mint) -->
+    <div
+      class="ai-aurora-1 absolute -top-32 left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-emerald-500/30 via-teal-400/25 to-cyan-400/20 rounded-full blur-[110px] pointer-events-none">
+    </div>
+    <div
+      class="ai-aurora-2 absolute top-1/3 -right-28 w-[620px] h-[620px] bg-gradient-to-bl from-teal-400/30 via-emerald-400/25 to-lime-300/15 rounded-full blur-[105px] pointer-events-none">
+    </div>
+    <div
+      class="ai-aurora-3 absolute -bottom-20 -left-20 w-[550px] h-[550px] bg-gradient-to-tr from-cyan-500/20 via-emerald-600/25 to-transparent rounded-full blur-[100px] pointer-events-none">
+    </div>
+
+    <!-- Diagonal Moving Laser Light Beam -->
+    <div
+      class="ai-light-sweep-effect absolute -inset-full w-[250%] h-[300%] bg-gradient-to-r from-transparent via-emerald-300/12 to-transparent pointer-events-none">
+    </div>
+
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center gap-2 text-xs font-semibold text-emerald-200/70 mb-8" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-emerald-300 transition flex items-center gap-1.5">
+          <i data-lucide="home" class="w-3.5 h-3.5"></i>
+          <span>হোম (Home)</span>
+        </a>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-emerald-600"></i>
+        <span class="text-emerald-400 font-bold">কোর্স ক্যাটালগ (All Courses)</span>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="text-center max-w-3xl mx-auto">
+        <!-- AI Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/40 backdrop-blur-xl text-emerald-300 text-xs font-bold shadow-lg shadow-emerald-950/60 mb-5">
+          <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>Next-Gen AI &amp; Tech Careers · ২০২৬ স্মার্ট কারিকুলাম</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.2]">
+          ভবিষ্যৎমুখী <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 drop-shadow-[0_0_30px_rgba(16,185,129,0.45)]">AI
+            ও প্রফেশনাল আইটি</span> কোর্সসমূহ
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mt-4 text-sm sm:text-base text-emerald-100/90 leading-relaxed max-w-2xl mx-auto font-normal">
+          আন্তর্জাতিক মার্কেটপ্লেস ও কর্পোরেট চাকুরির উপযোগী আধুনিক স্কিল ডেভেলপমেন্ট প্রোগ্রাম। ৬৪ জেলায় নিজস্ব হাই-টেক
+          কম্পিউটার ল্যাব এবং অভিজ্ঞ মেন্টরদের সরাসরি তত্ত্বাবধানে নিজের ক্যারিয়ার রূপান্তর করুন।
+        </p>
+
+        <!-- AI Interactive Search Console -->
+        <div class="mt-8 max-w-2xl mx-auto">
+          <div
+            class="relative flex items-center bg-slate-900/85 backdrop-blur-2xl rounded-2xl border border-emerald-500/50 shadow-[0_12px_40px_-5px_rgba(16,185,129,0.3)] p-2 focus-within:border-emerald-400 focus-within:ring-4 focus-within:ring-emerald-400/25 transition-all ai-search-glow">
+            <div class="pl-3.5 pr-2 text-emerald-400">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <input type="text" id="course-search-input"
+              placeholder="কোর্স খুঁজুন (যেমন: MERN Stack, AI, Graphic Design, Cyber Security, Flutter...)"
+              class="w-full py-2.5 text-sm sm:text-base text-white bg-transparent placeholder-slate-400 focus:outline-hidden font-medium">
+            <button id="clear-search-btn" class="hidden pr-3 text-slate-400 hover:text-white cursor-pointer"
+              title="মুছে ফেলুন">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+            <button id="hero-search-btn"
+              class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-emerald to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-950/40 transition-all shrink-0">
+              খুঁজুন
+            </button>
+          </div>
+
+          <!-- Quick Clickable Keyword Tags -->
+          <div class="flex flex-wrap items-center justify-center gap-1.5 mt-3.5 text-[11px] text-emerald-200/70">
+            <span class="font-medium">জনপ্রিয় সার্চ:</span>
+            <button onclick="setQuickSearch('AI Automation')"
+              class="px-2.5 py-0.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">🤖
+              AI Automation</button>
+            <button onclick="setQuickSearch('MERN Stack')"
+              class="px-2.5 py-0.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">⚡
+              MERN Stack</button>
+            <button onclick="setQuickSearch('Flutter')"
+              class="px-2.5 py-0.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">📱
+              Flutter</button>
+            <button onclick="setQuickSearch('Cyber Security')"
+              class="px-2.5 py-0.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">🛡️
+              Cyber Security</button>
+            <button onclick="setQuickSearch('UI/UX')"
+              class="px-2.5 py-0.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer">🎨
+              UI/UX</button>
+          </div>
+        </div>
+
+        <!-- Quick Trust Indicators -->
+        <div
+          class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-8 text-xs text-emerald-200/80 font-medium">
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+            <span>১০০% প্রজেক্ট ও পোর্টফোলিও বেজড</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>NSDA ও সরকারি অনুমোদনপ্রাপ্ত মান</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="award" class="w-4 h-4 text-emerald-400"></i>
+            <span>লাইফটাইম প্লেসমেন্ট সাপোর্ট সেল</span>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SEO DESCRIPTION BOX (CONTENT-RICH, ACCORDION-EXPANDABLE, HIGH-RANKING)    -->
+  <!-- ========================================================================= -->
+  <section class="py-8 bg-[#F8FAF9] border-b border-slate-200/80">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm relative overflow-hidden">
+
+        <!-- Header & SEO Badge -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
+          <div>
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-bold border border-emerald-200/80 mb-2.5 shadow-2xs">
+              <i data-lucide="book-open" class="w-3.5 h-3.5 text-emerald-700"></i>
+              ই-লার্নিং অ্যান্ড আর্নিং লিমিটেড ক্যারিয়ার গাইডলাইন
+            </span>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight leading-snug">
+              বাংলাদেশে বিশ্বমানের আইটি ও ফ্রিল্যান্সিং স্কিল ডেভেলপমেন্ট — কেন ই-লার্নিং অ্যান্ড আর্নিং লিমিটেড?
+            </h2>
+          </div>
+
+          <div class="shrink-0">
+            <span class="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200">
+              ৬৪ জেলায় অনুমোদিত প্রতিষ্ঠান
+            </span>
+          </div>
+        </div>
+
+        <!-- 4 High-Impact Visual Feature Cards (SEO Key Drivers) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-5">
+          <div class="p-3.5 rounded-2xl bg-[#F8FAF9] border border-slate-200/80 flex items-start gap-3">
+            <div
+              class="w-8 h-8 rounded-xl bg-emerald-100 text-brand-emerald flex items-center justify-center shrink-0 font-bold text-sm">
+              <i data-lucide="monitor" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-900">৬৪ জেলায় নিজস্ব ল্যাব</h3>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">জেলা ব্রাঞ্চগুলোতে সরাসরি হাই-কনফিগ পিসি ও
+                ফাইবার ইন্টারনেট ল্যাব।</p>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F8FAF9] border border-slate-200/80 flex items-start gap-3">
+            <div
+              class="w-8 h-8 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center shrink-0 font-bold text-sm">
+              <i data-lucide="cpu" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-900">প্রতিটি কোর্সে AI ইন্টিগ্রেশন</h3>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">ChatGPT, Copilot ও n8n দিয়ে কাজের গতি ৩ গুণ
+                বৃদ্ধির কৌশল।</p>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F8FAF9] border border-slate-200/80 flex items-start gap-3">
+            <div
+              class="w-8 h-8 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center shrink-0 font-bold text-sm">
+              <i data-lucide="award" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-900">NSDA ও ইন্টারন্যাশনাল স্ট্যান্ডার্ড</h3>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">দক্ষতা উন্নয়ন কর্তৃপক্ষ অনুমোদিত আন্তর্জাতিক
+                CBT&A কারিকুলাম।</p>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F8FAF9] border border-slate-200/80 flex items-start gap-3">
+            <div
+              class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 font-bold text-sm">
+              <i data-lucide="briefcase" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-900">লাইফটাইম প্লেসমেন্ট সেল</h3>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-relaxed">আপওয়ার্ক, ফাইভার ও গ্লোবাল রিমোট চাকুরির
+                ডেডিকেটেড সাপোর্ট।</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Initial Summary Text -->
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+          চতুর্থ শিল্পবিপ্লব ও কৃত্রিম বুদ্ধিমত্তার (AI) এই যুগে সাধারণ সনাতন ট্রেনিং দিয়ে আন্তর্জাতিক মার্কেটপ্লেসে
+          টিকে থাকা অসম্ভব। <strong>ই-লার্নিং অ্যান্ড আর্নিং লিমিটেড</strong> নিয়ে এসেছে সম্পূর্ণ প্রজেক্ট-ভিত্তিক
+          হ্যান্ডস-অন আইটি ও ক্যারিয়ার ডেভেলপমেন্ট প্রোগ্রাম, যা বাংলাদেশের প্রতিটি জেলার তরুণ-তরুণী, ফ্রেশ গ্র্যাজুয়েট
+          এবং পেশাজীবীদের গ্লোবাল স্ট্যান্ডার্ডে প্রস্তুত করতে ডিজাইন করা হয়েছে।
+        </p>
+
+        <!-- Expandable SEO Content -->
+        <div id="seo-content-full">
+          <div
+            class="pt-4 space-y-3.5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-4">
+            <p>
+              আমাদের প্রতিটি কোর্স বাস্তব মার্কেট ডিমান্ড এবং এন্টারপ্রাইজ রিকোয়ারমেন্ট অনুযায়ী সাজানো। আপনি নন-কোডার
+              কিংবা ফ্রেশ গ্র্যাজুয়েট হলেও স্ক্র্যাচ থেকে ইন্ডাস্ট্রির প্র্যাকটিক্যাল ল্যাব ট্রেনিংয়ের মাধ্যমে একজন দক্ষ
+              <strong>ফুল-স্ট্যাক এমইআরএন ডেভেলপার, এআই অটোমেশন কনসালট্যান্ট, সাইবার সিকিউরিটি স্পেশালিস্ট, ডিজিটাল
+                মার্কেটিং গ্রোথ এক্সপার্ট কিংবা প্রফেশনাল UI/UX ডিজাইনার</strong> হিসেবে গড়ে উঠবেন।
+            </p>
+            <p>
+              কোর্স চলাকালীন সময়েই শিক্ষার্থীদের দিয়ে বাস্তব ক্লায়েন্ট প্রজেক্ট ও পোর্টফোলিও তৈরি করানো হয়, যা সরাসরি
+              আন্তর্জাতিক বায়ারদের সামনে উপস্থাপনযোগ্য। শুধু সফটওয়্যার শেখানো নয়, বরং কীভাবে আপওয়ার্ক ও ফাইভারে বিড করতে
+              হয়, ক্লায়েন্ট ইন্টারভিউ ফেস করতে হয় এবং হাই-টিকেটের আন্তর্জাতিক প্রজেক্ট ক্লোজ করতে হয়—তা প্রতিটি
+              প্রোগ্রামে হাতে-কলমে শেখানো হয়।
+            </p>
+            <div
+              class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200/80 text-emerald-900 text-xs sm:text-sm">
+              <strong>বিশেষ ক্যারিয়ার সুবিধা:</strong> আমাদের ডেডিকেটেড জব প্লেসমেন্ট সেল সফল শিক্ষার্থীদের সরাসরি
+              শীর্ষস্থানীয় সফটওয়্যার কোম্পানি, এডটেক প্ল্যাটফর্ম ও ডিজিটাল মার্কেটিং এজেন্সিতে পেইড ইন্টার্নশিপ ও
+              ফুল-টাইম জবের সুযোগ করে দেয়।
+            </div>
+          </div>
+        </div>
+
+        <!-- Read More / Show Less Toggle Button -->
+        <div class="mt-4 pt-3 flex items-center justify-between">
+          <button id="seo-read-more-btn" type="button" onclick="toggleSeoContent()"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-emerald hover:text-emerald-800 transition cursor-pointer">
+            <span id="seo-btn-text">বিস্তারিত তথ্য পড়ুন (Read More)</span>
+            <i id="seo-btn-icon" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300"></i>
+          </button>
+
+          <span class="text-[11px] text-slate-400 font-medium">আপডেটেড ২০২৬ কারিকুলাম</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE-OPTIMIZED FILTER SECTION & COURSE CATALOG GRID                     -->
+  <!-- ========================================================================= -->
+  <section class="py-10 sm:py-14 bg-[#F8FAF9]">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Filter Sticky Header Container (Fully Mobile-Optimized) -->
+      <div class="bg-white rounded-3xl border border-slate-200/90 p-4 sm:p-6 shadow-sm mb-10">
+
+        <!-- Top Row: Category Tabs Title & Results Count -->
+        <div class="flex items-center justify-between gap-4 pb-4 border-b border-slate-100 flex-wrap">
+          <div>
+            <h2 class="text-base sm:text-lg font-black text-slate-900 tracking-tight flex items-center gap-2">
+              <i data-lucide="sliders-horizontal" class="w-4 h-4 text-emerald-700"></i>
+              <span>কোর্স ক্যাটাগরি ফিল্টার</span>
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">আপনার ক্যারিয়ারের লক্ষ্য অনুযায়ী কোর্স বাছাই করুন</p>
+          </div>
+
+          <!-- Total Count Display -->
+          <div
+            class="text-xs font-bold text-slate-700 bg-emerald-50/80 px-3 py-1.5 rounded-xl border border-emerald-200/80 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span id="course-results-count">প্রদর্শন করা হচ্ছে: ১৪টি কোর্স</span>
+          </div>
+        </div>
+
+        <!-- Category Horizontal Touch-Scroller for Mobile & Desktop with Smooth Edge Fade -->
+        <div class="relative -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div class="flex items-center gap-2 overflow-x-auto py-3.5 no-scrollbar select-none"
+            style="scrollbar-width: none; -ms-overflow-style: none;">
+            <button
+              class="filter-tab active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="all">
+              <span>সব কোর্স (All)</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">14</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="web">
+              <span>Web &amp; Software</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">4</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="graphics">
+              <span>Graphics &amp; UI/UX</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">3</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="marketing">
+              <span>Digital Marketing &amp; AI</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">3</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="cyber">
+              <span>Cyber &amp; Networking</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">2</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="office">
+              <span>Business &amp; Office</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">1</span>
+            </button>
+
+            <button
+              class="filter-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 text-slate-700 hover:border-emerald-500/40 hover:text-emerald-700 transition shrink-0 flex items-center gap-2 cursor-pointer shadow-xs active:scale-95"
+              data-category="cbta">
+              <span>Govt. CBT&amp;A</span>
+              <span
+                class="badge-count px-2 py-0.5 rounded-full text-[11px] bg-slate-100 text-slate-600 font-semibold">1</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Filter Toggle Button (Visible only on mobile devices) -->
+        <div class="block md:hidden pt-3 border-t border-slate-100">
+          <button id="mobile-filter-toggle" type="button" onclick="toggleMobileFilterDrawer()"
+            class="flex items-center justify-between w-full px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 font-bold text-xs text-slate-800 transition active:scale-98">
+            <span class="flex items-center gap-2">
+              <i data-lucide="filter" class="w-4 h-4 text-emerald-700"></i>
+              <span>আরও ফিল্টার ও সাজান (Filter &amp; Sort)</span>
+            </span>
+            <div class="flex items-center gap-1.5">
+              <span id="mobile-active-filter-badge"
+                class="hidden px-2 py-0.5 rounded-full text-[10px] bg-emerald-700 text-white font-bold">সক্রিয়</span>
+              <i id="mobile-filter-chevron" data-lucide="chevron-down"
+                class="w-4 h-4 text-slate-500 transition-transform duration-300"></i>
+            </div>
+          </button>
+        </div>
+
+        <!-- Secondary Filters Row (Collapsible on Mobile, Horizontal on Desktop) -->
+        <div id="secondary-filters-box"
+          class="hidden md:flex pt-3.5 md:border-t md:border-slate-100 flex-col md:flex-row flex-wrap items-stretch md:items-center justify-between gap-3 text-xs mt-3 md:mt-0">
+
+          <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5">
+            <!-- Learning Mode Filter -->
+            <div
+              class="flex items-center justify-between sm:justify-start gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 sm:py-1.5">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span class="text-slate-500 font-medium">মোড:</span>
+              </div>
+              <select id="mode-filter"
+                class="bg-transparent font-bold text-slate-800 focus:outline-hidden cursor-pointer text-xs">
+                <option value="all">সকল মোড (All Modes)</option>
+                <option value="offline">অফলাইন ল্যাব (৬৪ জেলা)</option>
+                <option value="online">অনলাইন লাইভ (Global Live)</option>
+                <option value="hybrid">হাইব্রিড (Hybrid)</option>
+              </select>
+            </div>
+
+            <!-- Skill Level Filter -->
+            <div
+              class="flex items-center justify-between sm:justify-start gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 sm:py-1.5">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="bar-chart-2" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span class="text-slate-500 font-medium">লেভেল:</span>
+              </div>
+              <select id="level-filter"
+                class="bg-transparent font-bold text-slate-800 focus:outline-hidden cursor-pointer text-xs">
+                <option value="all">সকল লেভেল</option>
+                <option value="beginner">বিগিনার ফ্রেন্ডলি</option>
+                <option value="intermediate">ইন্টারমিডিয়েট</option>
+                <option value="advanced">অ্যাডভান্সড স্পেশালিস্ট</option>
+              </select>
+            </div>
+
+            <!-- Reset Filters Pill -->
+            <button id="reset-all-filters"
+              class="hidden items-center justify-center gap-1.5 px-3 py-2 sm:py-1.5 rounded-xl bg-red-50 text-red-600 font-bold hover:bg-red-100 transition cursor-pointer border border-red-200/60">
+              <i data-lucide="rotate-ccw" class="w-3 h-3"></i>
+              <span>ফিল্টার রিসেট</span>
+            </button>
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div
+            class="flex items-center justify-between sm:justify-start gap-1.5 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 sm:py-1.5 md:ml-auto">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="arrow-down-up" class="w-3.5 h-3.5 text-slate-400"></i>
+              <span class="text-slate-500 font-medium">সাজান:</span>
+            </div>
+            <select id="sort-select"
+              class="bg-transparent font-bold text-slate-800 focus:outline-hidden cursor-pointer text-xs">
+              <option value="popular">জনপ্রিয় কোর্স (Most Popular)</option>
+              <option value="rating">রেটিং অনুযায়ী (Highest Rated)</option>
+              <option value="price-asc">কোর্স ফি: কম থেকে বেশি</option>
+              <option value="price-desc">কোর্স ফি: বেশি থেকে কম</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Course Cards Responsive Grid (3 Columns on Desktop) -->
+      <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <!-- Course Card: Full-Stack MERN & Next.js 16 Professional -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="mern-stack" data-category="web" data-mode="offline" data-level="intermediate" data-price="12000"
+          data-rating="4.9" data-enrolled="3,850+ Enrolled" data-title="full-stack mern & next.js 16 professional">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/mern-stack-development-course-banner-1791865246.webp"
+                alt="Full-Stack MERN & Next.js 16 Professional" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  BESTSELLER
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  NSDA LEVEL 3 ALIGNED
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Web & Software
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 14 Seats Left in Batch 42
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Full-Stack MERN & Next.js 16
+                  Professional</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Build modern, production-grade web applications. Master React 19, Next.js, Node.js, Express, MongoDB,
+                Tailwind, and REST APIs.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,420 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  3,850+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  12 Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">12,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 20,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Full-Stack MERN & Next.js 16 Professional')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Digital Marketing & AI Growth Automation -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="digital-marketing" data-category="marketing" data-mode="hybrid" data-level="beginner"
+          data-price="10000" data-rating="4.8" data-enrolled="4,200+ Enrolled"
+          data-title="digital marketing & ai growth automation">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/digital-marketing-freelancing-course-banner-1791871800.webp"
+                alt="Digital Marketing & AI Growth Automation" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  HIGH DEMAND
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  AI POWERED
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Digital Marketing & AI
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 9 Seats Left in Batch 38
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3.5 Months (42 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Digital Marketing & AI Growth
+                  Automation</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Master Meta Ads, Google Performance Max, SEO, ChatGPT & AI automations to drive exponential business
+                growth and freelancing income.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(1,150 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  4,200+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  8 Live Campaigns
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">10,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 16,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    38% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳5,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Digital Marketing & AI Growth Automation')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Graphic Design & UI/UX Masterclass -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="graphic-design" data-category="graphics" data-mode="offline" data-level="beginner" data-price="11000"
+          data-rating="4.9" data-enrolled="5,100+ Enrolled" data-title="graphic design & ui/ux masterclass">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/graphic-design-freelancing-workspace-1791865666.webp"
+                alt="Graphic Design & UI/UX Masterclass" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  TOP RATED
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  PORTFOLIO READY
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Graphics & UI/UX
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 11 Seats Left in Batch 51
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Graphic Design & UI/UX
+                  Masterclass</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                From brand identity design to advanced Figma design systems. Master Photoshop, Illustrator, Figma, and
+                international design standards.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,890 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  5,100+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  15 Case Studies
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">11,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 18,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    39% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳3,666</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Graphic Design & UI/UX Masterclass')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Cyber Security, CCNA & MikroTik Administration -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="cyber-security" data-category="cyber" data-mode="offline" data-level="intermediate"
+          data-price="15000" data-rating="4.9" data-enrolled="2,300+ Enrolled"
+          data-title="cyber security, ccna & mikrotik administration">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/certified-ethical-hacker-cybersecurity-banner-1791874126.webp"
+                alt="Cyber Security, CCNA & MikroTik Administration" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  ENTERPRISE TECH
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  LAB PRACTICAL
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Cyber & Networking
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 6 Seats Left in Batch 29
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4.5 Months (54 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Cyber Security, CCNA & MikroTik
+                  Administration</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Hands-on practical training in Cisco CCNA 200-301, MikroTik routing, network penetration testing,
+                firewall management, and enterprise defense.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(980 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,300+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  10 Lab Simulations
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">15,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 25,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳5,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Cyber Security, CCNA & MikroTik Administration')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Motion Graphics, 3D & Commercial Video Editing -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="motion-graphics" data-category="graphics" data-mode="hybrid" data-level="intermediate"
+          data-price="13000" data-rating="4.8" data-enrolled="2,150+ Enrolled"
+          data-title="motion graphics, 3d & commercial video editing">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/motion-graphics-and-video-editing-course-1791866294.webp"
+                alt="Motion Graphics, 3D & Commercial Video Editing" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  TRENDING 2026
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  INDUSTRY CERTIFIED
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Graphics & UI/UX
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 8 Seats Left in Batch 33
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Motion Graphics, 3D & Commercial
+                  Video Editing</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Master Adobe Premiere Pro, After Effects, Cinema 4D basics, visual storytelling, and commercial video
+                production for international creators.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(870 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,150+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  14 Video Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">13,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 22,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    41% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,333</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Motion Graphics, 3D & Commercial Video Editing')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: AI Automation Professional Powered by AI -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="ai-automation" data-category="marketing" data-mode="online" data-level="advanced" data-price="14000"
+          data-rating="5.0" data-enrolled="1,400+ Enrolled" data-title="ai automation professional powered by ai">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/ai-automation-professional-powered-by-ai-1791954331.webp"
+                alt="AI Automation Professional Powered by AI" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  HOT NEW
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  NO-CODE & AI AGENTS
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Digital Marketing & AI
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 12 Seats Left in Batch 12
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3 Months (36 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">AI Automation Professional
+                  Powered by AI</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Build autonomous AI agents and automated business pipelines using n8n, Make.com, OpenAI APIs, CRM
+                integrations, and Zapier.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  5.0
+                  <span class="text-slate-400 font-normal text-[11px]">(620 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,400+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  9 Production Bots
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">14,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 24,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    42% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,666</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('AI Automation Professional Powered by AI')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Android & iOS App Development with Flutter -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="flutter-app" data-category="web" data-mode="offline" data-level="intermediate" data-price="13500"
+          data-rating="4.9" data-enrolled="1,950+ Enrolled" data-title="android & ios app development with flutter">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/flutter-app-development-course-banner-1791871516.webp"
+                alt="Android & iOS App Development with Flutter" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  CROSS-PLATFORM
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  GOOGLE CERTIFIED
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Web & Software
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 10 Seats Left in Batch 24
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4.5 Months (52 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Android & iOS App Development
+                  with Flutter</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Master Dart, Flutter 3, State Management (Bloc/Riverpod), Firebase, REST APIs, and publish production
+                mobile apps to Google Play & App Store.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(780 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,950+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  7 Mobile Apps
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">13,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 22,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    38% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,500</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Android & iOS App Development with Flutter')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Web Development with PHP & Laravel -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="php-laravel" data-category="web" data-mode="offline" data-level="beginner" data-price="11500"
+          data-rating="4.8" data-enrolled="3,200+ Enrolled" data-title="web development with php & laravel">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/master-php-and-laravel-web-development-1791864888.webp"
+                alt="Web Development with PHP & Laravel" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  BACKEND CORE
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  JOB PLACEMENT
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Web & Software
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 7 Seats Left in Batch 39
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  4 Months (48 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Web Development with PHP &
+                  Laravel</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Comprehensive backend development with PHP 8, Laravel 11, MySQL database architecture, MVC design
+                patterns, and enterprise APIs.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(1,340 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  3,200+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  10 Web Apps
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">11,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 19,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    39% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳3,833</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Web Development with PHP & Laravel')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Certified Ethical Hacker - CEHv13 Powered by AI -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'" data-id="ceh-v13"
+          data-category="cyber" data-mode="online" data-level="advanced" data-price="18000" data-rating="5.0"
+          data-enrolled="1,100+ Enrolled" data-title="certified ethical hacker - cehv13 powered by ai">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/certified-ethical-hacker-cehv13-powered-by-ai-1793875529.webp"
+                alt="Certified Ethical Hacker - CEHv13 Powered by AI" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  GLOBAL CERT
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  BUG BOUNTY READY
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Cyber & Networking
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 5 Seats Left in Batch 18
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  5 Months (60 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Certified Ethical Hacker -
+                  CEHv13 Powered by AI</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                In-depth ethical hacking methodology, Kali Linux, AI-driven penetration testing, web app vulnerability
+                scanning, and bug bounty strategies.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  5.0
+                  <span class="text-slate-400 font-normal text-[11px]">(520 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,100+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  12 Live Pentest Labs
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">18,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 30,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳6,000</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Certified Ethical Hacker - CEHv13 Powered by AI')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: UI/UX Design & Product Strategy Mastery -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="ui-ux-design" data-category="graphics" data-mode="hybrid" data-level="intermediate"
+          data-price="12500" data-rating="4.9" data-enrolled="2,600+ Enrolled"
+          data-title="ui/ux design & product strategy mastery">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/ui-ux-freelancing-course-banner-1791865982.webp"
+                alt="UI/UX Design & Product Strategy Mastery" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  HIGH SALARY
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  GLOBAL REMOTE
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Graphics & UI/UX
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 9 Seats Left in Batch 26
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3.5 Months (42 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">UI/UX Design & Product Strategy
+                  Mastery</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                UX research, wireframing, high-fidelity UI design in Figma, design systems, micro-interactions,
+                usability testing, and client pitches.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(940 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,600+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  8 Product Case Studies
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">12,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 20,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    37% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,166</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('UI/UX Design & Product Strategy Mastery')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Frontend Web Development with React 19 & Tailwind -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="frontend-react" data-category="web" data-mode="offline" data-level="beginner" data-price="10500"
+          data-rating="4.8" data-enrolled="2,450+ Enrolled"
+          data-title="frontend web development with react 19 & tailwind">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img src="https://erp-back.e-laeltd.com/storage/images/courses/frontend-excellence-1794302451.webp"
+                alt="Frontend Web Development with React 19 & Tailwind" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  FAST TRACK
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  INTERACTIVE UI
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Web & Software
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 12 Seats Left in Batch 31
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3.5 Months (42 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Frontend Web Development with
+                  React 19 & Tailwind</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Modern JavaScript ES6+, React 19 hooks, state architecture, Tailwind CSS v4, responsive design, and
+                lightning-fast web applications.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(890 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  2,450+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  11 Frontend Projects
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">10,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 17,500</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳3,500</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Frontend Web Development with React 19 & Tailwind')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: AI Content Creation & Social Media Growth -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="ai-content-creation" data-category="marketing" data-mode="online" data-level="beginner"
+          data-price="9000" data-rating="4.8" data-enrolled="1,750+ Enrolled"
+          data-title="ai content creation & social media growth">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/ai-content-creation-business-mastery-1793872653.webp"
+                alt="AI Content Creation & Social Media Growth" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  PASSIVE INCOME
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  FAST MONETIZE
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Digital Marketing & AI
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 15 Seats Left in Batch 19
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  2.5 Months (30 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">AI Content Creation & Social
+                  Media Growth</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Harness Midjourney, ChatGPT, ElevenLabs, Runway AI, and YouTube/Facebook video automation tools to build
+                profitable media brands.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.8
+                  <span class="text-slate-400 font-normal text-[11px]">(640 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,750+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  6 Channel Launches
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">9,000</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 15,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    40% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,500</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('AI Content Creation & Social Media Growth')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Microsoft Office, Advanced Excel & Workspace AI -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="office-excel" data-category="office" data-mode="offline" data-level="beginner" data-price="7500"
+          data-rating="4.9" data-enrolled="4,800+ Enrolled"
+          data-title="microsoft office, advanced excel & workspace ai">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/microsoft-office-google-workspace-specialist-with-ai-1793874447.webp"
+                alt="Microsoft Office, Advanced Excel & Workspace AI" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  ESSENTIAL SKILL
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  OFFICE MASTER
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Business & Office
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 18 Seats Left in Batch 45
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  2.5 Months (30 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Microsoft Office, Advanced Excel
+                  & Workspace AI</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                Advanced Excel formulas, PivotTables, dashboard design, PowerPoint corporate decks, Google Docs/Sheets,
+                and Copilot AI office productivity.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(1,650 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  4,800+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  12 Business Worksheets
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">7,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 12,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    37% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">2 x <strong
+                      class="text-emerald-700 font-extrabold">৳3,750</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Microsoft Office, Advanced Excel & Workspace AI')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Course Card: Competency-Based Training & Assessment (CBT&A - NSDA) -->
+        <div
+          class="course-card card-hover bg-white rounded-3xl border border-slate-200 hover:border-emerald-500/40 overflow-hidden flex flex-col justify-between shadow-sm cursor-pointer transition-all duration-300 group"
+          onclick="if(!event.target.closest('a, button')) window.location.href='course-details.html'"
+          data-id="cbta-nsda" data-category="cbta" data-mode="offline" data-level="advanced" data-price="12500"
+          data-rating="4.9" data-enrolled="1,800+ Enrolled"
+          data-title="competency-based training & assessment (cbt&a - nsda)">
+          <div>
+            <!-- Thumbnail & Badges -->
+            <div class="relative aspect-video overflow-hidden bg-slate-900">
+              <img
+                src="https://erp-back.e-laeltd.com/storage/images/courses/714207721-1021041150491636-5143568291155439496-n-1782037238.webp"
+                alt="Competency-Based Training & Assessment (CBT&A - NSDA)" loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none">
+              </div>
+
+              <!-- Top Left Badges -->
+              <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-emerald text-white tracking-wider shadow">
+                  NATIONAL RECOGNITION
+                </span>
+                <span
+                  class="px-2.5 py-1 rounded-lg text-[10px] font-extrabold uppercase bg-brand-night text-white/90 border border-white/20">
+                  NSDA CERTIFIED
+                </span>
+              </div>
+
+              <!-- Top Right Mode Badge -->
+              <div class="absolute top-3 right-3 z-10">
+                <span
+                  class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-white/90 backdrop-blur-md text-slate-800 border border-white/40 shadow-xs">
+                  Govt. CBT&A
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-6 pb-3">
+              <!-- Row 1: Batch Seats Alert & Duration -->
+              <div class="flex items-center justify-between text-xs mb-2">
+                <span class="flex items-center gap-1.5 text-red-600 font-bold text-[11px]">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></span>
+                  Only 6 Seats Left in Batch 15
+                </span>
+                <span class="font-medium text-[11px] text-slate-500 flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i>
+                  3 Months (36 Classes)
+                </span>
+              </div>
+
+              <!-- Row 2: Course Title -->
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-forest transition leading-snug">
+                <a href="course-details.html" class="hover:text-emerald-700 transition">Competency-Based Training &
+                  Assessment (CBT&A - NSDA)</a>
+              </h3>
+
+              <!-- Row 3: Short Description -->
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                National Skill Development Authority (NSDA) approved certification standard methodology, trainer
+                competencies, and global occupational verification.
+              </p>
+
+              <!-- Row 4: Review Rating & Course Enrollment (Clean Single Line) -->
+              <div class="flex items-center gap-2 mt-3 text-xs text-slate-500 font-medium">
+                <span class="flex items-center gap-1 text-slate-800 font-bold">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400 text-amber-400"></i>
+                  4.9
+                  <span class="text-slate-400 font-normal text-[11px]">(720 Reviews)</span>
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  1,800+ Enrolled
+                </span>
+                <span class="text-slate-300">•</span>
+                <span class="flex items-center gap-1 text-slate-600 font-semibold text-[11px]">
+                  <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-600"></i>
+                  Govt. Standard Portfolio
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom: Pricing Box & Action Buttons -->
+          <div class="p-6 pt-0">
+            <!-- Exact Pricing Box -->
+            <div class="bg-[#F8FAF9] rounded-2xl p-4 border border-slate-200/80 mb-4">
+              <!-- Top Row: Price Stack + Old Price + Discount -->
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-start gap-1">
+                  <span class="text-sm font-bold text-slate-900 mt-0.5 leading-none">৳</span>
+                  <span class="text-2xl font-black text-slate-900 tracking-tight leading-none">12,500</span>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs text-slate-400 line-through">৳ 20,000</span>
+                  <span
+                    class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                    37% OFF
+                  </span>
+                </div>
+              </div>
+
+              <!-- Bottom Row: Installment Details -->
+              <div class="mt-3 pt-2.5 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-1.5 text-slate-500 text-[11px]">
+                  <i data-lucide="credit-card" class="w-3.5 h-3.5 text-slate-400"></i>
+                  <span>Installment Available:</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[11px]">
+                  <span class="font-bold text-slate-800">3 x <strong
+                      class="text-emerald-700 font-extrabold">৳4,166</strong>/mo</span>
+                  <span
+                    class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100/80 border border-emerald-200/80 px-1.5 py-0.2 rounded">
+                    0% Interest
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dual Action Buttons -->
+            <div class="grid grid-cols-2 gap-2.5">
+              <button onclick="openSyllabusModal('Competency-Based Training & Assessment (CBT&A - NSDA)')"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-emerald-500/40 hover:text-emerald-700 transition text-center flex items-center justify-center gap-1.5 shadow-xs cursor-pointer">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-slate-400"></i>
+                <span>Syllabus</span>
+              </button>
+              <a href="course-details.html"
+                class="py-2.5 px-3 rounded-xl text-xs font-bold text-white bg-brand-forest hover:bg-brand-dark transition text-center shadow-md shadow-brand-forest/20 flex items-center justify-center gap-1.5">
+                <span>বিস্তারিত দেখুন</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Empty State -->
+      <div id="no-results"
+        class="hidden bg-white rounded-3xl border border-slate-200 p-12 text-center max-w-lg mx-auto my-12">
+        <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="search-x" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-1.5">কোনো কোর্স পাওয়া যায়নি</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mb-6">আপনার দেওয়া কি-ওয়ার্ড বা ফিল্টার অনুযায়ী কোনো কোর্স মিলছে না।
+          অনুগ্রহ করে অন্য ফিল্টার চেষ্টা করুন।</p>
+        <button id="empty-state-reset"
+          class="px-6 py-2.5 rounded-xl bg-brand-forest hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm shadow-md transition cursor-pointer">
+          সকল কোর্স দেখুন (Reset Filters)
+        </button>
+      </div>
+
+      <!-- Bottom Career Counseling Banner -->
+      <div
+        class="mt-16 bg-gradient-to-r from-brand-forest via-emerald-800 to-teal-900 rounded-3xl p-8 sm:p-10 text-white shadow-xl relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-white/10 rounded-full blur-2xl pointer-events-none">
+        </div>
+        <div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <span
+              class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-3 border border-white/20">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-300"></i>
+              ফ্রি ক্যারিয়ার গাইডলাইন
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-black tracking-tight leading-snug">
+              কোন কোর্সটি আপনার জন্য পারফেক্ট বুঝতে পারছেন না?
+            </h3>
+            <p class="text-emerald-100 text-xs sm:text-sm mt-2 leading-relaxed">
+              আমাদের অভিজ্ঞ ক্যারিয়ার কাউন্সেলরদের সাথে ফ্রিতে কথা বলুন এবং আপনার ব্যাকগ্রাউন্ড অনুযায়ী সঠিক কোর্স
+              নির্ধারণ করুন।
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 shrink-0">
+            <a href="tel:09612345678"
+              class="px-6 py-3.5 rounded-2xl bg-white text-brand-forest hover:bg-emerald-50 font-extrabold text-sm shadow-lg transition flex items-center gap-2">
+              <i data-lucide="phone-call" class="w-4 h-4 text-emerald-700"></i>
+              <span>কল করুন (Hotline)</span>
+            </a>
+            <a href="https://wa.me/8801700000000?text=I%20need%20career%20counseling" target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-2xl bg-emerald-600/80 hover:bg-emerald-600 text-white font-extrabold text-sm border border-white/30 shadow-lg transition flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>WhatsApp চ্যাট</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-brand-night text-slate-300 pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Company Profile & Accreditation -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-forest to-brand-emerald flex items-center justify-center text-white">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <div class="text-xl font-black text-white">e-LAE <span class="text-brand-emerald text-sm">LTD</span></div>
+              <p class="text-[11px] text-slate-400">E-Learning &amp; Earning Ltd.</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            Bangladesh's premier government-aligned IT workforce training institute with active physical computer
+            centers across all 64 districts. Registered with NSDA, BASIS, BACCO, and BCS.
+          </p>
+
+          <div class="text-xs text-slate-300 space-y-1">
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-emerald"></i>
+              <span>Hotline: <strong class="text-white">01791-111890</strong> (24/7)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-emerald"></i>
+              <span>Email: <strong class="text-white">info@e-laeltd.com</strong></span>
+            </div>
+          </div>
+
+          <!-- Social Handles -->
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://facebook.com"
+              class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-forest text-white flex items-center justify-center transition">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com"
+              class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-forest text-white flex items-center justify-center transition">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="https://linkedin.com"
+              class="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-forest text-white flex items-center justify-center transition">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links: Courses -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Top Programs</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#courses-section" onclick="filterCourses('web')"
+                class="hover:text-brand-emerald transition">Full-Stack Web Dev</a></li>
+            <li><a href="#courses-section" onclick="filterCourses('marketing')"
+                class="hover:text-brand-emerald transition">Digital Marketing &amp; AI</a></li>
+            <li><a href="#courses-section" onclick="filterCourses('graphics')"
+                class="hover:text-brand-emerald transition">UI/UX &amp; Graphic Design</a></li>
+            <li><a href="#courses-section" onclick="filterCourses('cyber')"
+                class="hover:text-brand-emerald transition">Cyber Security &amp; CCNA</a></li>
+            <li><a href="#courses-section" onclick="filterCourses('graphics')"
+                class="hover:text-brand-emerald transition">Motion Graphics 3D</a></li>
+            <li><a href="#courses-section" onclick="filterCourses('cbta')"
+                class="hover:text-brand-emerald transition">NSDA CBT&amp;A Certification</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links: Institution -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Institution</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#district-section" class="hover:text-brand-emerald transition">64 District Campuses</a></li>
+            <li><a href="#mentors-section" class="hover:text-brand-emerald transition">Faculty &amp; Trainers</a></li>
+            <li><a href="#success-section" class="hover:text-brand-emerald transition">Success Stories (450+)</a></li>
+            <li><a href="#seminar-section" class="hover:text-brand-emerald transition">Free Live Seminars</a></li>
+            <li><a href="#blog-section" class="hover:text-brand-emerald transition">Research &amp; News</a></li>
+            <li><a href="#" onclick="openEnrollDrawer('Corporate Training')"
+                class="hover:text-brand-emerald transition">Corporate Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Accreditation & Legal -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider">Accreditation</h4>
+          <div class="space-y-2 text-xs text-slate-400">
+            <p>• Dept of Youth Development</p>
+            <p>• NSDA Gov Registration</p>
+            <p>• BASIS Member Institute</p>
+            <p>• BACCO Industry Partner</p>
+            <p>• BCS Certified Member</p>
+          </div>
+
+          <div class="pt-3">
+            <div class="text-[11px] font-bold text-slate-300 mb-1.5">Accepted Payment Methods:</div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white/10 text-[10px] font-bold text-white">bKash</span>
+              <span class="px-2 py-0.5 rounded bg-white/10 text-[10px] font-bold text-white">Nagad</span>
+              <span class="px-2 py-0.5 rounded bg-white/10 text-[10px] font-bold text-white">Rocket</span>
+              <span class="px-2 py-0.5 rounded bg-white/10 text-[10px] font-bold text-white">Visa/Mastercard</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Legal Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 E-Learning &amp; Earning Ltd. All Rights Reserved. Govt. Reg &amp; NSDA Compliant.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-400 transition">Refund Policy</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-400 transition">Verification Portal</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: COURSE SYLLABUS PREVIEW                                           -->
+  <!-- ========================================================================= -->
+  <div id="syllabus-modal"
+    class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-7 shadow-2xl relative border border-slate-200">
+      <button onclick="closeSyllabusModal()"
+        class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1 rounded-full hover:bg-slate-100 transition cursor-pointer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-brand-emerald flex items-center justify-center mb-4">
+        <i data-lucide="file-text" class="w-6 h-6"></i>
+      </div>
+
+      <h3 id="modal-syllabus-title" class="text-xl font-black text-slate-900 tracking-tight mb-2">
+        কোর্স সিলেবাস ডাউনলোড
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+        সম্পূর্ণ মডিউল ব্রেকডাউন, প্রজেক্ট শিডিউল ও ক্লাসের পূর্ণাঙ্গ কারিকুলাম এখনই ফ্রিতে দেখে নিন।
+      </p>
+
+      <form onsubmit="handleSyllabusDownload(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">আপনার নাম</label>
+          <input type="text" required placeholder="পুরো নাম লিখুন"
+            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-emerald-500 focus:outline-hidden">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">মোবাইল নম্বর (WhatsApp)</label>
+          <input type="tel" required placeholder="017XXXXXXXX"
+            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:border-emerald-500 focus:outline-hidden">
+        </div>
+        <button type="submit"
+          class="w-full py-3.5 rounded-xl bg-brand-forest hover:bg-brand-dark text-white font-extrabold text-sm shadow-lg shadow-brand-forest/20 transition cursor-pointer">
+          সিলেবাস ডাউনলোড ও প্রিভিউ করুন
+        </button>
+      </form>
+    </div>
+  </div>
+
+    <!-- Interactive JavaScript -->
+  <script>
+    // Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // Global Functions Attached to Window for Instant Accessibility
+    window.openSyllabusModal = function(courseTitle) {
+      const modal = document.getElementById('syllabus-modal');
+      const titleEl = document.getElementById('modal-syllabus-title');
+      if (modal && titleEl) {
+        titleEl.textContent = courseTitle + ' - সিলেবাস প্রিভিউ';
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    };
+
+    window.closeSyllabusModal = function() {
+      const modal = document.getElementById('syllabus-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    };
+
+    window.handleSyllabusDownload = function(e) {
+      if (e) e.preventDefault();
+      alert('ধন্যবাদ! আপনার দেওয়া নম্বরে সম্পূর্ণ কোর্স কারিকুলাম ও সিলেবাসের PDF লিংক পাঠানো হয়েছে।');
+      window.closeSyllabusModal();
+    };
+
+    // SEO Content Expandable Accordion Toggle
+    window.toggleSeoContent = function() {
+      const full = document.getElementById('seo-content-full');
+      const text = document.getElementById('seo-btn-text');
+      const icon = document.getElementById('seo-btn-icon');
+      if (!full) return;
+
+      const isExpanded = full.classList.contains('expanded') || (full.style.maxHeight && full.style.maxHeight !== '0px');
+      if (isExpanded) {
+        full.classList.remove('expanded');
+        full.style.maxHeight = '0px';
+        full.style.opacity = '0';
+        if (text) text.textContent = 'বিস্তারিত তথ্য পড়ুন (Read More)';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        full.classList.add('expanded');
+        full.style.maxHeight = (full.scrollHeight + 80) + 'px';
+        full.style.opacity = '1';
+        if (text) text.textContent = 'সংক্ষেপ করুন (Show Less)';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    };
+
+    // Mobile Filter Drawer Toggle
+    window.toggleMobileFilterDrawer = function() {
+      const box = document.getElementById('secondary-filters-box');
+      const icon = document.getElementById('mobile-filter-chevron');
+      if (!box) return;
+
+      const isHidden = box.classList.contains('hidden');
+      if (isHidden) {
+        box.classList.remove('hidden');
+        box.classList.add('flex');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        box.classList.add('hidden');
+        box.classList.remove('flex');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    };
+
+    // Quick search pill click handler
+    window.setQuickSearch = function(term) {
+      const input = document.getElementById('course-search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (input) {
+        input.value = term;
+        if (clearBtn) clearBtn.classList.remove('hidden');
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        const grid = document.getElementById('courses-grid');
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    // Mobile Navigation Menu Toggle
+    window.toggleMobileMenu = function() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    };
+
+    // Direct DOM Event Listeners Binding (Redundancy for guaranteed click handling)
+    document.addEventListener('DOMContentLoaded', function() {
+      const seoBtn = document.getElementById('seo-read-more-btn');
+      if (seoBtn) {
+        seoBtn.onclick = window.toggleSeoContent;
+      }
+      const mobileFilterBtn = document.getElementById('mobile-filter-toggle');
+      if (mobileFilterBtn) {
+        mobileFilterBtn.onclick = window.toggleMobileFilterDrawer;
+      }
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+
+    // Filter, Search & Sort Controller
+    (function initCourseCatalog() {
+      const grid = document.getElementById('courses-grid');
+      const cards = Array.from(document.querySelectorAll('.course-card'));
+      const categoryTabs = document.querySelectorAll('.filter-tab');
+      const searchInput = document.getElementById('course-search-input');
+      const clearSearchBtn = document.getElementById('clear-search-btn');
+      const modeFilter = document.getElementById('mode-filter');
+      const levelFilter = document.getElementById('level-filter');
+      const sortSelect = document.getElementById('sort-select');
+      const resultsCountEl = document.getElementById('course-results-count');
+      const resetBtn = document.getElementById('reset-all-filters');
+      const noResultsEl = document.getElementById('no-results');
+      const emptyResetBtn = document.getElementById('empty-state-reset');
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+      let activeMode = 'all';
+      let activeLevel = 'all';
+      let currentSort = 'popular';
+
+      function applyFilters() {
+        let visibleCards = [];
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category') || '';
+          const cardMode = card.getAttribute('data-mode') || '';
+          const cardLevel = card.getAttribute('data-level') || '';
+          const cardTitle = card.getAttribute('data-title') || '';
+          const cardText = card.textContent.toLowerCase();
+
+          // Category match
+          const matchCategory = (activeCategory === 'all' || cardCategory === activeCategory);
+          // Mode match
+          const matchMode = (activeMode === 'all' || cardMode === activeMode);
+          // Level match
+          const matchLevel = (activeLevel === 'all' || cardLevel === activeLevel);
+          // Search match
+          const matchSearch = (!searchQuery || cardTitle.includes(searchQuery) || cardText.includes(searchQuery));
+
+          if (matchCategory && matchMode && matchLevel && matchSearch) {
+            card.classList.remove('hidden');
+            visibleCards.push(card);
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Sort visible cards
+        if (visibleCards.length > 0) {
+          visibleCards.sort((a, b) => {
+            if (currentSort === 'rating') {
+              return parseFloat(b.getAttribute('data-rating') || 0) - parseFloat(a.getAttribute('data-rating') || 0);
+            } else if (currentSort === 'price-asc') {
+              return parseInt(a.getAttribute('data-price') || 0) - parseInt(b.getAttribute('data-price') || 0);
+            } else if (currentSort === 'price-desc') {
+              return parseInt(b.getAttribute('data-price') || 0) - parseInt(a.getAttribute('data-price') || 0);
+            } else {
+              return 0;
+            }
+          });
+
+          visibleCards.forEach(c => grid.appendChild(c));
+        }
+
+        // Update count & empty state
+        const total = visibleCards.length;
+        if (resultsCountEl) {
+          resultsCountEl.textContent = `প্রদর্শন করা হচ্ছে: ${total}টি কোর্স`;
+        }
+
+        if (total === 0) {
+          if (noResultsEl) noResultsEl.classList.remove('hidden');
+        } else {
+          if (noResultsEl) noResultsEl.classList.add('hidden');
+        }
+
+        // Toggle reset button & mobile active badge
+        const isFiltered = (activeCategory !== 'all' || searchQuery !== '' || activeMode !== 'all' || activeLevel !== 'all');
+        const mobileBadge = document.getElementById('mobile-active-filter-badge');
+        if (mobileBadge) {
+          if (isFiltered) {
+            mobileBadge.classList.remove('hidden');
+          } else {
+            mobileBadge.classList.add('hidden');
+          }
+        }
+        if (resetBtn) {
+          if (isFiltered) {
+            resetBtn.classList.remove('hidden');
+            resetBtn.classList.add('inline-flex');
+          } else {
+            resetBtn.classList.add('hidden');
+            resetBtn.classList.remove('inline-flex');
+          }
+        }
+
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      }
+
+      // Category tab clicks
+      categoryTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          categoryTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          activeCategory = tab.getAttribute('data-category') || 'all';
+          applyFilters();
+        });
+      });
+
+      // Search input handler
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim().toLowerCase();
+          if (clearSearchBtn) {
+            if (searchQuery.length > 0) {
+              clearSearchBtn.classList.remove('hidden');
+            } else {
+              clearSearchBtn.classList.add('hidden');
+            }
+          }
+          applyFilters();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          if (searchInput) {
+            searchInput.value = '';
+            searchQuery = '';
+          }
+          clearSearchBtn.classList.add('hidden');
+          applyFilters();
+        });
+      }
+
+      // Mode filter
+      if (modeFilter) {
+        modeFilter.addEventListener('change', (e) => {
+          activeMode = e.target.value;
+          applyFilters();
+        });
+      }
+
+      // Level filter
+      if (levelFilter) {
+        levelFilter.addEventListener('change', (e) => {
+          activeLevel = e.target.value;
+          applyFilters();
+        });
+      }
+
+      // Sort
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          currentSort = e.target.value;
+          applyFilters();
+        });
+      }
+
+      // Reset all filters
+      function resetAll() {
+        activeCategory = 'all';
+        searchQuery = '';
+        activeMode = 'all';
+        activeLevel = 'all';
+        currentSort = 'popular';
+
+        if (searchInput) searchInput.value = '';
+        if (clearSearchBtn) clearSearchBtn.classList.add('hidden');
+        if (modeFilter) modeFilter.value = 'all';
+        if (levelFilter) levelFilter.value = 'all';
+        if (sortSelect) sortSelect.value = 'popular';
+
+        categoryTabs.forEach(t => {
+          if (t.getAttribute('data-category') === 'all') {
+            t.classList.add('active');
+          } else {
+            t.classList.remove('active');
+          }
+        });
+
+        applyFilters();
+      }
+
+      if (resetBtn) resetBtn.addEventListener('click', resetAll);
+      if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+
+      // Smooth Mega Menu Controller
+      (function initMegaMenuController() {
+        const trigger = document.getElementById('courses-menu-group');
+        const menu = document.getElementById('courses-mega-menu');
+        if (!trigger || !menu) return;
+
+        let timer = null;
+
+        function open() {
+          if (timer) clearTimeout(timer);
+          menu.classList.remove('opacity-0', 'invisible', 'pointer-events-none');
+          menu.classList.add('opacity-100', 'visible', 'pointer-events-auto');
+        }
+
+        function close() {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            menu.classList.remove('opacity-100', 'visible', 'pointer-events-auto');
+            menu.classList.add('opacity-0', 'invisible', 'pointer-events-none');
+          }, 250);
+        }
+
+        trigger.addEventListener('mouseenter', open);
+        trigger.addEventListener('mouseleave', close);
+        menu.addEventListener('mouseenter', open);
+        menu.addEventListener('mouseleave', close);
+      })();
+    })();
+  </script>
+</body>
+
+</html>

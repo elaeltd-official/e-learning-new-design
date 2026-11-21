@@ -339,7 +339,7 @@
                   <span class="w-2 h-2 rounded-full bg-brand-emerald"></span>
                   <span>Explore All Course Categories &amp; Tracks</span>
                 </div>
-                <a href="https://e-laeltd.com/courses"
+                <a href="courses.html"
                   class="text-xs font-extrabold text-brand-forest hover:text-brand-emerald flex items-center gap-1.5 transition group/all">
                   <span>Browse Full Course Catalog (30+)</span>
                   <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/all:translate-x-1 transition"></i>
@@ -729,7 +729,7 @@
       <div class="pb-2 mb-2 border-b border-slate-100">
         <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3">Main Navigation</span>
       </div>
-      <a href="https://e-laeltd.com/courses" onclick="toggleMobileMenu()"
+      <a href="courses.html" onclick="toggleMobileMenu()"
         class="flex items-center justify-between px-3 py-2.5 rounded-xl font-bold text-slate-800 hover:bg-slate-100">
         <span class="flex items-center gap-2.5"><i data-lucide="layout-grid" class="w-4 h-4 text-brand-emerald"></i> All
           Courses</span>
@@ -3262,479 +3262,247 @@
   </section>
 
     <!-- ========================================================================= -->
-  <!-- 10. SUCCESS STORIES (VIDEO DOCUMENTARY GALLERY & SMOOTH AUTO SLIDER)       -->
+  <!-- 10. SUCCESS STORIES (MODERN BENTO GRID STUDENT SHOWCASE HUB)             -->
   <!-- ========================================================================= -->
-  <section id="success-section" class="py-20 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
-    <!-- Subtle background pattern -->
-    <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
+  <section id="success-section" class="py-16 sm:py-20 lg:py-24 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
+    
+    <!-- Moving Ambient Gradient Mesh & Grid Pattern -->
+    <style>
+      @keyframes succOrbFloat1 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.35; }
+        50% { transform: translate(60px, 30px) scale(1.18); opacity: 0.55; }
+      }
+      @keyframes succOrbFloat2 {
+        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
+        50% { transform: translate(-55px, -25px) scale(1.12); opacity: 0.45; }
+      }
+      @keyframes succGridGlide {
+        0% { background-position: 0 0; }
+        100% { background-position: 64px 64px; }
+      }
+      .succ-animated-grid {
+        background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
+        background-size: 32px 32px;
+        animation: succGridGlide 28s linear infinite;
+      }
+      .succ-orb-1 {
+        animation: succOrbFloat1 16s ease-in-out infinite;
+      }
+      .succ-orb-2 {
+        animation: succOrbFloat2 20s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Moving Grid Pattern -->
+    <div class="succ-animated-grid absolute inset-0 [mask-image:radial-gradient(ellipse_75%_65%_at_50%_30%,#000_70%,transparent_100%)] opacity-35 pointer-events-none"></div>
+
+    <!-- Animated Floating Ambient Glow Orbs -->
+    <div class="succ-orb-1 absolute -top-24 left-1/4 w-[450px] h-[450px] bg-emerald-400/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="succ-orb-2 absolute top-1/3 -right-20 w-[500px] h-[500px] bg-teal-400/15 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-      <!-- Section Header with Controls -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-        <div class="max-w-2xl">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-            Success Stories
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
-            See All 450+ Success Stories — Real students across all 64 district branches who transformed their careers through hands-on practical lab training.
-          </p>
-        </div>
-
-        <!-- Manual Prev / Next Controls & Live Auto-slide Badge -->
-        <div class="flex items-center gap-3 shrink-0">
-          <button id="success-slider-prev" aria-label="Previous Slide"
-            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
-            <i data-lucide="chevron-left" class="w-5 h-5"></i>
-          </button>
-          <button id="success-slider-next" aria-label="Next Slide"
-            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
-            <i data-lucide="chevron-right" class="w-5 h-5"></i>
-          </button>
-        </div>
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200 shadow-2xs">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-emerald-700"></i>
+          বাস্তব সাফল্য ও ক্যারিয়ার রূপান্তর
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Success Stories
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+          See All 450+ Success Stories — Real students across all 64 district branches who transformed their careers through hands-on practical lab training.
+        </p>
       </div>
 
-      <!-- Continuous Smooth Auto-Moving Slider Carousel -->
-      <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
-        
-        <!-- Subtle Left & Right Edge Fades -->
-        <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
-        <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
+      <!-- Modern Bento Grid Showcase Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4.5 items-stretch">
 
-        <!-- Scrollable Track Container -->
-        <div id="success-slider-scroll"
-          class="flex gap-6 overflow-x-auto scroll-smooth py-4 select-none cursor-grab active:cursor-grabbing no-scrollbar"
-          style="scrollbar-width: none; -ms-overflow-style: none;">
+        <!-- ==================== BENTO HERO CARD (7 Cols Desktop) ==================== -->
+        <div class="lg:col-span-7 flex flex-col">
+          <div class="group bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-500/40 p-6 sm:p-7 flex flex-col justify-between h-full transition-all duration-300 relative overflow-hidden">
+            <div>
+              <!-- Featured Video Thumbnail with Play Button & Chip -->
+              <div class="w-full aspect-[16/9.5] sm:aspect-[16/9] rounded-2xl overflow-hidden mb-5 relative bg-slate-900 border border-slate-200/60 shadow-inner cursor-pointer"
+                onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
+                <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-10969-gfg.webp"
+                  alt="Tanvir Ahmed Success Story"
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/25 to-transparent"></div>
 
-          <!-- ==================== CARD 1 (Tanvir Ahmed - MERN Stack) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
-              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-10969-gfg.webp"
-                alt="Tanvir Ahmed Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    MERN Stack &amp; Freelancing · Dhaka Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                <!-- Center 'Watch Documentary' Button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                    <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
+                    <span>ভিডিও ডকুমেন্টারি দেখুন</span>
+                  </button>
                 </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “Before joining e-Learning &amp; Earning Ltd., I struggled to structure real-world projects. Guided portfolio reviews helped me land my first international SaaS client within 6 weeks of graduating.”
-                </p>
+
+                <!-- Bottom Right Badge Chip -->
+                <div class="absolute bottom-3.5 right-3.5 sm:bottom-4 sm:right-4 z-10">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-emerald-800 text-xs font-bold shadow-md border border-white/40">
+                    <i data-lucide="trending-up" class="w-3.5 h-3.5 text-emerald-600"></i>
+                    <span>Top Rated · $2,400/mo</span>
+                  </span>
+                </div>
               </div>
+
+              <!-- Student Campus & Batch Meta -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                  MERN Stack &amp; Freelancing · Dhaka Campus
+                </span>
+                <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+              </div>
+
+              <!-- Main Title -->
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 group-hover:text-emerald-700 transition-colors leading-[1.35] mb-3 tracking-tight">
+                Tanvir Ahmed — “শূন্য অভিজ্ঞতা থেকে আন্তর্জাতিক ক্লায়েন্ট ও হাই-টিকেটের সফল যাত্রা”
+              </h3>
+
+              <!-- Excerpt Quote -->
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 font-normal">
+                “Before joining e-Learning &amp; Earning Ltd., I struggled to structure real-world projects. Guided portfolio reviews helped me land my first international SaaS client within 6 weeks of graduating.”
+              </p>
             </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  Tanvir Ahmed
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Top Rated Seller · $2,400/mo Avg. Billing
-                </p>
+
+            <!-- Bottom Student Meta & Action -->
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-brand-emerald flex items-center justify-center font-bold text-sm border border-emerald-200">
+                  TA
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Tanvir Ahmed</h4>
+                  <p class="text-xs text-slate-500">MERN Stack Graduate</p>
+                </div>
               </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
+              <button onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')"
+                class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-emerald group-hover:text-emerald-700">
+                <span>ভিডিও দেখুন</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
+              </button>
             </div>
           </div>
+        </div>
 
-          <!-- ==================== CARD 2 (Muktadir Hasan Fuhad - Graphic Design) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/P85xLYbLo-w?autoplay=1')">
+        <!-- ==================== BENTO RIGHT 4 CARDS (5 Cols Desktop) ==================== -->
+        <div class="lg:col-span-5 flex flex-col gap-4 lg:gap-4.5 justify-between">
+
+          <!-- Card 2: Muktadir Hasan Fuhad -->
+          <div class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-center cursor-pointer"
+            onclick="openSuccessVideoModal('https://www.youtube.com/embed/P85xLYbLo-w?autoplay=1')">
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60 shadow-inner">
               <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-120196-WhatsApp Image 2025-08-21 at 12.43.01 PM (1).webp"
-                alt="Muktadir Hasan Fuhad Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Graphic Design &amp; Upwork · Bogura Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                alt="মুকতাদির হাসান ফুহাদ" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/15 flex items-center justify-center transition-colors">
+                <div class="w-8 h-8 rounded-full bg-brand-emerald/90 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="play" class="w-3.5 h-3.5 fill-white ml-0.5"></i>
                 </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “বগুড়া শাখা থেকে গ্রাফিক ডিজাইন কোর্স সম্পন্ন করে আন্তর্জাতিক মার্কেটপ্লেসে কাজ শুরু করি। লাইভ প্রজেক্ট সাপোর্ট এবং মেন্টরদের সার্বক্ষণিক গাইডলাইন আমার আয়ের পথ সুগম করেছে।”
-                </p>
               </div>
             </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  মুকতাদির হাসান ফুহাদ
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Level 2 Freelancer · $1,800/mo Avg. Billing
-                </p>
+            <div class="flex-1 w-full min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="text-[11px] font-bold text-brand-emerald">বগুড়া ক্যাম্পাস · গ্রাফিক ডিজাইন</span>
               </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-1 mb-1">
+                মুকতাদির হাসান ফুহাদ
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-2 mb-2 leading-relaxed">
+                “বগুড়া শাখা থেকে গ্রাফিক ডিজাইন শিখে আন্তর্জাতিক মার্কেটপ্লেসে লেভেল ২ সেলার হয়েছি।”
+              </p>
+              <div class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i>
+                <span>Level 2 Freelancer · $1,800/mo</span>
               </div>
             </div>
           </div>
 
-          <!-- ==================== CARD 3 (Nasrin Akter - Women in Tech) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+          <!-- Card 3: Nasrin Akter -->
+          <div class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-center cursor-pointer"
+            onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60 shadow-inner">
               <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-292943-Screenshot 2025-08-12 115940.webp"
-                alt="Nasrin Akter Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Digital Marketing &amp; E-Commerce · Chattogram
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                alt="নাসরিন আক্তার" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/15 flex items-center justify-center transition-colors">
+                <div class="w-8 h-8 rounded-full bg-brand-emerald/90 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="play" class="w-3.5 h-3.5 fill-white ml-0.5"></i>
                 </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “গৃহিণী থেকে স্বাবলম্বী হওয়ার এই যাত্রা সহজ ছিল না। ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের মেন্টরদের সহযোগিতায় আজ আমি ঘরে বসেই বিদেশি ব্র্যান্ডের রিমোট ক্যাম্পেইন হ্যান্ডেল করছি।”
-                </p>
               </div>
             </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  নাসরিন আক্তার
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Remote Agency Lead · $1,500/mo Remote Income
-                </p>
+            <div class="flex-1 w-full min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="text-[11px] font-bold text-brand-emerald">চট্টগ্রাম ক্যাম্পাস · ডিজিটাল মার্কেটিং</span>
               </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-1 mb-1">
+                নাসরিন আক্তার
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-2 mb-2 leading-relaxed">
+                “গৃহিণী থেকে স্বাবলম্বী হওয়ার এই যাত্রায় ঘরে বসেই বিদেশি ব্র্যান্ডের রিমোট ক্যাম্পেইন হ্যান্ডেল করছি।”
+              </p>
+              <div class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i>
+                <span>Remote Agency Lead · $1,500/mo</span>
               </div>
             </div>
           </div>
 
-          <!-- ==================== CARD 4 (Sabbir Rahman - Cyber Security) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/rA2FCD3FFQk?autoplay=1')">
+          <!-- Card 4: Sabbir Rahman -->
+          <div class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-center cursor-pointer"
+            onclick="openSuccessVideoModal('https://www.youtube.com/embed/rA2FCD3FFQk?autoplay=1')">
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60 shadow-inner">
               <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-530446-Screenshot 2025-08-12 125338.webp"
-                alt="Sabbir Rahman Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Cyber Security &amp; Ethical Hacking · Sylhet Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                alt="সাব্বির রহমান" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/15 flex items-center justify-center transition-colors">
+                <div class="w-8 h-8 rounded-full bg-brand-emerald/90 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="play" class="w-3.5 h-3.5 fill-white ml-0.5"></i>
                 </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “ল্যাবভিত্তিক প্র্যাকটিক্যাল ট্রেনিং আর হ্যান্ডস-অন সিকিউরিটি অডিট এক্সারসাইজ আমাকে আন্তর্জাতিক বাগ বাউন্টি প্ল্যাটফর্মে প্রথম প্রাইজ এনে দেয়। জেলা ব্রাঞ্চ থেকেই আন্তর্জাতিক ক্যারিয়ার সম্ভব!”
-                </p>
               </div>
             </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  সাব্বির রহমান
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Security Bounty Hunter · $2,100/mo Security Bounties
-                </p>
+            <div class="flex-1 w-full min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="text-[11px] font-bold text-brand-emerald">সিলেট ক্যাম্পাস · সাইবার সিকিউরিটি</span>
               </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-1 mb-1">
+                সাব্বির রহমান
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-2 mb-2 leading-relaxed">
+                “ল্যাবভিত্তিক প্র্যাকটিক্যাল ট্রেনিং আমাকে আন্তর্জাতিক বাগ বাউন্টি প্ল্যাটফর্মে এনে দিয়েছে সাফল্য।”
+              </p>
+              <div class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i>
+                <span>Bug Bounty Hunter · $2,100/mo</span>
               </div>
             </div>
           </div>
 
-          <!-- ==================== CARD 5 (Ayesha Siddiqa - UI/UX Design) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+          <!-- Card 5: Ayesha Siddiqa -->
+          <div class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row gap-3.5 sm:gap-4 items-center cursor-pointer"
+            onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
+            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60 shadow-inner">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
-                alt="Ayesha Siddiqa Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    UI/UX &amp; Product Design · Rangpur Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
+                alt="আয়েশা সিদ্দিকা" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/15 flex items-center justify-center transition-colors">
+                <div class="w-8 h-8 rounded-full bg-brand-emerald/90 text-white flex items-center justify-center shadow-md">
+                  <i data-lucide="play" class="w-3.5 h-3.5 fill-white ml-0.5"></i>
                 </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “ক্লায়েন্ট মিটিং কীভাবে হ্যান্ডেল করতে হয়, কীভাবে Figma ডিজাইন সিস্টেম আর্কিটেকচার বানাতে হয় তা হাতে-কলমে শিখেছি। আজ আমি দুটি কানাডিয়ান স্টার্টআপের ইউআই ডিজাইন করছি।”
-                </p>
               </div>
             </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  আয়েশা সিদ্দিকা
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Top Rated Designer · $2,600/mo Retainer
-                </p>
+            <div class="flex-1 w-full min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span class="text-[11px] font-bold text-brand-emerald">রংপুর ক্যাম্পাস · UI/UX ডিজাইন</span>
               </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- ==================== CARD 6 (Kamrul Islam - Full Stack) ==================== -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&auto=format&fit=crop&q=80"
-                alt="Kamrul Islam Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              
-              <!-- Center 'Watch Story' Pill Button -->
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Python, Next.js &amp; Cloud · Cumilla Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
-                </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “শুধু থিওরি না, সরাসরি প্রোডাকশন গ্রেড ক্লাউড অ্যাপ্লিকেশন ডিপ্লয়মেন্ট শেখানো হয়েছে। কোর্স চলাকালীন সময়েই ইউএসএ ক্লায়েন্টের সাথে ফুল-টাইম রিমোট জব পেয়েছি।”
-                </p>
-              </div>
-            </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  কামরুল ইসলাম
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Full Stack Engineer · $2,800/mo Retainer
-                </p>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- ==================== DUPLICATE SET FOR INFINITE SEAMLESS LOOP ==================== -->
-          <!-- Duplicate 1 -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/Wu9Y8QfWP8w?autoplay=1')">
-              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-10969-gfg.webp"
-                alt="Tanvir Ahmed Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    MERN Stack &amp; Freelancing · Dhaka Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
-                </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “Before joining e-Learning &amp; Earning Ltd., I struggled to structure real-world projects. Guided portfolio reviews helped me land my first international SaaS client within 6 weeks of graduating.”
-                </p>
-              </div>
-            </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  Tanvir Ahmed
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Top Rated Seller · $2,400/mo Avg. Billing
-                </p>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Duplicate 2 -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/P85xLYbLo-w?autoplay=1')">
-              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-120196-WhatsApp Image 2025-08-21 at 12.43.01 PM (1).webp"
-                alt="Muktadir Hasan Fuhad Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Graphic Design &amp; Upwork · Bogura Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
-                </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “বগুড়া শাখা থেকে গ্রাফিক ডিজাইন কোর্স সম্পন্ন করে আন্তর্জাতিক মার্কেটপ্লেসে কাজ শুরু করি। লাইভ প্রজেক্ট সাপোর্ট এবং মেন্টরদের সার্বক্ষণিক গাইডলাইন আমার আয়ের পথ সুগম করেছে।”
-                </p>
-              </div>
-            </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  মুকতাদির হাসান ফুহাদ
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Level 2 Freelancer · $1,800/mo Avg. Billing
-                </p>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Duplicate 3 -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/ZM72GBR0ouM?autoplay=1')">
-              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-292943-Screenshot 2025-08-12 115940.webp"
-                alt="Nasrin Akter Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Digital Marketing &amp; E-Commerce · Chattogram
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
-                </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “গৃহিণী থেকে স্বাবলম্বী হওয়ার এই যাত্রা সহজ ছিল না। ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের মেন্টরদের সহযোগিতায় আজ আমি ঘরে বসেই বিদেশি ব্র্যান্ডের রিমোট ক্যাম্পেইন হ্যান্ডেল করছি।”
-                </p>
-              </div>
-            </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  নাসরিন আক্তার
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Remote Agency Lead · $1,500/mo Remote Income
-                </p>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Duplicate 4 -->
-          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
-            <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900 cursor-pointer" onclick="openSuccessVideoModal('https://www.youtube.com/embed/rA2FCD3FFQk?autoplay=1')">
-              <img src="https://erp-back.e-laeltd.com/storage/images/video-galleries/e-learning-and-earning-ltd-530446-Screenshot 2025-08-12 125338.webp"
-                alt="Sabbir Rahman Success Story"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute inset-0 bg-slate-950/30 group-hover:bg-slate-950/20 transition-colors"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <button class="px-5 py-2.5 rounded-xl bg-brand-emerald hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-xl flex items-center gap-2 group-hover:scale-105 transition-transform duration-300 border border-white/20">
-                  <i data-lucide="play" class="w-4 h-4 fill-white text-white"></i>
-                  <span>Watch Story</span>
-                </button>
-              </div>
-            </div>
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-bold text-brand-emerald tracking-wide">
-                    Cyber Security &amp; Ethical Hacking · Sylhet Campus
-                  </span>
-                  <i data-lucide="quote" class="w-5 h-5 text-slate-300 fill-slate-200/50 shrink-0"></i>
-                </div>
-                <p class="text-slate-700 text-sm sm:text-[15px] leading-relaxed font-normal">
-                  “ল্যাবভিত্তিক প্র্যাকটিক্যাল ট্রেনিং আর হ্যান্ডস-অন সিকিউরিটি অডিট এক্সারসাইজ আমাকে আন্তর্জাতিক বাগ বাউন্টি প্ল্যাটফর্মে প্রথম প্রাইজ এনে দেয়। জেলা ব্রাঞ্চ থেকেই আন্তর্জাতিক ক্যারিয়ার সম্ভব!”
-                </p>
-              </div>
-            </div>
-            <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between">
-              <div>
-                <h4 class="font-bold text-slate-900 text-base group-hover:text-brand-emerald transition-colors">
-                  সাব্বির রহমান
-                </h4>
-                <p class="text-xs font-semibold text-brand-emerald mt-0.5">
-                  Security Bounty Hunter · $2,100/mo Security Bounties
-                </p>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-emerald-100/60 flex items-center justify-center text-brand-emerald group-hover:bg-brand-emerald group-hover:text-white transition-all">
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <h4 class="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-1 mb-1">
+                আয়েশা সিদ্দিকা
+              </h4>
+              <p class="text-xs text-slate-500 line-clamp-2 mb-2 leading-relaxed">
+                “Figma ডিজাইন সিস্টেম শিখে আজ আমি দুটি আন্তর্জাতিক স্টার্টআপের প্রোডাক্ট ডিজাইন করছি।”
+              </p>
+              <div class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">
+                <i data-lucide="check-circle-2" class="w-3 h-3"></i>
+                <span>Top Rated Designer · $2,600/mo</span>
               </div>
             </div>
           </div>
@@ -3743,68 +3511,17 @@
 
       </div>
 
-      <!-- Bottom Button (Linking to https://e-laeltd.com/video-gallery) -->
-      <div class="mt-12 text-center">
-        <a href="https://e-laeltd.com/video-gallery" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-brand-emerald hover:bg-emerald-600 text-white font-extrabold text-sm sm:text-base transition-all shadow-lg shadow-emerald-950/20 hover:shadow-xl hover:-translate-y-0.5 group cursor-pointer">
-          <i data-lucide="film" class="w-4 h-4 text-emerald-200 group-hover:text-white transition-colors"></i>
-          <span>আরও দেখুন (See All 450+ Success Stories)</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+      <!-- Bottom Button (All Success Stories) -->
+      <div class="flex justify-center mt-12 sm:mt-14">
+        <a href="https://e-laeltd.com/success-stories" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-forest hover:bg-emerald-800 text-white font-extrabold shadow-lg shadow-brand-forest/20 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base group">
+          <i data-lucide="video" class="w-4 h-4 text-emerald-300 group-hover:text-white transition-colors"></i>
+          <span>সকল ৪৫০+ সফল গল্প দেখুন (Watch All Stories)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"></i>
         </a>
       </div>
 
     </div>
-
-    <!-- Script for Ultra-Smooth Continuous Motion & Interactive Controls -->
-    <script>
-      (function() {
-        const slider = document.getElementById('success-slider-scroll');
-        const prevBtn = document.getElementById('success-slider-prev');
-        const nextBtn = document.getElementById('success-slider-next');
-        if (!slider) return;
-
-        let isPaused = false;
-        let animationFrameId;
-        const scrollSpeed = 0.75; // Calm, ultra-smooth continuous speed (~45px per sec)
-
-        function autoGlide() {
-          if (!isPaused && slider) {
-            slider.scrollLeft += scrollSpeed;
-            // Seamless wrap when reached half the track
-            if (slider.scrollLeft >= (slider.scrollWidth / 2)) {
-              slider.scrollLeft = 0;
-            }
-          }
-          if (typeof lucide !== 'undefined') lucide.createIcons();
-        animationFrameId = requestAnimationFrame(autoGlide);
-        }
-
-        // Start gliding
-        animationFrameId = requestAnimationFrame(autoGlide);
-
-        // Pause on mouse hover & touch interactions
-        slider.addEventListener('mouseenter', () => { isPaused = true; });
-        slider.addEventListener('mouseleave', () => { isPaused = false; });
-        slider.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
-        slider.addEventListener('touchend', () => { isPaused = false; });
-
-        // Prev & Next Manual Navigation
-        if (prevBtn) {
-          prevBtn.addEventListener('click', () => {
-            isPaused = true;
-            slider.scrollBy({ left: -420, behavior: 'smooth' });
-            setTimeout(() => { isPaused = false; }, 2500);
-          });
-        }
-        if (nextBtn) {
-          nextBtn.addEventListener('click', () => {
-            isPaused = true;
-            slider.scrollBy({ left: 420, behavior: 'smooth' });
-            setTimeout(() => { isPaused = false; }, 2500);
-          });
-        }
-      })();
-    </script>
   </section>
 <!-- ========================================================================= -->
   <!-- 10b. STUDENT REVIEWS & FEEDBACK (SMOOTH MOVING SLIDER & TRUST BANNER)     -->
@@ -4344,285 +4061,699 @@
     </script>
   </section>
 <!-- ========================================================================= -->
-  <!-- 10.5 NEWS FEEDS & NATIONAL MEDIA COVERAGE (MODERN BENTO GRID PRESS HUB)   -->
+  <!-- 10.5 NEWS FEEDS & NATIONAL MEDIA COVERAGE (SMOOTH AUTO SLIDER CAROUSEL)  -->
   <!-- ========================================================================= -->
-  <section id="news-feeds-section"
-    class="py-14 sm:py-18 lg:py-20 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
-    
-    <!-- Moving Background Animations -->
-    <style>
-      @keyframes newsOrbFloat1 {
-        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.35; }
-        50% { transform: translate(70px, 35px) scale(1.2); opacity: 0.55; }
-      }
-      @keyframes newsOrbFloat2 {
-        0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; }
-        50% { transform: translate(-65px, -30px) scale(1.15); opacity: 0.45; }
-      }
-      @keyframes newsGridGlide {
-        0% { background-position: 0 0; }
-        100% { background-position: 64px 64px; }
-      }
-      .news-animated-grid {
-        background-image: linear-gradient(to right, #cbd5e1 1px, transparent 1px), linear-gradient(to bottom, #cbd5e1 1px, transparent 1px);
-        background-size: 32px 32px;
-        animation: newsGridGlide 28s linear infinite;
-      }
-      .news-orb-1 {
-        animation: newsOrbFloat1 15s ease-in-out infinite;
-      }
-      .news-orb-2 {
-        animation: newsOrbFloat2 18s ease-in-out infinite;
-      }
-    </style>
-
-    <!-- Moving Grid Pattern -->
-    <div
-      class="news-animated-grid absolute inset-0 [mask-image:radial-gradient(ellipse_75%_65%_at_50%_30%,#000_70%,transparent_100%)] opacity-35 pointer-events-none">
-    </div>
-
-    <!-- Animated Floating Ambient Glow Orbs -->
-    <div class="news-orb-1 absolute -top-24 left-1/4 w-[450px] h-[450px] bg-emerald-400/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="news-orb-2 absolute top-1/3 -right-20 w-[500px] h-[500px] bg-teal-400/15 rounded-full blur-3xl pointer-events-none"></div>
+  <section id="news-feeds-section" class="py-20 bg-[#F8FAF9] border-t border-slate-200 relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-40 pointer-events-none"></div>
 
     <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-      <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
-          News Feeds
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
-          Stay informed with our latest news, government AI initiative coverage &amp; national media reports across Bangladesh.
-        </p>
+      <!-- Section Header with Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-bold mb-3 border border-emerald-200 shadow-2xs">
+            <i data-lucide="newspaper" class="w-3.5 h-3.5 text-emerald-700"></i>
+            জাতীয় গণমাধ্যম ও প্রেস কভারেজ
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+            News Feeds
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
+            Stay informed with our latest news, government AI initiative coverage &amp; national media reports across Bangladesh.
+          </p>
+        </div>
+
+        <!-- Manual Prev / Next Controls & Live Auto-slide Badge -->
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="news-slider-prev" aria-label="Previous Slide"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+          </button>
+          <button id="news-slider-next" aria-label="Next Slide"
+            class="w-11 h-11 rounded-full bg-white border border-slate-200 text-slate-700 hover:text-brand-emerald hover:border-brand-emerald flex items-center justify-center shadow-sm hover:shadow-md transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Modern Bento Grid Press Hub Layout (Refined Tighter Gap) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-4.5 items-stretch">
+      <!-- Continuous Smooth Auto-Moving Slider Carousel -->
+      <div class="relative -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Subtle Left & Right Edge Fades -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-[#F8FAF9] to-transparent z-10 pointer-events-none"></div>
 
-        <!-- ==================== BENTO HERO CARD (7 Cols Desktop) ==================== -->
-        <div class="lg:col-span-7 flex flex-col">
-          <a href="https://www.rupalibangladesh.com/national-news/134040"
-            target="_blank" rel="nofollow noopener noreferrer"
-            class="group bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl hover:border-emerald-500/40 p-6 sm:p-7 flex flex-col justify-between h-full transition-all duration-300 relative overflow-hidden">
-            
-            <div>
-              <!-- Featured Image with Bottom Outlet Chip -->
-              <div class="w-full aspect-[16/9.5] sm:aspect-[16/9] rounded-2xl overflow-hidden mb-5 relative bg-slate-900 border border-slate-200/60 shadow-inner">
-                <img src="assets/news/news-featured-minister.webp"
-                  alt="এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী"
-                  loading="lazy"
-                  onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-650407--.webp';"
-                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+        <!-- Scrollable Track Container -->
+        <div id="news-slider-scroll"
+          class="flex gap-6 overflow-x-auto scroll-smooth py-4 select-none cursor-grab active:cursor-grabbing no-scrollbar"
+          style="scrollbar-width: none; -ms-overflow-style: none;">
 
-                <!-- Bottom Right Outlet Chip -->
-                <div class="absolute bottom-3.5 right-3.5 sm:bottom-4 sm:right-4 z-10">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
-                    <span>Rupali Bangladesh</span>
-                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
-                  </span>
+          <!-- Card: Rupali Bangladesh -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://www.rupalibangladesh.com/national-news/134040" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-featured-minister.webp"
+                    alt="এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Rupali Bangladesh</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    দেশের তরুণ প্রজন্মকে আধুনিক কৃত্রিম বুদ্ধিমত্তা (AI) ও ফ্রিল্যান্সিং দক্ষতায় গড়ে তুলতে ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের দেশব্যাপী এআই প্রশিক্ষণ কর্মশালার আনুষ্ঠানিক উদ্বোধন।
+                  </p>
                 </div>
               </div>
 
-              <!-- Date Meta -->
-              <div class="flex items-center gap-1.5 text-xs font-medium text-slate-400 mb-3">
-                <i data-lucide="calendar" class="w-3.5 h-3.5 text-slate-400"></i>
-                <span>Published 2026</span>
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>Rupali Bangladesh</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- Card: Ekattor TV -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://ekattor.tv/country/rajshahi/93379/%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A7%9C%E0%A6%BE-%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%80-%E0%A6%8F%E0%A6%86%E0%A6%87-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A7%87%E0%A6%B0-%E0%A6%AF%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BE-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-ekattor-tv.webp"
+                    alt="বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Ekattor TV</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    জেলা পর্যায়ে তরুণদের প্রযুক্তিগত কর্মসংস্থান সৃষ্টিতে বিশেষ এআই বুটক্যাম্প।
+                  </p>
+                </div>
               </div>
 
-              <!-- Main Title (Comfortable Line-Height) -->
-              <h3 class="text-xl sm:text-2xl lg:text-[26px] font-black text-slate-900 group-hover:text-emerald-700 transition-colors leading-[1.4] mb-3.5 tracking-tight">
-                এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী
-              </h3>
-
-              <!-- Summary Description (Comfortable Spacing) -->
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed sm:leading-[1.7] line-clamp-3 mb-6">
-                দেশের তরুণ প্রজন্মকে আধুনিক কৃত্রিম বুদ্ধিমত্তা (AI) ও ফ্রিল্যান্সিং দক্ষতায় গড়ে তুলতে ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের দেশব্যাপী এআই প্রশিক্ষণ কর্মশালার আনুষ্ঠানিক উদ্বোধন।
-              </p>
-            </div>
-
-            <!-- Footer Action Button -->
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-slate-800 group-hover:text-emerald-700 transition-colors mt-auto">
-              <span class="flex items-center gap-1.5">
-                <span>সম্পূর্ণ প্রেস কভারেজ পড়ুন</span>
-                <span class="text-xs font-normal text-slate-400">(Read Full Coverage)</span>
-              </span>
-              <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-all transform group-hover:translate-x-1">
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- ==================== BENTO RIGHT GRID (5 Cols Desktop, 4 Compact Cards, Refined Gap) ==================== -->
-        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 lg:gap-3.5">
-
-          <!-- Bento Card 1: Ekattor TV -->
-          <a href="https://ekattor.tv/country/rajshahi/93379/%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A7%9C%E0%A6%BE-%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%80-%E0%A6%8F%E0%A6%86%E0%A6%87-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A7%87%E0%A6%B0-%E0%A6%AF%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BE-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81"
-            target="_blank" rel="nofollow noopener noreferrer"
-            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
-            
-            <!-- Thumbnail with Play indicator -->
-            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
-              <img src="assets/news/news-ekattor-tv.webp"
-                alt="বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু"
-                loading="lazy"
-                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-947975--.webp';"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
-              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-rose-600/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
-                <i data-lucide="tv" class="w-3 h-3 text-white"></i> TV
-              </span>
-            </div>
-
-            <!-- Content -->
-            <div class="flex-1 min-w-0 w-full">
-              <div class="flex items-center justify-between text-xs mb-1.5">
-                <span class="font-bold text-rose-600 flex items-center gap-1">
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
                   <span>Ekattor TV</span>
                 </span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
               </div>
-              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
-                বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু
-              </h4>
-              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
-                জেলা পর্যায়ে তরুণদের প্রযুক্তিগত কর্মসংস্থান সৃষ্টিতে বিশেষ এআই বুটক্যাম্প।
-              </p>
-              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
-                <span>Published 2026</span>
+            </a>
+          </div>
+          <!-- Card: Deepto News -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://deeptonews.com/%e0%a6%a6%e0%a7%87%e0%a6%b6%e0%a6%ac%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%aa%e0%a7%80-%e0%a6%8f%e0%a6%86%e0%a6%87-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%a3/#google_vignette" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-deepto-tv.webp"
+                    alt="দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Deepto News</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    ৬৪ জেলায় আধুনিক কম্পিউটার ল্যাব ও মেন্টরশিপের মাধ্যমে প্রশিক্ষণ কর্মসূচি।
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
 
-          <!-- Bento Card 2: Deepto News -->
-          <a href="https://deeptonews.com/%e0%a6%a6%e0%a7%87%e0%a6%b6%e0%a6%ac%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%aa%e0%a7%80-%e0%a6%8f%e0%a6%86%e0%a6%87-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%a3/#google_vignette"
-            target="_blank" rel="nofollow noopener noreferrer"
-            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
-            
-            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
-              <img src="assets/news/news-deepto-tv.webp"
-                alt="দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ"
-                loading="lazy"
-                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-830325--.webp';"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
-              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-amber-600/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
-                <i data-lucide="radio" class="w-3 h-3 text-white"></i> Media
-              </span>
-            </div>
-
-            <div class="flex-1 min-w-0 w-full">
-              <div class="flex items-center justify-between text-xs mb-1.5">
-                <span class="font-bold text-amber-700 flex items-center gap-1">
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
                   <span>Deepto News</span>
                 </span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
               </div>
-              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
-                দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ
-              </h4>
-              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
-                ৬৪ জেলায় আধুনিক কম্পিউটার ল্যাব ও মেন্টরশিপের মাধ্যমে প্রশিক্ষণ কর্মসূচি।
-              </p>
-              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
-                <span>Published 2026</span>
+            </a>
+          </div>
+          <!-- Card: The Daily Star Bangla -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://bangla.thedailystar.net/news/bangladesh/news-3948571" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-daily-star.webp"
+                    alt="বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>The Daily Star Bangla</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    তথ্যপ্রযুক্তি ও যুব দক্ষতা উন্নয়ন কেন্দ্রের আঞ্চলিক সম্প্রসারণ প্রসঙ্গ।
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
 
-          <!-- Bento Card 3: The Daily Star Bangla -->
-          <a href="https://bangla.thedailystar.net/news/bangladesh/news-3948571"
-            target="_blank" rel="nofollow noopener noreferrer"
-            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
-            
-            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
-              <img src="assets/news/news-daily-star.webp"
-                alt="বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম"
-                loading="lazy"
-                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-629591--.webp';"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
-              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-blue-700/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
-                <i data-lucide="newspaper" class="w-3 h-3 text-white"></i> Daily
-              </span>
-            </div>
-
-            <div class="flex-1 min-w-0 w-full">
-              <div class="flex items-center justify-between text-xs mb-1.5">
-                <span class="font-bold text-blue-700 flex items-center gap-1">
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
                   <span>The Daily Star Bangla</span>
                 </span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
               </div>
-              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
-                বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম
-              </h4>
-              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
-                তথ্যপ্রযুক্তি ও যুব দক্ষতা উন্নয়ন কেন্দ্রের আঞ্চলিক সম্প্রসারণ প্রসঙ্গ।
-              </p>
-              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
-                <span>Published 2026</span>
+            </a>
+          </div>
+          <!-- Card: BSS News (বাসস) -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://www.bssnews.net/bangla/national/329238" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-bss-news.webp"
+                    alt="কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>BSS News (বাসস)</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    বাংলাদেশ সংবাদ সংস্থায় প্রকাশিত যুব উন্নয়ন বিষয়ক জাতীয় প্রতিবেদন।
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
 
-          <!-- Bento Card 4: BSS News -->
-          <a href="https://www.bssnews.net/bangla/national/329238"
-            target="_blank" rel="nofollow noopener noreferrer"
-            class="group bg-white rounded-2xl border border-slate-200/90 p-4 shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col sm:flex-row lg:flex-row gap-3.5 sm:gap-4 items-center">
-            
-            <div class="w-full sm:w-36 lg:w-36 aspect-[16/10] sm:aspect-square lg:aspect-square shrink-0 rounded-xl overflow-hidden relative bg-slate-900 border border-slate-200/60">
-              <img src="assets/news/news-bss-news.webp"
-                alt="কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, শুরু হলো দেশব্যাপী এআই প্রশিক্ষণ কর্মসূচি"
-                loading="lazy"
-                onerror="this.onerror=null; this.src='https://erp-back.e-laeltd.com/storage/images/news-feeds/e-learning-and-earning-ltd-255214--.webp';"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
-              <span class="absolute bottom-1.5 left-1.5 px-2 py-0.5 rounded-md bg-emerald-700/90 text-[10px] font-extrabold text-white flex items-center gap-1 shadow-sm">
-                <i data-lucide="building-2" class="w-3 h-3 text-white"></i> Agency
-              </span>
-            </div>
-
-            <div class="flex-1 min-w-0 w-full">
-              <div class="flex items-center justify-between text-xs mb-1.5">
-                <span class="font-bold text-emerald-700 flex items-center gap-1">
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
                   <span>BSS News (বাসস)</span>
                 </span>
-                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
               </div>
-              <h4 class="text-sm sm:text-[14.5px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors line-clamp-2 leading-[1.5] mb-1.5">
-                কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ
-              </h4>
-              <p class="text-xs text-slate-500 line-clamp-1 mb-2.5 leading-relaxed">
-                বাংলাদেশ সংবাদ সংস্থায় প্রকাশিত যুব উন্নয়ন বিষয়ক জাতীয় প্রতিবেদন।
-              </p>
-              <div class="text-[11px] font-medium text-slate-400 flex items-center gap-1">
-                <i data-lucide="calendar" class="w-3 h-3 text-slate-400"></i>
-                <span>Published 2026</span>
+            </a>
+          </div>
+          <!-- Card: Rupali Bangladesh -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://www.rupalibangladesh.com/national-news/134040" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-featured-minister.webp"
+                    alt="এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Rupali Bangladesh</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    এআই ভিত্তিক প্রশিক্ষণ কর্মশালা উদ্বোধন করলেন ক্রীড়া প্রতিমন্ত্রী
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    দেশের তরুণ প্রজন্মকে আধুনিক কৃত্রিম বুদ্ধিমত্তা (AI) ও ফ্রিল্যান্সিং দক্ষতায় গড়ে তুলতে ই-লার্নিং অ্যান্ড আর্নিং লিমিটেডের দেশব্যাপী এআই প্রশিক্ষণ কর্মশালার আনুষ্ঠানিক উদ্বোধন।
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
+
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>Rupali Bangladesh</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- Card: Ekattor TV -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://ekattor.tv/country/rajshahi/93379/%E0%A6%AC%E0%A6%97%E0%A7%81%E0%A7%9C%E0%A6%BE-%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87-%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%80-%E0%A6%8F%E0%A6%86%E0%A6%87-%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%A3%E0%A7%87%E0%A6%B0-%E0%A6%AF%E0%A6%BE%E0%A6%A4%E0%A7%8D%E0%A6%B0%E0%A6%BE-%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-ekattor-tv.webp"
+                    alt="বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Ekattor TV</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    বগুড়া থেকে দেশব্যাপী এআই প্রশিক্ষণের যাত্রা শুরু
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    জেলা পর্যায়ে তরুণদের প্রযুক্তিগত কর্মসংস্থান সৃষ্টিতে বিশেষ এআই বুটক্যাম্প।
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>Ekattor TV</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- Card: Deepto News -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://deeptonews.com/%e0%a6%a6%e0%a7%87%e0%a6%b6%e0%a6%ac%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%aa%e0%a7%80-%e0%a6%8f%e0%a6%86%e0%a6%87-%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%b6%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%b7%e0%a6%a3/#google_vignette" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-deepto-tv.webp"
+                    alt="দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>Deepto News</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    দেশব্যাপী এআই প্রশিক্ষণ: দক্ষ মানবসম্পদ তৈরির নতুন উদ্যোগ
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    ৬৪ জেলায় আধুনিক কম্পিউটার ল্যাব ও মেন্টরশিপের মাধ্যমে প্রশিক্ষণ কর্মসূচি।
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>Deepto News</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- Card: The Daily Star Bangla -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://bangla.thedailystar.net/news/bangladesh/news-3948571" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-daily-star.webp"
+                    alt="বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>The Daily Star Bangla</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    বগুড়ার উন্নয়নে একবিন্দু ছাড় দিতে রাজি নই: প্রতিমন্ত্রী শাহে আলম
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    তথ্যপ্রযুক্তি ও যুব দক্ষতা উন্নয়ন কেন্দ্রের আঞ্চলিক সম্প্রসারণ প্রসঙ্গ।
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>The Daily Star Bangla</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
+          <!-- Card: BSS News (বাসস) -->
+          <div class="w-[320px] sm:w-[380px] lg:w-[410px] shrink-0 bg-white rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+            <a href="https://www.bssnews.net/bangla/national/329238" target="_blank" rel="nofollow noopener noreferrer" class="block flex-1 flex flex-col justify-between">
+              <div>
+                <!-- Top Image -->
+                <div class="relative w-full aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img src="assets/news/news-bss-news.webp"
+                    alt="কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ"
+                    loading="lazy"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+                  
+                  <!-- Top-Left Published Badge -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-900/75 backdrop-blur-md text-white text-[11px] font-semibold border border-white/20">
+                      <i data-lucide="calendar" class="w-3 h-3 text-emerald-400"></i>
+                      <span>2026</span>
+                    </span>
+                  </div>
+
+                  <!-- Bottom-Right Outlet Chip -->
+                  <div class="absolute bottom-3.5 right-3.5">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white/95 backdrop-blur-md text-slate-800 text-xs font-bold shadow-md border border-white/40">
+                      <span>BSS News (বাসস)</span>
+                      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-700"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="p-6">
+                  <div class="flex items-center gap-2 mb-2.5">
+                    <span class="text-xs font-bold text-brand-emerald tracking-wide">
+                      জাতীয় গণমাধ্যম কভারেজ
+                    </span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-emerald transition-colors leading-[1.4] line-clamp-2 mb-2">
+                    কৃত্রিম বুদ্ধিমত্তায় দক্ষ হবে তরুণরা, দেশব্যাপী এআই প্রশিক্ষণ
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-2 font-normal">
+                    বাংলাদেশ সংবাদ সংস্থায় প্রকাশিত যুব উন্নয়ন বিষয়ক জাতীয় প্রতিবেদন।
+                  </p>
+                </div>
+              </div>
+
+              <!-- Bottom Bar -->
+              <div class="bg-slate-50/90 px-6 py-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                  <i data-lucide="newspaper" class="w-3.5 h-3.5 text-brand-emerald"></i>
+                  <span>BSS News (বাসস)</span>
+                </span>
+                <span class="inline-flex items-center gap-1 text-xs font-bold text-brand-emerald group-hover:text-emerald-700">
+                  <span>প্রতিবেদনটি পড়ুন</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </span>
+              </div>
+            </a>
+          </div>
 
         </div>
-
       </div>
 
-      <!-- Bottom Button (All News & Media Coverage) -->
-      <div class="flex justify-center mt-12 sm:mt-14">
+      <!-- Bottom Button -->
+      <div class="flex justify-center mt-10 sm:mt-12">
         <a href="https://e-laeltd.com/news-feeds" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-brand-forest hover:bg-emerald-800 text-white font-extrabold shadow-lg shadow-brand-forest/20 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 text-sm sm:text-base group">
-          <i data-lucide="newspaper" class="w-4 h-4 text-emerald-300 group-hover:text-white transition-colors"></i>
-          <span>সব সংবাদ ও জাতীয় প্রেস কভারেজ দেখুন</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"></i>
+          class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 text-slate-800 hover:text-brand-emerald font-bold shadow-sm hover:shadow-md transition-all duration-300 text-sm group">
+          <i data-lucide="newspaper" class="w-4 h-4 text-brand-emerald"></i>
+          <span>সকল প্রেস ও জাতীয় নিউজ দেখুন (All Media Coverage)</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
         </a>
       </div>
 
     </div>
+
+    <!-- Script for News Slider Ultra-Smooth Continuous Motion & Interactive Controls -->
+    <script>
+      (function() {
+        const slider = document.getElementById('news-slider-scroll');
+        const prevBtn = document.getElementById('news-slider-prev');
+        const nextBtn = document.getElementById('news-slider-next');
+        if (!slider) return;
+
+        let isPaused = false;
+        let animationFrameId;
+        const scrollSpeed = 0.75; // Calm, ultra-smooth continuous speed (~45px per sec)
+
+        function autoGlide() {
+          if (!isPaused && slider) {
+            slider.scrollLeft += scrollSpeed;
+            // Seamless wrap when reached half the track
+            if (slider.scrollLeft >= (slider.scrollWidth / 2)) {
+              slider.scrollLeft = 0;
+            }
+          }
+          animationFrameId = requestAnimationFrame(autoGlide);
+        }
+
+        // Start gliding
+        animationFrameId = requestAnimationFrame(autoGlide);
+
+        // Pause on mouse hover & touch interactions
+        slider.addEventListener('mouseenter', () => { isPaused = true; });
+        slider.addEventListener('mouseleave', () => { isPaused = false; });
+        slider.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+        slider.addEventListener('touchend', () => { isPaused = false; });
+
+        // Prev & Next Manual Navigation
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: -420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            isPaused = true;
+            slider.scrollBy({ left: 420, behavior: 'smooth' });
+            setTimeout(() => { isPaused = false; }, 2500);
+          });
+        }
+      })();
+    </script>
   </section>
   <!-- ========================================================================= -->
   <!-- 11. FREE LIVE SEMINARS & CAREER ADVISING SECTION                          -->
